@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="2000" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-ag-nEd" userLabel="Image Stack View">
+                                <rect key="frame" x="551" y="0.0" width="900" height="930"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-oq-yrD">
+                                        <rect key="frame" x="251" y="0.0" width="399" height="930"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="900" id="jOz-Yq-nTq"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="900" id="lMq-RN-wCh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="930" id="aHE-uD-f3Y"/>
+                                    <constraint firstAttribute="width" constant="900" id="kPh-r9-ahn"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VQO-SW-eKc" userLabel="Buttom Stack View">
+                                <rect key="frame" x="629" y="1074" width="520" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-yd-yTi">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Buy">
+                                            <color key="titleColor" red="0.30784826209999999" green="0.28135239400000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0J-cX-4vq">
+                                        <rect key="frame" x="176" y="0.0" width="164" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="View"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-7I-sgj">
+                                        <rect key="frame" x="370" y="0.0" width="150" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Like"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Ar-VC-PwN" userLabel="Left Stack View">
+                                <rect key="frame" x="90" y="40" width="307" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make: Calvin klein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwQ-Wl-zS8">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dress Name:  Fancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-0k-QXo">
+                                        <rect key="frame" x="0.0" y="72" width="307" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-uP-pbS" userLabel="Right Stack View">
+                                <rect key="frame" x="1443" y="40" width="400" height="288"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retail Price:  $189.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-BW-L7I">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale Price:    $59.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-X0-GSx">
+                                        <rect key="frame" x="0.0" y="72" width="309" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description  This is a beautiful dress made with original hand made Kente Cloth from Ghana west Africa" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="RwT-XJ-dLM">
+                                        <rect key="frame" x="0.0" y="144" width="400" height="144"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="q8l-C7-CiP"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="21B-Lj-k1w" userLabel="Ratings Stack View">
+                                <rect key="frame" x="1443" y="436" width="441" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHM-EE-vKI">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-P9-UL5" userLabel="Like Stack View">
+                                        <rect key="frame" x="120" y="0.0" width="138" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-0x-f4Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9Io-j5-XLa">
+                                                <rect key="frame" x="86" y="0.0" width="52" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="3V1-Yf-8h1"/>
+                                                    <constraint firstAttribute="width" constant="52" id="mHY-vy-LwR"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saH-wJ-Jr4" userLabel="Dislike Stack View">
+                                        <rect key="frame" x="278" y="0.0" width="163" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSB-Ie-XzV">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="83P-Qz-AT9">
+                                                <rect key="frame" x="114" y="0.0" width="49" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="DLS-dd-hbD"/>
+                                                    <constraint firstAttribute="width" constant="49" id="x2K-0q-lej"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-mV-3sT" userLabel="Side Image Stack View">
+                                <rect key="frame" x="143" y="171" width="200" height="740"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-Pr-Ery">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="SGW-a5-irb"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="ZUu-YX-Z7R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sg0-mQ-iya">
+                                        <rect key="frame" x="0.0" y="250" width="200" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="AYj-Q0-Ft7"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="NpH-N2-x9I"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ssC-EG-6LE">
+                                        <rect key="frame" x="0.0" y="500" width="200" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="QBq-Bm-g5a"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="tCX-wz-njN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tCe-uP-pbS" firstAttribute="leading" secondItem="1Gg-ag-nEd" secondAttribute="trailing" constant="50" id="7l7-NQ-Igw"/>
+                            <constraint firstItem="VQO-SW-eKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xk-jp-iNp" userLabel="Button Stack View.centerX = centerX"/>
+                            <constraint firstItem="XeR-mV-3sT" firstAttribute="top" secondItem="6Ar-VC-PwN" secondAttribute="bottom" constant="20" id="FON-gJ-d9W"/>
+                            <constraint firstItem="21B-Lj-k1w" firstAttribute="leading" secondItem="1Gg-ag-nEd" secondAttribute="trailing" constant="50" id="K0z-9j-fPX"/>
+                            <constraint firstItem="6Ar-VC-PwN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="N7e-4i-q0O"/>
+                            <constraint firstItem="1Gg-ag-nEd" firstAttribute="leading" secondItem="6Ar-VC-PwN" secondAttribute="trailing" constant="100" id="VCW-nn-G35"/>
+                            <constraint firstItem="6Ar-VC-PwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="a6W-U5-PXX"/>
+                            <constraint firstItem="1Gg-ag-nEd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="drO-g3-mzd"/>
+                            <constraint firstItem="XeR-mV-3sT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="eI5-Vi-GtS"/>
+                            <constraint firstItem="tCe-uP-pbS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="gm7-Ho-cSN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VQO-SW-eKc" secondAttribute="bottom" constant="40" id="pMa-BR-b3U"/>
+                            <constraint firstItem="21B-Lj-k1w" firstAttribute="top" secondItem="tCe-uP-pbS" secondAttribute="bottom" constant="125" id="wKE-MC-T7l"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="2000" height="1200"/>
+                    <connections>
+                        <outlet property="image" destination="WC1-oq-yrD" id="n6q-kw-aNZ"/>
+                        <outlet property="sideImage1" destination="bhu-Pr-Ery" id="23I-Zf-bi9"/>
+                        <outlet property="sideImage2" destination="sg0-mQ-iya" id="5Ui-BX-F48"/>
+                        <outlet property="sideImage3" destination="ssC-EG-6LE" id="T7q-7X-8ZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dislike.png" width="570" height="597"/>
+        <image name="dress25.jpg" width="399" height="600"/>
+        <image name="like.gif" width="394" height="394"/>
+    </resources>
+</document>
