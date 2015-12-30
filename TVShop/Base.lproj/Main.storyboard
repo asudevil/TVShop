@@ -14,47 +14,24 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="2000" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-ag-nEd" userLabel="Image Stack View">
-                                <rect key="frame" x="551" y="0.0" width="900" height="930"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-oq-yrD">
-                                        <rect key="frame" x="251" y="0.0" width="399" height="930"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="900" id="jOz-Yq-nTq"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="900" id="lMq-RN-wCh"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-al-vP3">
+                                <rect key="frame" x="878" y="1016" width="165" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="930" id="aHE-uD-f3Y"/>
-                                    <constraint firstAttribute="width" constant="900" id="kPh-r9-ahn"/>
+                                    <constraint firstAttribute="height" constant="56" id="Ci8-eH-Yx2"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VQO-SW-eKc" userLabel="Buttom Stack View">
-                                <rect key="frame" x="629" y="1074" width="520" height="86"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-yd-yTi">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="86"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Buy">
-                                            <color key="titleColor" red="0.30784826209999999" green="0.28135239400000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0J-cX-4vq">
-                                        <rect key="frame" x="176" y="0.0" width="164" height="86"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="View"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-7I-sgj">
-                                        <rect key="frame" x="370" y="0.0" width="150" height="86"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Like"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="View"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dress25.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-oq-yrD">
+                                <rect key="frame" x="753" y="20" width="399" height="930"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="970" id="jOz-Yq-nTq"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="650" id="lMq-RN-wCh"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Ar-VC-PwN" userLabel="Left Stack View">
                                 <rect key="frame" x="90" y="40" width="307" height="114"/>
                                 <subviews>
@@ -73,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-uP-pbS" userLabel="Right Stack View">
-                                <rect key="frame" x="1443" y="40" width="400" height="288"/>
+                                <rect key="frame" x="1447" y="75" width="400" height="288"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retail Price:  $189.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-BW-L7I">
                                         <rect key="frame" x="0.0" y="0.0" width="326" height="42"/>
@@ -99,7 +76,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="21B-Lj-k1w" userLabel="Ratings Stack View">
-                                <rect key="frame" x="1443" y="436" width="441" height="43"/>
+                                <rect key="frame" x="1447" y="450" width="441" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHM-EE-vKI">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
@@ -145,8 +122,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-mV-3sT" userLabel="Side Image Stack View">
-                                <rect key="frame" x="143" y="171" width="200" height="740"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-mV-3sT" userLabel="Side Image Stack View">
+                                <rect key="frame" x="120" y="174" width="200" height="740"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress25.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-Pr-Ery">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
@@ -174,22 +151,22 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tCe-uP-pbS" firstAttribute="leading" secondItem="1Gg-ag-nEd" secondAttribute="trailing" constant="50" id="7l7-NQ-Igw"/>
-                            <constraint firstItem="VQO-SW-eKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xk-jp-iNp" userLabel="Button Stack View.centerX = centerX"/>
+                            <constraint firstItem="WC1-oq-yrD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6di-R7-dO6"/>
                             <constraint firstItem="XeR-mV-3sT" firstAttribute="top" secondItem="6Ar-VC-PwN" secondAttribute="bottom" constant="20" id="FON-gJ-d9W"/>
-                            <constraint firstItem="21B-Lj-k1w" firstAttribute="leading" secondItem="1Gg-ag-nEd" secondAttribute="trailing" constant="50" id="K0z-9j-fPX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dDY-al-vP3" secondAttribute="bottom" constant="20" id="G6P-j1-AVz"/>
                             <constraint firstItem="6Ar-VC-PwN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="N7e-4i-q0O"/>
-                            <constraint firstItem="1Gg-ag-nEd" firstAttribute="leading" secondItem="6Ar-VC-PwN" secondAttribute="trailing" constant="100" id="VCW-nn-G35"/>
+                            <constraint firstItem="tCe-uP-pbS" firstAttribute="leading" secondItem="WC1-oq-yrD" secondAttribute="trailing" constant="70" id="XkL-d6-k41"/>
                             <constraint firstItem="6Ar-VC-PwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="a6W-U5-PXX"/>
-                            <constraint firstItem="1Gg-ag-nEd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="drO-g3-mzd"/>
+                            <constraint firstItem="21B-Lj-k1w" firstAttribute="leading" secondItem="WC1-oq-yrD" secondAttribute="trailing" constant="70" id="bFo-lz-oPd"/>
                             <constraint firstItem="XeR-mV-3sT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="eI5-Vi-GtS"/>
                             <constraint firstItem="tCe-uP-pbS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="gm7-Ho-cSN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VQO-SW-eKc" secondAttribute="bottom" constant="40" id="pMa-BR-b3U"/>
+                            <constraint firstItem="WC1-oq-yrD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="j0Z-pw-W7d"/>
                             <constraint firstItem="21B-Lj-k1w" firstAttribute="top" secondItem="tCe-uP-pbS" secondAttribute="bottom" constant="125" id="wKE-MC-T7l"/>
+                            <constraint firstItem="dDY-al-vP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wX1-3a-uFi"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="2000" height="1200"/>
+                    <size key="freeformSize" width="1920" height="1080"/>
                     <connections>
                         <outlet property="image" destination="WC1-oq-yrD" id="n6q-kw-aNZ"/>
                         <outlet property="sideImage1" destination="bhu-Pr-Ery" id="23I-Zf-bi9"/>
@@ -200,6 +177,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="437" y="389"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="dCy-cp-qAW">
+            <objects>
+                <tableViewController id="pS9-zA-LzO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="TxY-ZO-idn">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eVd-xA-4HK">
+                                <rect key="frame" x="0.0" y="199" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVd-xA-4HK" id="WhH-lF-1f7">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pS9-zA-LzO" id="rzM-Cj-cIJ"/>
+                            <outlet property="delegate" destination="pS9-zA-LzO" id="ZWv-XI-w1g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="4mQ-Fv-2Cn"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1920" height="1080"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnN-Gh-HTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502" y="1659"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5lZ-ya-Vo9">
+            <objects>
+                <navigationController id="kX9-4v-Xlr" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1920" height="1080"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xe0-sU-1To">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pS9-zA-LzO" kind="relationship" relationship="rootViewController" id="UIc-4H-4OU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgI-y3-v5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="1659"/>
         </scene>
     </scenes>
     <resources>
