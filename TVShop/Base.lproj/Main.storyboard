@@ -24,6 +24,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="View"/>
+                                <connections>
+                                    <segue destination="GdP-8i-9wB" kind="show" id="287-su-J15"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dress25.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-oq-yrD">
                                 <rect key="frame" x="753" y="20" width="399" height="930"/>
@@ -178,57 +181,153 @@
             </objects>
             <point key="canvasLocation" x="437" y="389"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="dCy-cp-qAW">
+        <!--View Controller-->
+        <scene sceneID="dWf-A7-5A4">
             <objects>
-                <tableViewController id="pS9-zA-LzO" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="TxY-ZO-idn">
+                <viewController id="SRT-HR-lN7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aRC-kQ-0v3"/>
+                        <viewControllerLayoutGuide type="bottom" id="6dr-ZX-bUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Dk-zr-Ms8">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eVd-xA-4HK">
-                                <rect key="frame" x="0.0" y="199" width="1920" height="66"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVd-xA-4HK" id="WhH-lF-1f7">
-                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pS9-zA-LzO" id="rzM-Cj-cIJ"/>
-                            <outlet property="delegate" destination="pS9-zA-LzO" id="ZWv-XI-w1g"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="4mQ-Fv-2Cn"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1920" height="1080"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnN-Gh-HTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dress0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-p9-9uo">
+                                <rect key="frame" x="466" y="32" width="818" height="1028"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anr-h7-zcI">
+                                <rect key="frame" x="126" y="145" width="179" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Buy"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description  This is a beautiful dress made with original hand made Kente Cloth from Ghana west Africa." lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-Xb-7U3">
+                                <rect key="frame" x="1412" y="53" width="491" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="OIR-dl-62x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ALq-ul-LAd" userLabel="Ratings Stack View">
+                                <rect key="frame" x="1412" y="286" width="441" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-2h-VSh">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-IY-v93" userLabel="Like Stack View">
+                                        <rect key="frame" x="120" y="0.0" width="138" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxD-DP-3D6">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-Hc-mQA">
+                                                <rect key="frame" x="86" y="0.0" width="52" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52" id="6t0-Vs-hj7"/>
+                                                    <constraint firstAttribute="height" constant="43" id="96s-L9-EiE"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMJ-t2-vR6" userLabel="Dislike Stack View">
+                                        <rect key="frame" x="278" y="0.0" width="163" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I37-d7-Ebf">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-Hr-Dcc">
+                                                <rect key="frame" x="114" y="0.0" width="49" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="JKw-eZ-bab"/>
+                                                    <constraint firstAttribute="width" constant="49" id="k6E-bB-2xy"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-Ih-KfF">
+                                <rect key="frame" x="1412" y="404" width="389" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Options:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsD-fv-DKZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard 3-5 business days: $9.95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-1O-DSR">
+                                        <rect key="frame" x="0.0" y="37" width="389" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPS 2 day delivery:  $19.95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBM-EE-Am3">
+                                        <rect key="frame" x="0.0" y="67" width="303" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYs-pq-r04">
+                                <rect key="frame" x="126" y="286" width="179" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Video"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeP-TU-N5e">
+                                <rect key="frame" x="126" y="427" width="179" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Like"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ALq-ul-LAd" secondAttribute="trailing" constant="10" id="Jz9-wk-jLn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lk9-Ih-KfF" secondAttribute="trailing" constant="40" id="QEu-02-Aj6"/>
+                            <constraint firstItem="Lk9-Ih-KfF" firstAttribute="top" secondItem="ALq-ul-LAd" secondAttribute="bottom" constant="75" id="hJn-5a-iLG"/>
+                            <constraint firstItem="ALq-ul-LAd" firstAttribute="top" secondItem="FSi-Xb-7U3" secondAttribute="bottom" constant="23" id="pRW-d0-atW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FSi-Xb-7U3" secondAttribute="trailing" constant="-3" id="tqN-61-0Vn"/>
+                            <constraint firstItem="FSi-Xb-7U3" firstAttribute="top" secondItem="9Dk-zr-Ms8" secondAttribute="topMargin" constant="53" id="zBs-Y6-5y9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="50W-RT-Gdg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL7-eh-dgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="1659"/>
+            <point key="canvasLocation" x="2505" y="1656"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="5lZ-ya-Vo9">
+        <scene sceneID="qoy-My-4oT">
             <objects>
-                <navigationController id="kX9-4v-Xlr" sceneMemberID="viewController">
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1920" height="1080"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xe0-sU-1To">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GdP-8i-9wB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbH-es-Rzz">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pS9-zA-LzO" kind="relationship" relationship="rootViewController" id="UIc-4H-4OU"/>
+                        <segue destination="SRT-HR-lN7" kind="relationship" relationship="rootViewController" id="q96-7P-w5V"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sgI-y3-v5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Owx-Bi-Jmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437" y="1659"/>
+            <point key="canvasLocation" x="437" y="1650"/>
         </scene>
     </scenes>
     <resources>
         <image name="dislike.png" width="570" height="597"/>
+        <image name="dress0.jpg" width="3456" height="5184"/>
         <image name="dress25.jpg" width="399" height="600"/>
         <image name="like.gif" width="394" height="394"/>
     </resources>
