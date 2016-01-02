@@ -13,6 +13,14 @@
 		8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */; };
 		8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */; };
 		8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */; };
+		84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */; };
+		84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7521C35C8F300ECFE0B /* MenViewController.swift */; };
+		84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */; };
+		84B6D7571C35D29800ECFE0B /* B&B.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7561C35D29800ECFE0B /* B&B.jpg */; };
+		84B6D7591C35D55300ECFE0B /* Men.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7581C35D55300ECFE0B /* Men.jpg */; };
+		84B6D75D1C3625DB00ECFE0B /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D75C1C3625DB00ECFE0B /* FocusView.swift */; };
+		84B6D75F1C365C6D00ECFE0B /* Shoes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D75E1C365C6D00ECFE0B /* Shoes.jpg */; };
+		84B6D7611C366BEB00ECFE0B /* Skirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7601C366BEB00ECFE0B /* Skirt.jpg */; };
 		84FF89591BFFDE7900FB70D8 /* dress0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF89581BFFDE7900FB70D8 /* dress0.jpg */; };
 		84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895A1BFFDF9900FB70D8 /* dress1.jpg */; };
 		84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895B1BFFDF9900FB70D8 /* dress2.jpg */; };
@@ -57,6 +65,14 @@
 		8423CBA21BFDA3F900AB5E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG1.jpg; sourceTree = "<group>"; };
 		8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG2.jpg; sourceTree = "<group>"; };
+		84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WomenViewController.swift; sourceTree = "<group>"; };
+		84B6D7521C35C8F300ECFE0B /* MenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenViewController.swift; sourceTree = "<group>"; };
+		84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsViewController.swift; sourceTree = "<group>"; };
+		84B6D7561C35D29800ECFE0B /* B&B.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "B&B.jpg"; sourceTree = "<group>"; };
+		84B6D7581C35D55300ECFE0B /* Men.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Men.jpg; sourceTree = "<group>"; };
+		84B6D75C1C3625DB00ECFE0B /* FocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		84B6D75E1C365C6D00ECFE0B /* Shoes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shoes.jpg; sourceTree = "<group>"; };
+		84B6D7601C366BEB00ECFE0B /* Skirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skirt.jpg; sourceTree = "<group>"; };
 		84FF89581BFFDE7900FB70D8 /* dress0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress0.jpg; sourceTree = "<group>"; };
 		84FF895A1BFFDF9900FB70D8 /* dress1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress1.jpg; sourceTree = "<group>"; };
 		84FF895B1BFFDF9900FB70D8 /* dress2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress2.jpg; sourceTree = "<group>"; };
@@ -125,6 +141,10 @@
 				8423CB991BFDA3F900AB5E1E /* AppDelegate.swift */,
 				8423CB9B1BFDA3F900AB5E1E /* ViewController.swift */,
 				8423CB9D1BFDA3F900AB5E1E /* Main.storyboard */,
+				84B6D75C1C3625DB00ECFE0B /* FocusView.swift */,
+				84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */,
+				84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */,
+				84B6D7521C35C8F300ECFE0B /* MenViewController.swift */,
 				84B6D7321C337EE200ECFE0B /* images */,
 				8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */,
 				8423CBA21BFDA3F900AB5E1E /* Info.plist */,
@@ -138,11 +158,13 @@
 				84FF89961BFFEADC00FB70D8 /* like.gif */,
 				84FF89981BFFED1300FB70D8 /* dislike.png */,
 				84FF89581BFFDE7900FB70D8 /* dress0.jpg */,
+				84B6D7601C366BEB00ECFE0B /* Skirt.jpg */,
 				84FF895A1BFFDF9900FB70D8 /* dress1.jpg */,
 				84FF895B1BFFDF9900FB70D8 /* dress2.jpg */,
 				84FF895E1BFFDFB400FB70D8 /* dress3.jpg */,
 				84FF895F1BFFDFB400FB70D8 /* dress4.jpg */,
 				84FF89601BFFDFB400FB70D8 /* dress5.jpg */,
+				84B6D75E1C365C6D00ECFE0B /* Shoes.jpg */,
 				84FF89611BFFDFB400FB70D8 /* dress6.jpg */,
 				84FF89621BFFDFB400FB70D8 /* dress7.jpg */,
 				84FF89631BFFDFB400FB70D8 /* dress8.jpg */,
@@ -150,6 +172,7 @@
 				84FF89651BFFDFB400FB70D8 /* dress10.jpg */,
 				84FF89661BFFDFB400FB70D8 /* dress11.jpg */,
 				84FF89671BFFDFB400FB70D8 /* dress12.jpg */,
+				84B6D7561C35D29800ECFE0B /* B&B.jpg */,
 				84FF89681BFFDFB400FB70D8 /* dress13.jpg */,
 				84FF89691BFFDFB400FB70D8 /* dress14.jpg */,
 				84FF896A1BFFDFB400FB70D8 /* dress15.jpg */,
@@ -166,6 +189,7 @@
 				84FF89751BFFDFB400FB70D8 /* dress26.jpg */,
 				84FF89761BFFDFB400FB70D8 /* dress27.jpg */,
 				84FF89771BFFDFB400FB70D8 /* dress28.jpg */,
+				84B6D7581C35D55300ECFE0B /* Men.jpg */,
 				84FF89781BFFDFB400FB70D8 /* dress29.jpg */,
 				8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */,
 				8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */,
@@ -239,10 +263,12 @@
 				84FF89991BFFED1300FB70D8 /* dislike.png in Resources */,
 				84FF897F1BFFDFB400FB70D8 /* dress8.jpg in Resources */,
 				84FF897E1BFFDFB400FB70D8 /* dress7.jpg in Resources */,
+				84B6D7591C35D55300ECFE0B /* Men.jpg in Resources */,
 				84FF89811BFFDFB400FB70D8 /* dress10.jpg in Resources */,
 				84FF89901BFFDFB400FB70D8 /* dress25.jpg in Resources */,
 				84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */,
 				84FF897A1BFFDFB400FB70D8 /* dress3.jpg in Resources */,
+				84B6D7571C35D29800ECFE0B /* B&B.jpg in Resources */,
 				84FF89941BFFDFB400FB70D8 /* dress29.jpg in Resources */,
 				84FF89891BFFDFB400FB70D8 /* dress18.jpg in Resources */,
 				84FF89911BFFDFB400FB70D8 /* dress26.jpg in Resources */,
@@ -251,12 +277,14 @@
 				8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */,
 				8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */,
 				84FF898C1BFFDFB400FB70D8 /* dress21.jpg in Resources */,
+				84B6D7611C366BEB00ECFE0B /* Skirt.jpg in Resources */,
 				84FF89591BFFDE7900FB70D8 /* dress0.jpg in Resources */,
 				84FF89831BFFDFB400FB70D8 /* dress12.jpg in Resources */,
 				84FF89921BFFDFB400FB70D8 /* dress27.jpg in Resources */,
 				84FF898B1BFFDFB400FB70D8 /* dress20.jpg in Resources */,
 				84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */,
 				84FF89971BFFEADC00FB70D8 /* like.gif in Resources */,
+				84B6D75F1C365C6D00ECFE0B /* Shoes.jpg in Resources */,
 				84FF897B1BFFDFB400FB70D8 /* dress4.jpg in Resources */,
 				84FF89801BFFDFB400FB70D8 /* dress9.jpg in Resources */,
 				84FF89861BFFDFB400FB70D8 /* dress15.jpg in Resources */,
@@ -280,8 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */,
+				84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */,
+				84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */,
 				8423CB9C1BFDA3F900AB5E1E /* ViewController.swift in Sources */,
 				8423CB9A1BFDA3F900AB5E1E /* AppDelegate.swift in Sources */,
+				84B6D75D1C3625DB00ECFE0B /* FocusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

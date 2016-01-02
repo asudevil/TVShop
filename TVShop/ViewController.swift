@@ -14,14 +14,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var sideImage2: UIImageView!
     @IBOutlet weak var sideImage3: UIImageView!
     
+    @IBOutlet var descriptionLabel: UILabel!
 
     @IBOutlet weak var image: UIImageView!
     
     var swipCount = 0
     
+    var clickedSideImage1 = UIImage()
+    var clickedSideImage2 = UIImage()
+    var clickedSideImage3 = UIImage()
+    var clickedImage = UIImage()
+    var clickedDescription = ""
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sideImage1.image = clickedSideImage1
+        sideImage2.image = clickedSideImage2
+        sideImage3.image = clickedSideImage3
+        image.image = clickedImage
+        descriptionLabel.text = clickedDescription
         
         var swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
@@ -54,6 +68,8 @@ class ViewController: UIViewController {
         
         if swipCount > 30 {
             swipCount = 0
+        } else if swipCount < 0 {
+            swipCount = 30
         }
         
         let imageValue = "dress\(swipCount).jpg"

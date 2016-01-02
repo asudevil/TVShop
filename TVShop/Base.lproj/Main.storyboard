@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="X07-Mw-JG2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -171,6 +171,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1920" height="1080"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="RwT-XJ-dLM" id="oDr-NM-RBR"/>
                         <outlet property="image" destination="WC1-oq-yrD" id="n6q-kw-aNZ"/>
                         <outlet property="sideImage1" destination="bhu-Pr-Ery" id="23I-Zf-bi9"/>
                         <outlet property="sideImage2" destination="sg0-mQ-iya" id="5Ui-BX-F48"/>
@@ -324,11 +325,341 @@
             </objects>
             <point key="canvasLocation" x="437" y="1650"/>
         </scene>
+        <!--Women-->
+        <scene sceneID="bwS-KZ-VkK">
+            <objects>
+                <viewController id="RwX-2g-Twj" customClass="WomenViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iG5-IZ-E9R"/>
+                        <viewControllerLayoutGuide type="bottom" id="u62-0d-777"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PgC-nl-fRr">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHOP TV!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-Xm-ZI5" userLabel="Title Label">
+                                <rect key="frame" x="472" y="474" width="572" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-KH-8AH" userLabel="Top Stack View">
+                                <rect key="frame" x="208" y="145" width="1580" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-9h-0yR" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress15.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T67-Lj-IWe">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="B9P-TR-L1b"/>
+                                                    <constraint firstAttribute="height" constant="450" id="IFs-x8-wAq"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="PCO-8b-mi3"/>
+                                            <constraint firstAttribute="width" constant="320" id="fFy-vp-blG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-bP-DR7" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Skirt.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgV-4z-EvX">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="Tbi-Wa-X8D"/>
+                                                    <constraint firstAttribute="height" constant="450" id="qdh-zt-EO3"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="6gd-DV-RH7"/>
+                                            <constraint firstAttribute="width" constant="320" id="hlQ-IZ-VEb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sod-lF-ayn" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLY-lp-Pk3">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="7xV-M8-79o"/>
+                                                    <constraint firstAttribute="width" constant="350" id="rNJ-uq-A2Q"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="42n-Gv-EaN"/>
+                                            <constraint firstAttribute="width" constant="320" id="efI-mZ-zZy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-Md-hzF" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Shoes.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hG-Kh-xru">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="7m2-YJ-f7b"/>
+                                                    <constraint firstAttribute="width" constant="350" id="IcZ-a1-h4x"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="5pf-Sw-FKi"/>
+                                            <constraint firstAttribute="height" constant="430" id="Uda-nt-kIo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-yq-CZd" userLabel="Buttom Stack View">
+                                <rect key="frame" x="170" y="510" width="1580" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFy-Px-XRH" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress18.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-YM-vfu">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="bYL-iY-jTL"/>
+                                                    <constraint firstAttribute="height" constant="450" id="eiK-LG-PEB"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="gr6-XE-vgo"/>
+                                            <constraint firstAttribute="width" constant="320" id="inv-lf-AkZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W6-Wy-fyN" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress23.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hu1-Uh-qbL">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="U6V-mD-wer"/>
+                                                    <constraint firstAttribute="width" constant="350" id="y1Z-mW-A3j"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="Enf-h3-bbj"/>
+                                            <constraint firstAttribute="height" constant="430" id="wzT-Dr-mg3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-Yd-wYb" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress21.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO5-0A-mp8">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="rcb-Qh-gE2"/>
+                                                    <constraint firstAttribute="width" constant="350" id="wkB-gC-A8K"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="1yS-Xt-hTf"/>
+                                            <constraint firstAttribute="height" constant="430" id="4Fg-sR-vf4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJa-uW-cZl" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress28.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-Cb-aNX">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="Y8P-QZ-Ucx"/>
+                                                    <constraint firstAttribute="width" constant="350" id="bp8-Oa-0ix"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="Hff-r2-yTt"/>
+                                            <constraint firstAttribute="width" constant="320" id="KaR-9X-t3c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vJN-Xm-ZI5" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="-70" id="06m-lD-avA"/>
+                            <constraint firstItem="hoz-yq-CZd" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="3sg-Il-m43"/>
+                            <constraint firstItem="ZMF-KH-8AH" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="MPr-8f-FD1"/>
+                            <constraint firstItem="hoz-yq-CZd" firstAttribute="top" secondItem="ZMF-KH-8AH" secondAttribute="bottom" constant="50" id="PCu-KW-6Cf"/>
+                            <constraint firstItem="vJN-Xm-ZI5" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="uUK-sn-dYC"/>
+                            <constraint firstItem="ZMF-KH-8AH" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="30" id="v9o-2V-oj3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Women" image="second" id="qGW-tg-dFj"/>
+                    <connections>
+                        <outlet property="firstImage" destination="T67-Lj-IWe" id="of9-Am-wpk"/>
+                        <outlet property="firstImageView" destination="2hK-9h-0yR" id="1wy-Ic-Ix8"/>
+                        <outlet property="forthImage" destination="2hG-Kh-xru" id="Ox8-8j-a8y"/>
+                        <outlet property="secondImage" destination="pgV-4z-EvX" id="G1Q-tl-f6H"/>
+                        <outlet property="secondImageView" destination="1ny-bP-DR7" id="6aJ-jK-3Uc"/>
+                        <outlet property="thirdImage" destination="qLY-lp-Pk3" id="peD-cM-6Fu"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="catalog" id="frN-sY-DW3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPg-Dv-OTB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1853" y="384"/>
+        </scene>
+        <!--Men View Controller-->
+        <scene sceneID="HHg-H4-k3D">
+            <objects>
+                <viewController title="Men View Controller" id="dVk-mL-61s" customClass="MenViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rOR-dK-HA9"/>
+                        <viewControllerLayoutGuide type="bottom" id="RgD-TH-gvS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="chh-IO-MOM">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Men.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-Do-rE3">
+                                <rect key="frame" x="696" y="161" width="541" height="757"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Men" image="second" id="rLx-wp-zfF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0k-u7-yHB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1897" y="1816"/>
+        </scene>
+        <!--Kids View Controller-->
+        <scene sceneID="P6Q-QG-dZa">
+            <objects>
+                <viewController title="Kids View Controller" id="d3T-gR-gGM" customClass="KidsViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yk9-pg-UEN"/>
+                        <viewControllerLayoutGuide type="bottom" id="0JZ-Ig-6E0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qnF-R2-lbO">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="B&amp;B.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YLi-V3-2jJ">
+                                <rect key="frame" x="737" y="163" width="571" height="765"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="607" id="IYv-Fj-xWX"/>
+                                    <constraint firstAttribute="height" constant="765" id="OJu-Gc-jgB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="571" id="boW-41-Ke7"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zEx-pk-2cg">
+                                <rect key="frame" x="156" y="221" width="277" height="318"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6d-HA-bYl">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Kid Clothes"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-4D-d4K">
+                                        <rect key="frame" x="0.0" y="116" width="277" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Kids Shoes"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIS-5x-sir">
+                                        <rect key="frame" x="0.0" y="232" width="277" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Just Stuff"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YLi-V3-2jJ" firstAttribute="top" secondItem="yk9-pg-UEN" secondAttribute="bottom" constant="60" id="VDc-ns-ck5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YLi-V3-2jJ" secondAttribute="trailing" constant="564" id="Xa9-kH-YNh"/>
+                            <constraint firstItem="zEx-pk-2cg" firstAttribute="leading" secondItem="qnF-R2-lbO" secondAttribute="leadingMargin" constant="136" id="duV-pE-FNR"/>
+                            <constraint firstItem="zEx-pk-2cg" firstAttribute="top" secondItem="yk9-pg-UEN" secondAttribute="bottom" constant="221" id="sV0-eR-eP7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kids" image="second" id="vA8-Yd-pXi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k86-0U-Yz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1899" y="3249"/>
+        </scene>
+        <!--On Sale!!-->
+        <scene sceneID="lPj-3s-ciP">
+            <objects>
+                <viewController id="rDc-Y7-wF1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uKO-Wf-EmL"/>
+                        <viewControllerLayoutGuide type="bottom" id="NKq-xp-iNs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oLv-sI-1AV">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="50% off!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-oE-VxS">
+                                <rect key="frame" x="841" y="452" width="281" height="145"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="7ev-oE-VxS" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="Xe6-n8-mSk"/>
+                            <constraint firstItem="7ev-oE-VxS" firstAttribute="centerY" secondItem="oLv-sI-1AV" secondAttribute="centerY" id="bSG-XG-teQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="On Sale!!" image="second" id="1EY-3h-xQM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fai-fc-gZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1890" y="4661"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yp1-kv-xfU">
+            <objects>
+                <tabBarController id="X07-Mw-JG2" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lBQ-dA-ddg">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RwX-2g-Twj" kind="relationship" relationship="viewControllers" id="t4Q-Wf-X0f"/>
+                        <segue destination="dVk-mL-61s" kind="relationship" relationship="viewControllers" id="Zjm-f3-qvA"/>
+                        <segue destination="d3T-gR-gGM" kind="relationship" relationship="viewControllers" id="1wa-Yy-k9H"/>
+                        <segue destination="rDc-Y7-wF1" kind="relationship" relationship="viewControllers" id="2rA-iZ-hVb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJu-p1-IDy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4067" y="1016"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="B&amp;B.jpg" width="768" height="1024"/>
+        <image name="Men.jpg" width="768" height="1024"/>
+        <image name="Shoes.jpg" width="600" height="450"/>
+        <image name="Skirt.jpg" width="419" height="558"/>
         <image name="dislike.png" width="570" height="597"/>
         <image name="dress0.jpg" width="3456" height="5184"/>
+        <image name="dress15.jpg" width="770" height="1145"/>
+        <image name="dress18.jpg" width="736" height="736"/>
+        <image name="dress2.jpg" width="772" height="1030"/>
+        <image name="dress21.jpg" width="736" height="736"/>
+        <image name="dress23.jpg" width="960" height="960"/>
         <image name="dress25.jpg" width="399" height="600"/>
+        <image name="dress28.jpg" width="736" height="736"/>
         <image name="like.gif" width="394" height="394"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
