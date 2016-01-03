@@ -8,19 +8,105 @@
 
 import UIKit
 
-class MenViewController: UIViewController {
+class MenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let URL_BASE = "file:///Users/admin/Desktop/App%20Development/TVShop/SampleJSON.html"
+    
+    var catalog = [Item]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        downloadData()
+        
+        print("downloadData is running!!")
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func downloadData() {
+        
+        //NOTE: All this should be in a seperate class for download manager
+        
+        let url = NSURL(string: URL_BASE)!
+        let request = NSURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request){ (data, request, error) -> Void in
+            
+            print("data loaded \(data)")
+            
+            if error != nil {
+                print(error.debugDescription)
+            } else {
+                
+                do {
+                    
+                    print("do the do")
+                    
+                    let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
+                    
+            print("dict is: \(dict)")
+                    
+                    if let results = dict!["results"] as? [Dictionary<String, AnyObject>]{
+            
+                        for obj in results {
+                            let item = Item(itemDict: obj)
+                            self.catalog.append(item)
+                            
+                        }
+                        
+                        //Main UI thread
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.collectionView.reloadData()
+                        }
+                    }
+                    
+                } catch {
+                    
+                }
+            }
+            
+        }
+        
+        task.resume()
+        
     }
     
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
+            
+            let item = catalog[indexPath.row]
+            cell.configureCell(item)
+            
+            return cell
+            
+        } else {
+            
+            return CatalogCell()
+        }
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return catalog.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSizeMake(450, 541)
+        
+    }
 
     /*
     // MARK: - Navigation

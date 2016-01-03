@@ -527,13 +527,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Men.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-Do-rE3">
-                                <rect key="frame" x="696" y="161" width="541" height="757"/>
-                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-Hl-S6f">
+                                <rect key="frame" x="0.0" y="0.0" width="1900" height="1000"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LA5-dh-0nE">
+                                    <size key="itemSize" width="450" height="541"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatalogCell" id="qa8-hu-bee" customClass="CatalogCell" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="541"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="541"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Men.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-Do-rE3">
+                                                    <rect key="frame" x="56" y="24" width="338" height="450"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="450" id="zqW-th-mdM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coats and Jackets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-HL-m4b">
+                                                    <rect key="frame" x="56" y="493" width="338" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="YuG-bi-8bN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="AWr-Do-rE3" secondAttribute="trailing" constant="48" id="Txe-5N-jDJ"/>
+                                            <constraint firstItem="0ef-HL-m4b" firstAttribute="leading" secondItem="qa8-hu-bee" secondAttribute="leadingMargin" constant="48" id="Xor-rD-abQ"/>
+                                            <constraint firstItem="AWr-Do-rE3" firstAttribute="top" secondItem="qa8-hu-bee" secondAttribute="topMargin" constant="16" id="fE7-IK-T3u"/>
+                                            <constraint firstItem="0ef-HL-m4b" firstAttribute="top" secondItem="AWr-Do-rE3" secondAttribute="bottom" constant="19" id="oSE-vc-5It"/>
+                                            <constraint firstItem="AWr-Do-rE3" firstAttribute="leading" secondItem="qa8-hu-bee" secondAttribute="leadingMargin" constant="48" id="sH2-v7-Jzo"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="0ef-HL-m4b" secondAttribute="trailing" constant="48" id="yI4-fI-28K"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImg" destination="AWr-Do-rE3" id="PhD-h0-AJA"/>
+                                            <outlet property="itemLbl" destination="0ef-HL-m4b" id="S08-h7-jVb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kUD-Hl-S6f" secondAttribute="trailing" id="Eyv-iG-Bth"/>
+                            <constraint firstItem="RgD-TH-gvS" firstAttribute="top" secondItem="kUD-Hl-S6f" secondAttribute="bottom" id="TCA-SX-JNH"/>
+                            <constraint firstItem="kUD-Hl-S6f" firstAttribute="leading" secondItem="chh-IO-MOM" secondAttribute="leadingMargin" id="ldZ-BH-B4X"/>
+                            <constraint firstItem="kUD-Hl-S6f" firstAttribute="top" secondItem="rOR-dK-HA9" secondAttribute="bottom" id="sFo-Uf-dru"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Men" image="second" id="rLx-wp-zfF"/>
+                    <connections>
+                        <outlet property="collectionView" destination="kUD-Hl-S6f" id="oIh-Pb-bPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0k-u7-yHB" sceneMemberID="firstResponder"/>
             </objects>
