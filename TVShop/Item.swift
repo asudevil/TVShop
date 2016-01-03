@@ -10,7 +10,7 @@ import Foundation
 
 class Item {
     
-    let URL_BASE = "dress"
+    let URL_BASE = "men"
 
     var title: String!
     var itemDescription: String!

@@ -23,6 +23,17 @@
 		84B6D7611C366BEB00ECFE0B /* Skirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7601C366BEB00ECFE0B /* Skirt.jpg */; };
 		84B6D7631C38794C00ECFE0B /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7621C38794C00ECFE0B /* CatalogCell.swift */; };
 		84B6D7651C38A54B00ECFE0B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7641C38A54B00ECFE0B /* Item.swift */; };
+		84B6D7711C39184E00ECFE0B /* men1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7661C39184E00ECFE0B /* men1.jpg */; };
+		84B6D7721C39184E00ECFE0B /* men2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7671C39184E00ECFE0B /* men2.jpg */; };
+		84B6D7731C39184E00ECFE0B /* men3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7681C39184E00ECFE0B /* men3.jpg */; };
+		84B6D7741C39184E00ECFE0B /* men4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7691C39184E00ECFE0B /* men4.jpg */; };
+		84B6D7751C39184E00ECFE0B /* men5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D76A1C39184E00ECFE0B /* men5.jpg */; };
+		84B6D7761C39184E00ECFE0B /* men6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D76B1C39184E00ECFE0B /* men6.jpg */; };
+		84B6D7771C39184E00ECFE0B /* men7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D76C1C39184E00ECFE0B /* men7.jpg */; };
+		84B6D7781C39184E00ECFE0B /* men8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D76D1C39184E00ECFE0B /* men8.jpg */; };
+		84B6D7791C39184E00ECFE0B /* men9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D76E1C39184E00ECFE0B /* men9.jpg */; };
+		84B6D77B1C39184E00ECFE0B /* men11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7701C39184E00ECFE0B /* men11.jpg */; };
+		84B6D77D1C391A8C00ECFE0B /* men10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D77C1C391A8C00ECFE0B /* men10.jpg */; };
 		84FF89591BFFDE7900FB70D8 /* dress0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF89581BFFDE7900FB70D8 /* dress0.jpg */; };
 		84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895A1BFFDF9900FB70D8 /* dress1.jpg */; };
 		84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895B1BFFDF9900FB70D8 /* dress2.jpg */; };
@@ -77,6 +88,17 @@
 		84B6D7601C366BEB00ECFE0B /* Skirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skirt.jpg; sourceTree = "<group>"; };
 		84B6D7621C38794C00ECFE0B /* CatalogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		84B6D7641C38A54B00ECFE0B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		84B6D7661C39184E00ECFE0B /* men1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men1.jpg; sourceTree = "<group>"; };
+		84B6D7671C39184E00ECFE0B /* men2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men2.jpg; sourceTree = "<group>"; };
+		84B6D7681C39184E00ECFE0B /* men3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men3.jpg; sourceTree = "<group>"; };
+		84B6D7691C39184E00ECFE0B /* men4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men4.jpg; sourceTree = "<group>"; };
+		84B6D76A1C39184E00ECFE0B /* men5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men5.jpg; sourceTree = "<group>"; };
+		84B6D76B1C39184E00ECFE0B /* men6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men6.jpg; sourceTree = "<group>"; };
+		84B6D76C1C39184E00ECFE0B /* men7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men7.jpg; sourceTree = "<group>"; };
+		84B6D76D1C39184E00ECFE0B /* men8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men8.jpg; sourceTree = "<group>"; };
+		84B6D76E1C39184E00ECFE0B /* men9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men9.jpg; sourceTree = "<group>"; };
+		84B6D7701C39184E00ECFE0B /* men11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men11.jpg; sourceTree = "<group>"; };
+		84B6D77C1C391A8C00ECFE0B /* men10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = men10.jpg; sourceTree = "<group>"; };
 		84FF89581BFFDE7900FB70D8 /* dress0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress0.jpg; sourceTree = "<group>"; };
 		84FF895A1BFFDF9900FB70D8 /* dress1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress1.jpg; sourceTree = "<group>"; };
 		84FF895B1BFFDF9900FB70D8 /* dress2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress2.jpg; sourceTree = "<group>"; };
@@ -175,6 +197,17 @@
 				84FF89621BFFDFB400FB70D8 /* dress7.jpg */,
 				84FF89631BFFDFB400FB70D8 /* dress8.jpg */,
 				84FF89641BFFDFB400FB70D8 /* dress9.jpg */,
+				84B6D7661C39184E00ECFE0B /* men1.jpg */,
+				84B6D7671C39184E00ECFE0B /* men2.jpg */,
+				84B6D7681C39184E00ECFE0B /* men3.jpg */,
+				84B6D7691C39184E00ECFE0B /* men4.jpg */,
+				84B6D76A1C39184E00ECFE0B /* men5.jpg */,
+				84B6D76B1C39184E00ECFE0B /* men6.jpg */,
+				84B6D76C1C39184E00ECFE0B /* men7.jpg */,
+				84B6D76D1C39184E00ECFE0B /* men8.jpg */,
+				84B6D76E1C39184E00ECFE0B /* men9.jpg */,
+				84B6D7701C39184E00ECFE0B /* men11.jpg */,
+				84B6D77C1C391A8C00ECFE0B /* men10.jpg */,
 				84FF89651BFFDFB400FB70D8 /* dress10.jpg */,
 				84FF89661BFFDFB400FB70D8 /* dress11.jpg */,
 				84FF89671BFFDFB400FB70D8 /* dress12.jpg */,
@@ -275,8 +308,10 @@
 				84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */,
 				84FF897A1BFFDFB400FB70D8 /* dress3.jpg in Resources */,
 				84B6D7571C35D29800ECFE0B /* B&B.jpg in Resources */,
+				84B6D7781C39184E00ECFE0B /* men8.jpg in Resources */,
 				84FF89941BFFDFB400FB70D8 /* dress29.jpg in Resources */,
 				84FF89891BFFDFB400FB70D8 /* dress18.jpg in Resources */,
+				84B6D7721C39184E00ECFE0B /* men2.jpg in Resources */,
 				84FF89911BFFDFB400FB70D8 /* dress26.jpg in Resources */,
 				84FF89851BFFDFB400FB70D8 /* dress14.jpg in Resources */,
 				84FF89821BFFDFB400FB70D8 /* dress11.jpg in Resources */,
@@ -284,16 +319,22 @@
 				8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */,
 				84FF898C1BFFDFB400FB70D8 /* dress21.jpg in Resources */,
 				84B6D7611C366BEB00ECFE0B /* Skirt.jpg in Resources */,
+				84B6D7751C39184E00ECFE0B /* men5.jpg in Resources */,
 				84FF89591BFFDE7900FB70D8 /* dress0.jpg in Resources */,
+				84B6D77D1C391A8C00ECFE0B /* men10.jpg in Resources */,
 				84FF89831BFFDFB400FB70D8 /* dress12.jpg in Resources */,
 				84FF89921BFFDFB400FB70D8 /* dress27.jpg in Resources */,
 				84FF898B1BFFDFB400FB70D8 /* dress20.jpg in Resources */,
 				84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */,
 				84FF89971BFFEADC00FB70D8 /* like.gif in Resources */,
+				84B6D77B1C39184E00ECFE0B /* men11.jpg in Resources */,
 				84B6D75F1C365C6D00ECFE0B /* Shoes.jpg in Resources */,
 				84FF897B1BFFDFB400FB70D8 /* dress4.jpg in Resources */,
+				84B6D7731C39184E00ECFE0B /* men3.jpg in Resources */,
+				84B6D7741C39184E00ECFE0B /* men4.jpg in Resources */,
 				84FF89801BFFDFB400FB70D8 /* dress9.jpg in Resources */,
 				84FF89861BFFDFB400FB70D8 /* dress15.jpg in Resources */,
+				84B6D7791C39184E00ECFE0B /* men9.jpg in Resources */,
 				84FF898A1BFFDFB400FB70D8 /* dress19.jpg in Resources */,
 				84FF89951BFFDFB400FB70D8 /* dress30.jpg in Resources */,
 				84FF897C1BFFDFB400FB70D8 /* dress5.jpg in Resources */,
@@ -302,7 +343,10 @@
 				84FF89841BFFDFB400FB70D8 /* dress13.jpg in Resources */,
 				84FF89881BFFDFB400FB70D8 /* dress17.jpg in Resources */,
 				8423CB9F1BFDA3F900AB5E1E /* Main.storyboard in Resources */,
+				84B6D7761C39184E00ECFE0B /* men6.jpg in Resources */,
 				84FF89871BFFDFB400FB70D8 /* dress16.jpg in Resources */,
+				84B6D7711C39184E00ECFE0B /* men1.jpg in Resources */,
+				84B6D7771C39184E00ECFE0B /* men7.jpg in Resources */,
 				84FF898D1BFFDFB400FB70D8 /* dress22.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,14 +31,12 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
     func downloadData() {
         
-        //NOTE: All this should be in a seperate class for download manager
+        //NOTE: All this should be in a seperate class for download manager class
         
         let url = NSURL(string: URL_BASE)!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request){ (data, request, error) -> Void in
-            
-            print("data loaded \(data)")
             
             if error != nil {
                 print(error.debugDescription)
@@ -46,11 +44,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
                 
                 do {
                     
-                    print("do the do")
-                    
                     let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
-                    
-            print("dict is: \(dict)")
                     
                     if let results = dict!["results"] as? [Dictionary<String, AnyObject>]{
             
@@ -72,7 +66,6 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             }
             
         }
-        
         task.resume()
         
     }
