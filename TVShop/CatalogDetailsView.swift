@@ -1,23 +1,25 @@
 //
-//  MenViewController.swift
+//  CatalogDetailsView.swift
 //  TVShop
 //
-//  Created by admin on 12/31/15.
-//  Copyright © 2015 CodeWithFelix. All rights reserved.
+//  Created by admin on 1/3/16.
+//  Copyright © 2016 CodeWithFelix. All rights reserved.
 //
 
 import UIKit
 
-class MenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     var clickedCell = CatalogCell()
     
-    let URL_BASE = "https://s3.amazonaws.com/spicysuya/MenJSON"
+    var catagory = ""
+    
+    var URL_BASE = "https://s3.amazonaws.com/spicysuya/KidsJSON"
     
     var catalog = [Item]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,9 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         collectionView.dataSource = self
         
         downloadData()
-
+        
+        print("downloadData is running!!")
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,17 +51,19 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
                     let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
                     
                     if let results = dict!["results"] as? [Dictionary<String, AnyObject>]{
-            
-                        for obj in results {
-                            let item = Item(itemDict: obj, type: "men")
-                            self.catalog.append(item)
-                            
-                        }
                         
-                        //Main UI thread
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.collectionView.reloadData()
-                        }
+                            for obj in results {
+                                
+                                let item = Item(itemDict: obj, type: self.catagory)
+                                self.catalog.append(item)
+                                
+                            }
+                            
+                            //Main UI thread
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.collectionView.reloadData()
+                            }
+                        
                     }
                     
                 } catch {
@@ -78,13 +84,11 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             let item = catalog[indexPath.row]
             cell.configureCell(item)
             
-            
             if cell.gestureRecognizers?.count == nil {
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
             }
-            
             
             return cell
             
@@ -101,12 +105,14 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             
             clickedCell = cell
             
-            print("You tapped on a men catalog")
+            print("You tapped on an item in the kids catalog")
             
-            performSegueWithIdentifier("catalogDetails", sender: self)
+ //           performSegueWithIdentifier("showCatalog", sender: self)
             
         }
     }
+    
+    
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -120,24 +126,27 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(450, 541)
+        return CGSizeMake(630, 850)
         
     }
-
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
+//        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
+//        
+//        if let title = clickedCell.itemLbl.text {
+//            catalogDetails.setCatagory = title
+//            
+//        }
+//        
+//        if let image = clickedCell.itemImg.image {
+//            catalogDetails.setImage = image
+//            
+//        }
         
-        if let title = clickedCell.itemLbl.text {
-
-            if title == "Jackets" {
-                
-                catalogDetails.URL_BASE = "https://s3.amazonaws.com/spicysuya/menJacketJSON"
-                catalogDetails.catagory = "Jacket"
-            }
-        }
     }
-
+    
+    
 
 }

@@ -45,7 +45,7 @@ class WomenViewController: UIViewController {
             
            tappedImage = clickedImage
             
-            print("You tapped on movie")
+            print("You tapped on an item")
             
             performSegueWithIdentifier("catalog", sender: self)
             

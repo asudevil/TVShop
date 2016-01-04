@@ -37,11 +37,11 @@ class ViewController: UIViewController {
         image.image = clickedImage
         descriptionLabel.text = clickedDescription
         
-        var swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
         
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
         
