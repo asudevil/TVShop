@@ -20,8 +20,8 @@ class Item {
             self.title = title
         }
         
-        if let description = itemDict["description"] as? String {
-            self.itemDescription = description
+        if let descriptionOutput = itemDict["description"] as? String {
+            self.itemDescription = descriptionOutput
         }
         
         if let imageCount = itemDict["image_path"] as? String {

@@ -16,7 +16,7 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
     
     var catagory = ""
     
-    var URL_BASE = "https://s3.amazonaws.com/spicysuya/KidsJSON"
+    var URL_BASE = ""
     
     var catalog = [Item]()
     
@@ -107,7 +107,7 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
             
             print("You tapped on an item in the kids catalog")
             
- //           performSegueWithIdentifier("showCatalog", sender: self)
+            performSegueWithIdentifier("itemDetails", sender: self)
             
         }
     }
@@ -126,27 +126,32 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(630, 850)
+        return CGSizeMake(630, 830)
         
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-//        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
-//        
-//        if let title = clickedCell.itemLbl.text {
-//            catalogDetails.setCatagory = title
-//            
-//        }
-//        
-//        if let image = clickedCell.itemImg.image {
-//            catalogDetails.setImage = image
-//            
-//        }
+        let itemDetails = segue.destinationViewController as! ItemDetailsView
+        
+        
+        if let title = clickedCell.itemLbl.text {
+            itemDetails.clickedItemTitle = title
+            
+        }
+        
+        if let image = clickedCell.itemImg.image {
+            itemDetails.clickedImage = image
+            itemDetails.clickedSideImage1 = image
+            itemDetails.clickedSideImage2 = image
+            itemDetails.clickedSideImage3 = image
+        }
+        
+        itemDetails.clickedItemDescription = clickedCell.itemDescript
+        
+        print(clickedCell.itemDescript)
         
     }
     
-    
-
 }

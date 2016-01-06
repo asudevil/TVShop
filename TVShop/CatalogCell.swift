@@ -12,6 +12,8 @@ class CatalogCell: UICollectionViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemLbl: UILabel!
     
+    var itemDescript = ""
+    
     func configureCell(item: Item) {
 
         if let title = item.title {
@@ -20,6 +22,10 @@ class CatalogCell: UICollectionViewCell {
         
         if let image = item.itemImagePath {
             itemImg.image = UIImage(named: image)
+        }
+        
+        if let itemText = item.itemDescription {
+            itemDescript = itemText
         }
         
         
