@@ -13,6 +13,7 @@ class Item {
     var title: String!
     var itemDescription: String!
     var itemImagePath: String!
+    var sideImagePath: String!
     
     init(itemDict: [String: AnyObject], type: String) {
         
@@ -29,6 +30,11 @@ class Item {
             self.itemImagePath = "\(type)\(imageCount).jpg"
 
         }
+        
+//testing concept
+        let sideImageCount = "5"
+        self.sideImagePath = "\(type)\(sideImageCount).jpg"
+
     }
     
 

@@ -10,6 +10,10 @@ import UIKit
 
 class ItemDetailsView: UIViewController {
     
+    @IBOutlet var sideImage1View: FocusView!
+    @IBOutlet var sideImage2View: FocusView!
+    @IBOutlet var sideImage3View: FocusView!
+    
     @IBOutlet var image: UIImageView!
     @IBOutlet var sideImage1: UIImageView!
     @IBOutlet var sideImage2: UIImageView!
@@ -36,7 +40,25 @@ class ItemDetailsView: UIViewController {
         itemTitle.text = clickedItemTitle
 //        brand.text = clickedBrand
         itemDescription.text = clickedItemDescription
+        
 
+
+    }
+    
+    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
+        
+        if sideImage1View.focused == true {
+            image.image = clickedSideImage1
+        }
+        
+        if sideImage2View.focused == true {
+            image.image = clickedSideImage2
+        }
+        
+        if sideImage3View.focused == true {
+            image.image = clickedSideImage3
+        }
     }
 
     /*

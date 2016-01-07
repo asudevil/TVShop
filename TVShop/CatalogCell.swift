@@ -14,6 +14,8 @@ class CatalogCell: UICollectionViewCell {
     
     var itemDescript = ""
     
+    var setSideImage = UIImage()
+    
     func configureCell(item: Item) {
 
         if let title = item.title {
@@ -24,9 +26,19 @@ class CatalogCell: UICollectionViewCell {
             itemImg.image = UIImage(named: image)
         }
         
+        if let sideImage = item.sideImagePath {
+            if let theImage = UIImage(named: sideImage) {
+                setSideImage = theImage
+                
+            }
+            
+        }
+        
         if let itemText = item.itemDescription {
             itemDescript = itemText
         }
+        
+        
         
         
 //        if let imagePath = item.itemImagePath {

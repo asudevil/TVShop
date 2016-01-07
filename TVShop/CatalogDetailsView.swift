@@ -144,9 +144,14 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
         if let image = clickedCell.itemImg.image {
             itemDetails.clickedImage = image
             itemDetails.clickedSideImage1 = image
-            itemDetails.clickedSideImage2 = image
+ //           itemDetails.clickedSideImage2 = image  // testing out side image
             itemDetails.clickedSideImage3 = image
         }
+
+        
+   // testing side image
+        itemDetails.clickedSideImage2 = clickedCell.setSideImage
+        
         
         itemDetails.clickedItemDescription = clickedCell.itemDescript
         
