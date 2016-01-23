@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6697698999FAA4411FE4D5A1 /* Pods_TVShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AF676246CE887C195EFDC8 /* Pods_TVShop.framework */; };
 		8423CB9A1BFDA3F900AB5E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CB991BFDA3F900AB5E1E /* AppDelegate.swift */; };
 		8423CB9C1BFDA3F900AB5E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CB9B1BFDA3F900AB5E1E /* ViewController.swift */; };
 		8423CB9F1BFDA3F900AB5E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423CB9D1BFDA3F900AB5E1E /* Main.storyboard */; };
 		8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */; };
 		8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */; };
 		8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */; };
+		84AF4F1F1C54145B00617BFF /* AmazonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F1E1C54145B00617BFF /* AmazonData.swift */; };
+		84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */; };
+		84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F231C541EDA00617BFF /* amazon_logo.jpg */; };
+		84AF4F261C541FCC00617BFF /* AmazonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F251C541FCC00617BFF /* AmazonViewController.swift */; };
 		84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */; };
 		84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7521C35C8F300ECFE0B /* MenViewController.swift */; };
 		84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */; };
@@ -105,6 +110,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		756EBA0A25A2BB50600E02B4 /* Pods-TVShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShop/Pods-TVShop.debug.xcconfig"; sourceTree = "<group>"; };
 		8423CB961BFDA3F900AB5E1E /* TVShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8423CB991BFDA3F900AB5E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8423CB9B1BFDA3F900AB5E1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -113,6 +119,11 @@
 		8423CBA21BFDA3F900AB5E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG1.jpg; sourceTree = "<group>"; };
 		8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG2.jpg; sourceTree = "<group>"; };
+		84AF4F1E1C54145B00617BFF /* AmazonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonData.swift; sourceTree = "<group>"; };
+		84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amazon-Bridging-Header.h"; sourceTree = "<group>"; };
+		84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACAlgorithm.swift; sourceTree = "<group>"; };
+		84AF4F231C541EDA00617BFF /* amazon_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amazon_logo.jpg; sourceTree = "<group>"; };
+		84AF4F251C541FCC00617BFF /* AmazonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonViewController.swift; sourceTree = "<group>"; };
 		84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WomenViewController.swift; sourceTree = "<group>"; };
 		84B6D7521C35C8F300ECFE0B /* MenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenViewController.swift; sourceTree = "<group>"; };
 		84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +213,8 @@
 		84FF89791BFFDFB400FB70D8 /* dress30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress30.jpg; sourceTree = "<group>"; };
 		84FF89961BFFEADC00FB70D8 /* like.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = like.gif; sourceTree = "<group>"; };
 		84FF89981BFFED1300FB70D8 /* dislike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dislike.png; sourceTree = "<group>"; };
+		A26EF5A70E7D815149E43F11 /* Pods-TVShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVShop/Pods-TVShop.release.xcconfig"; sourceTree = "<group>"; };
+		E3AF676246CE887C195EFDC8 /* Pods_TVShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,17 +222,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6697698999FAA4411FE4D5A1 /* Pods_TVShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374253380211747776AE678B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				756EBA0A25A2BB50600E02B4 /* Pods-TVShop.debug.xcconfig */,
+				A26EF5A70E7D815149E43F11 /* Pods-TVShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8423CB8D1BFDA3F900AB5E1E = {
 			isa = PBXGroup;
 			children = (
 				8423CB981BFDA3F900AB5E1E /* TVShop */,
 				8423CB971BFDA3F900AB5E1E /* Products */,
+				374253380211747776AE678B /* Pods */,
+				8A2B93DD4316A128CAD74C1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +259,10 @@
 		8423CB981BFDA3F900AB5E1E /* TVShop */ = {
 			isa = PBXGroup;
 			children = (
+				84AF4F1E1C54145B00617BFF /* AmazonData.swift */,
+				84AF4F251C541FCC00617BFF /* AmazonViewController.swift */,
+				84B6D7521C35C8F300ECFE0B /* MenViewController.swift */,
+				84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */,
 				8423CB991BFDA3F900AB5E1E /* AppDelegate.swift */,
 				8423CB9B1BFDA3F900AB5E1E /* ViewController.swift */,
 				84B6D7DA1C3CD24100ECFE0B /* ItemDetailsView.swift */,
@@ -242,12 +271,12 @@
 				84B6D75C1C3625DB00ECFE0B /* FocusView.swift */,
 				84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */,
 				84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */,
-				84B6D7521C35C8F300ECFE0B /* MenViewController.swift */,
 				84B6D7641C38A54B00ECFE0B /* Item.swift */,
 				84B6D7961C39C3B600ECFE0B /* CatalogDetailsView.swift */,
 				84B6D7321C337EE200ECFE0B /* images */,
 				8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */,
 				8423CBA21BFDA3F900AB5E1E /* Info.plist */,
+				84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */,
 			);
 			path = TVShop;
 			sourceTree = "<group>";
@@ -255,6 +284,7 @@
 		84B6D7321C337EE200ECFE0B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				84AF4F231C541EDA00617BFF /* amazon_logo.jpg */,
 				84FF89961BFFEADC00FB70D8 /* like.gif */,
 				84B6D77E1C39B9D400ECFE0B /* kids1.jpg */,
 				84B6D77F1C39B9D400ECFE0B /* kids2.jpg */,
@@ -342,6 +372,14 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		8A2B93DD4316A128CAD74C1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3AF676246CE887C195EFDC8 /* Pods_TVShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,9 +387,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8423CBA51BFDA3F900AB5E1E /* Build configuration list for PBXNativeTarget "TVShop" */;
 			buildPhases = (
+				BC599EBC37C5A87DBBA22AAF /* Check Pods Manifest.lock */,
 				8423CB921BFDA3F900AB5E1E /* Sources */,
 				8423CB931BFDA3F900AB5E1E /* Frameworks */,
 				8423CB941BFDA3F900AB5E1E /* Resources */,
+				1494E5CB6AF135677D1FA3B2 /* Embed Pods Frameworks */,
+				105A14995FA966AB1E11C9BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -421,6 +462,7 @@
 				84B6D7D11C3A234F00ECFE0B /* Jacket3.jpg in Resources */,
 				84FF89891BFFDFB400FB70D8 /* dress18.jpg in Resources */,
 				84B6D7721C39184E00ECFE0B /* men2.jpg in Resources */,
+				84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */,
 				84FF89911BFFDFB400FB70D8 /* dress26.jpg in Resources */,
 				84FF89851BFFDFB400FB70D8 /* dress14.jpg in Resources */,
 				84FF89821BFFDFB400FB70D8 /* dress11.jpg in Resources */,
@@ -491,20 +533,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		105A14995FA966AB1E11C9BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShop/Pods-TVShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1494E5CB6AF135677D1FA3B2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShop/Pods-TVShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC599EBC37C5A87DBBA22AAF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8423CB921BFDA3F900AB5E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84B6D7971C39C3B600ECFE0B /* CatalogDetailsView.swift in Sources */,
+				84AF4F261C541FCC00617BFF /* AmazonViewController.swift in Sources */,
 				84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */,
 				84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */,
 				84B6D7631C38794C00ECFE0B /* CatalogCell.swift in Sources */,
 				84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */,
 				84B6D7651C38A54B00ECFE0B /* Item.swift in Sources */,
 				8423CB9C1BFDA3F900AB5E1E /* ViewController.swift in Sources */,
+				84AF4F1F1C54145B00617BFF /* AmazonData.swift in Sources */,
 				8423CB9A1BFDA3F900AB5E1E /* AppDelegate.swift in Sources */,
 				84B6D7DB1C3CD24100ECFE0B /* ItemDetailsView.swift in Sources */,
+				84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */,
 				84B6D75D1C3625DB00ECFE0B /* FocusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +699,7 @@
 		};
 		8423CBA61BFDA3F900AB5E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756EBA0A25A2BB50600E02B4 /* Pods-TVShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -616,11 +710,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithfelix.TVShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TVShop/Amazon-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		8423CBA71BFDA3F900AB5E1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A26EF5A70E7D815149E43F11 /* Pods-TVShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -631,6 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithfelix.TVShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TVShop/Amazon-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1036,11 +1036,91 @@
                         <segue destination="dVk-mL-61s" kind="relationship" relationship="viewControllers" id="Zjm-f3-qvA"/>
                         <segue destination="d3T-gR-gGM" kind="relationship" relationship="viewControllers" id="1wa-Yy-k9H"/>
                         <segue destination="rDc-Y7-wF1" kind="relationship" relationship="viewControllers" id="2rA-iZ-hVb"/>
+                        <segue destination="Mkt-rs-qaX" kind="relationship" relationship="viewControllers" id="XX1-OL-IjB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJu-p1-IDy" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4067" y="1016"/>
+        </scene>
+        <!--Amazon View Controller-->
+        <scene sceneID="u2r-E8-1tM">
+            <objects>
+                <viewController title="Men View Controller" id="Mkt-rs-qaX" userLabel="Amazon View Controller" customClass="AmazonViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XSd-pA-lYi"/>
+                        <viewControllerLayoutGuide type="bottom" id="tQb-ge-vDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="607-To-MkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-YF-gTE">
+                                <rect key="frame" x="0.0" y="0.0" width="1900" height="1000"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E7d-8m-nKq">
+                                    <size key="itemSize" width="450" height="541"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatalogCell" id="kKk-JM-Ezf" customClass="CatalogCell" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="541"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="541"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amazon_logo.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPz-As-uM3">
+                                                    <rect key="frame" x="56" y="24" width="338" height="450"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="450" id="m8f-2A-r4L"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coats and Jackets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bev-5h-1VE">
+                                                    <rect key="frame" x="56" y="493" width="338" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="NHK-7d-PbR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="bev-5h-1VE" firstAttribute="leading" secondItem="kKk-JM-Ezf" secondAttribute="leadingMargin" constant="48" id="0uC-td-fJ7"/>
+                                            <constraint firstItem="NPz-As-uM3" firstAttribute="leading" secondItem="kKk-JM-Ezf" secondAttribute="leadingMargin" constant="48" id="IOC-q4-NSr"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="NPz-As-uM3" secondAttribute="trailing" constant="48" id="Q3t-9h-Guk"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bev-5h-1VE" secondAttribute="trailing" constant="48" id="iiX-6I-WdE"/>
+                                            <constraint firstItem="bev-5h-1VE" firstAttribute="top" secondItem="NPz-As-uM3" secondAttribute="bottom" constant="19" id="mui-17-0ZE"/>
+                                            <constraint firstItem="NPz-As-uM3" firstAttribute="top" secondItem="kKk-JM-Ezf" secondAttribute="topMargin" constant="16" id="tac-hB-twx"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImg" destination="NPz-As-uM3" id="KDY-J4-MaW"/>
+                                            <outlet property="itemLbl" destination="bev-5h-1VE" id="e3C-yM-2eM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tQb-ge-vDT" firstAttribute="top" secondItem="cjb-YF-gTE" secondAttribute="bottom" id="YxK-DW-JBO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cjb-YF-gTE" secondAttribute="trailing" id="cNr-0s-ltC"/>
+                            <constraint firstItem="cjb-YF-gTE" firstAttribute="top" secondItem="XSd-pA-lYi" secondAttribute="bottom" id="cmc-0m-lEe"/>
+                            <constraint firstItem="cjb-YF-gTE" firstAttribute="leading" secondItem="607-To-MkZ" secondAttribute="leadingMargin" id="fCT-1r-Sdm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Amazon" image="second" id="jJe-Vl-Hpj" userLabel="Amazon"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cjb-YF-gTE" id="k3v-Na-6sA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VkG-po-cJt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1827" y="-907"/>
         </scene>
     </scenes>
     <resources>
@@ -1048,6 +1128,7 @@
         <image name="Men.jpg" width="768" height="1024"/>
         <image name="Shoes.jpg" width="600" height="450"/>
         <image name="Skirt.jpg" width="419" height="558"/>
+        <image name="amazon_logo.jpg" width="1250" height="458"/>
         <image name="dislike.png" width="570" height="597"/>
         <image name="dress0.jpg" width="3456" height="5184"/>
         <image name="dress15.jpg" width="770" height="1145"/>

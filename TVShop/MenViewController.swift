@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SWXMLHash
 
 class MenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
