@@ -37,7 +37,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request){ (data, request, error) -> Void in
-            
+    
             if error != nil {
                 print(error.debugDescription)
             } else {
