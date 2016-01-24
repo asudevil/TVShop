@@ -77,20 +77,20 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath1: NSIndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
+        if let cell1 = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath1) as? CatalogCell {
             
-            let item = catalog[indexPath.row]
-            cell.configureCell(item)
+            let item = catalog[indexPath1.row]
+            cell1.configureCell(item)
             
-            if cell.gestureRecognizers?.count == nil {
+            if cell1.gestureRecognizers?.count == nil {
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
-                cell.addGestureRecognizer(tap)
+                cell1.addGestureRecognizer(tap)
             }
             
-            return cell
+            return cell1
             
         } else {
             
@@ -138,7 +138,6 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let title = clickedCell.itemLbl.text {
             itemDetails.clickedItemTitle = title
-            
         }
         
         if let image = clickedCell.itemImg.image {
@@ -152,10 +151,7 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
    // testing side image
         itemDetails.clickedSideImage2 = clickedCell.setSideImage
         
-        
-        itemDetails.clickedItemDescription = clickedCell.itemDescript
-        
-        print(clickedCell.itemDescript)
+        itemDetails.clickedItemCategory = clickedCell.itemCategory
         
     }
     

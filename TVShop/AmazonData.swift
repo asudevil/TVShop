@@ -107,7 +107,7 @@ class AmazonData {
                     product.asin = child.element?.text
                 }
                 
-                if child.element!.name == "SmallImage" {
+                if child.element!.name == "LargeImage" {
                     product.smallImage = child["URL"].element?.text
                 }
                 

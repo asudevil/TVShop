@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-al-vP3">
-                                <rect key="frame" x="878" y="1016" width="165" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-al-vP3">
+                                <rect key="frame" x="878" y="1004" width="164" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Ci8-eH-Yx2"/>
                                 </constraints>
@@ -52,8 +52,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-uP-pbS" userLabel="Right Stack View">
-                                <rect key="frame" x="1447" y="75" width="400" height="288"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-uP-pbS" userLabel="Right Stack View">
+                                <rect key="frame" x="1230" y="40" width="400" height="288"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retail Price:  $189.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-BW-L7I">
                                         <rect key="frame" x="0.0" y="0.0" width="326" height="42"/>
@@ -77,53 +77,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="q8l-C7-CiP"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="21B-Lj-k1w" userLabel="Ratings Stack View">
-                                <rect key="frame" x="1447" y="450" width="441" height="43"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHM-EE-vKI">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-P9-UL5" userLabel="Like Stack View">
-                                        <rect key="frame" x="120" y="0.0" width="138" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-0x-f4Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9Io-j5-XLa">
-                                                <rect key="frame" x="86" y="0.0" width="52" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="3V1-Yf-8h1"/>
-                                                    <constraint firstAttribute="width" constant="52" id="mHY-vy-LwR"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saH-wJ-Jr4" userLabel="Dislike Stack View">
-                                        <rect key="frame" x="278" y="0.0" width="163" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSB-Ie-XzV">
-                                                <rect key="frame" x="0.0" y="0.0" width="114" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="83P-Qz-AT9">
-                                                <rect key="frame" x="114" y="0.0" width="49" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="DLS-dd-hbD"/>
-                                                    <constraint firstAttribute="width" constant="49" id="x2K-0q-lej"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-mV-3sT" userLabel="Side Image Stack View">
                                 <rect key="frame" x="120" y="174" width="200" height="740"/>
@@ -160,11 +113,9 @@
                             <constraint firstItem="6Ar-VC-PwN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="N7e-4i-q0O"/>
                             <constraint firstItem="tCe-uP-pbS" firstAttribute="leading" secondItem="WC1-oq-yrD" secondAttribute="trailing" constant="70" id="XkL-d6-k41"/>
                             <constraint firstItem="6Ar-VC-PwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="a6W-U5-PXX"/>
-                            <constraint firstItem="21B-Lj-k1w" firstAttribute="leading" secondItem="WC1-oq-yrD" secondAttribute="trailing" constant="70" id="bFo-lz-oPd"/>
                             <constraint firstItem="XeR-mV-3sT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="eI5-Vi-GtS"/>
                             <constraint firstItem="tCe-uP-pbS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="gm7-Ho-cSN"/>
                             <constraint firstItem="WC1-oq-yrD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="j0Z-pw-W7d"/>
-                            <constraint firstItem="21B-Lj-k1w" firstAttribute="top" secondItem="tCe-uP-pbS" secondAttribute="bottom" constant="125" id="wKE-MC-T7l"/>
                             <constraint firstItem="dDY-al-vP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wX1-3a-uFi"/>
                         </constraints>
                     </view>
@@ -210,14 +161,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="700" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kids2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8C1-du-gPL">
-                                                    <rect key="frame" x="56" y="24" width="600" height="850"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kids2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8C1-du-gPL">
+                                                    <rect key="frame" x="28" y="8" width="644" height="750"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="750" id="fUq-ms-SJh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-Dy-LOv">
-                                                    <rect key="frame" x="79" y="825" width="501" height="71"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-Dy-LOv">
+                                                    <rect key="frame" x="56" y="798" width="588" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="SHG-Kw-Nll"/>
                                                     </constraints>
@@ -259,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pL-Uv-q5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="2419"/>
+            <point key="canvasLocation" x="437" y="4707"/>
         </scene>
         <!--Item Details View-->
         <scene sceneID="Ww2-La-FBc">
@@ -281,7 +232,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-Gi-a7K">
-                                <rect key="frame" x="1376" y="505" width="455" height="440"/>
+                                <rect key="frame" x="1376" y="383" width="455" height="440"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wA-h8-pH0">
                                         <rect key="frame" x="0.0" y="0.0" width="455" height="120"/>
@@ -312,86 +263,16 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lnf-gy-6Oh" userLabel="Ratings Stack View">
-                                <rect key="frame" x="1376" y="412" width="441" height="43"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-9O-fbg">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P01-Rn-l6Q" userLabel="Like Stack View">
-                                        <rect key="frame" x="120" y="0.0" width="138" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-1B-M3i">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-3d-uYr">
-                                                <rect key="frame" x="86" y="0.0" width="52" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="Oif-dk-930"/>
-                                                    <constraint firstAttribute="width" constant="52" id="bw6-hv-cUq"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-sk-nbu" userLabel="Dislike Stack View">
-                                        <rect key="frame" x="278" y="0.0" width="163" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AE-Fs-WkC">
-                                                <rect key="frame" x="0.0" y="0.0" width="114" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVf-IC-KTw">
-                                                <rect key="frame" x="114" y="0.0" width="49" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="49" id="AcV-of-INf"/>
-                                                    <constraint firstAttribute="height" constant="41" id="wYt-SR-2c0"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a beautiful dress made with original hand made Kente Cloth from Ghana west Africa." lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="oe8-LJ-cdB">
-                                <rect key="frame" x="1376" y="274" width="500" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="tGn-L3-if1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SVa-4g-PZ7">
-                                <rect key="frame" x="1376" y="198" width="350" height="42"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiX-pS-43Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-by-7DZ">
-                                        <rect key="frame" x="185" y="0.0" width="165" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title is Jacket" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-Hh-zcf">
-                                <rect key="frame" x="1376" y="120" width="240" height="48"/>
+                                <rect key="frame" x="1376" y="50" width="468" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="468" id="mKq-PV-YEG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-1w-CR4" userLabel="Side image view1" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-1w-CR4" userLabel="Side image view1">
                                 <rect key="frame" x="58" y="140" width="280" height="270"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jacket1.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsp-O3-KbK">
@@ -454,36 +335,87 @@
                                     <constraint firstAttribute="trailing" secondItem="Rgk-2H-D8Z" secondAttribute="trailing" constant="20" id="wU0-cj-Xid"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MJe-Q5-r0c" userLabel="Price Stack">
+                                <rect key="frame" x="1376" y="200" width="300" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYd-pg-7im">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c7-Zl-EfF">
+                                        <rect key="frame" x="158" y="0.0" width="142" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EgD-65-gEn"/>
+                                    <constraint firstAttribute="height" constant="42" id="wME-4j-0Qo"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-9O-fbg">
+                                <rect key="frame" x="1376" y="282" width="309" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="Hch-wy-DQZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-by-7DZ">
+                                <rect key="frame" x="1500" y="128" width="350" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="2aB-wy-o3L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiX-pS-43Z">
+                                <rect key="frame" x="1376" y="128" width="114" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="HMr-kb-FuN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="lnf-gy-6Oh" firstAttribute="top" secondItem="oe8-LJ-cdB" secondAttribute="bottom" constant="30" id="30c-Ck-QAp"/>
-                            <constraint firstItem="SVa-4g-PZ7" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="6Cs-WD-d4w"/>
                             <constraint firstItem="u87-BJ-mCN" firstAttribute="leading" secondItem="bNS-1w-CR4" secondAttribute="trailing" constant="86" id="6jI-bJ-VdF"/>
-                            <constraint firstItem="oe8-LJ-cdB" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="80Q-OK-WTd"/>
                             <constraint firstItem="ieB-0i-QEa" firstAttribute="top" secondItem="bNS-1w-CR4" secondAttribute="bottom" constant="40" id="AHd-i4-YMr"/>
                             <constraint firstItem="u87-BJ-mCN" firstAttribute="leading" secondItem="ieB-0i-QEa" secondAttribute="trailing" constant="86" id="AdM-WX-Jin"/>
                             <constraint firstItem="pUt-Gi-a7K" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="BLq-RC-cWo"/>
+                            <constraint firstItem="QYw-9O-fbg" firstAttribute="top" secondItem="MJe-Q5-r0c" secondAttribute="bottom" constant="40" id="Gsc-2b-983"/>
                             <constraint firstItem="u87-BJ-mCN" firstAttribute="top" secondItem="2au-lB-NOR" secondAttribute="topMargin" constant="27" id="KVL-Ht-nLX"/>
                             <constraint firstItem="gfY-Hh-zcf" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="NhN-36-1wb"/>
-                            <constraint firstItem="lnf-gy-6Oh" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="Qyw-2c-Cgh"/>
+                            <constraint firstItem="UiX-pS-43Z" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="OA2-QU-4eX"/>
                             <constraint firstItem="bNS-1w-CR4" firstAttribute="leading" secondItem="2au-lB-NOR" secondAttribute="leadingMargin" constant="38" id="RN5-D0-QCK"/>
-                            <constraint firstItem="oe8-LJ-cdB" firstAttribute="top" secondItem="SVa-4g-PZ7" secondAttribute="bottom" constant="34" id="ZLf-4N-ntX"/>
+                            <constraint firstItem="MJe-Q5-r0c" firstAttribute="top" secondItem="UiX-pS-43Z" secondAttribute="bottom" constant="30" id="Tkv-vx-ONg"/>
                             <constraint firstItem="juV-e8-0sR" firstAttribute="top" secondItem="ieB-0i-QEa" secondAttribute="bottom" constant="40" id="ZpJ-ic-R1X"/>
-                            <constraint firstItem="pUt-Gi-a7K" firstAttribute="top" secondItem="lnf-gy-6Oh" secondAttribute="bottom" constant="50" id="eHc-iM-eGl"/>
                             <constraint firstItem="u87-BJ-mCN" firstAttribute="leading" secondItem="juV-e8-0sR" secondAttribute="trailing" constant="86" id="hN7-zw-A2w"/>
                             <constraint firstItem="bNS-1w-CR4" firstAttribute="top" secondItem="mLP-UL-BEk" secondAttribute="bottom" constant="140" id="hkD-li-Ra1"/>
+                            <constraint firstItem="UiX-pS-43Z" firstAttribute="top" secondItem="gfY-Hh-zcf" secondAttribute="bottom" constant="30" id="jFu-nJ-YzI"/>
+                            <constraint firstItem="MJe-Q5-r0c" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="jNr-I2-iin"/>
+                            <constraint firstItem="QYw-9O-fbg" firstAttribute="leading" secondItem="u87-BJ-mCN" secondAttribute="trailing" constant="71" id="k6e-t4-zeu"/>
                             <constraint firstItem="juV-e8-0sR" firstAttribute="leading" secondItem="2au-lB-NOR" secondAttribute="leadingMargin" constant="38" id="tCH-2k-DEU"/>
-                            <constraint firstItem="SVa-4g-PZ7" firstAttribute="top" secondItem="gfY-Hh-zcf" secondAttribute="bottom" constant="30" id="umV-vW-Bke"/>
+                            <constraint firstItem="xKX-by-7DZ" firstAttribute="top" secondItem="gfY-Hh-zcf" secondAttribute="bottom" constant="30" id="v9i-3g-HL0"/>
+                            <constraint firstItem="xKX-by-7DZ" firstAttribute="leading" secondItem="UiX-pS-43Z" secondAttribute="trailing" constant="10" id="wSR-IT-nEF"/>
+                            <constraint firstItem="pUt-Gi-a7K" firstAttribute="top" secondItem="QYw-9O-fbg" secondAttribute="bottom" constant="65" id="yhR-mK-iLZ"/>
                             <constraint firstItem="ieB-0i-QEa" firstAttribute="leading" secondItem="2au-lB-NOR" secondAttribute="leadingMargin" constant="38" id="yiQ-89-Tpg"/>
-                            <constraint firstItem="gfY-Hh-zcf" firstAttribute="top" secondItem="mLP-UL-BEk" secondAttribute="bottom" constant="120" id="yn2-WH-H1y"/>
+                            <constraint firstItem="gfY-Hh-zcf" firstAttribute="top" secondItem="mLP-UL-BEk" secondAttribute="bottom" constant="50" id="yn2-WH-H1y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fbe-pH-2BC"/>
                     <connections>
                         <outlet property="brand" destination="xKX-by-7DZ" id="oL1-Y2-BLd"/>
                         <outlet property="image" destination="u87-BJ-mCN" id="n6i-6c-8kx"/>
-                        <outlet property="itemDescription" destination="oe8-LJ-cdB" id="KKO-7A-ByD"/>
                         <outlet property="itemTitle" destination="gfY-Hh-zcf" id="c9K-k1-Y5a"/>
+                        <outlet property="price" destination="7c7-Zl-EfF" id="ecf-3V-zmz"/>
+                        <outlet property="productCategory" destination="QYw-9O-fbg" id="W9f-yO-wkP"/>
                         <outlet property="sideImage1" destination="Dsp-O3-KbK" id="BJH-H4-Qym"/>
                         <outlet property="sideImage1View" destination="bNS-1w-CR4" id="5hF-gW-YrA"/>
                         <outlet property="sideImage2" destination="FRY-gN-VhT" id="e41-vn-49Y"/>
@@ -494,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OG-Da-5g9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2689" y="2419"/>
+            <point key="canvasLocation" x="2697" y="2195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dWf-A7-5A4">
@@ -516,8 +448,8 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Buy"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description  This is a beautiful dress made with original hand made Kente Cloth from Ghana west Africa." lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-Xb-7U3">
-                                <rect key="frame" x="1412" y="53" width="491" height="210"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description  This is a beautiful dress made with original hand made Kente Cloth from Ghana west Africa." lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-Xb-7U3">
+                                <rect key="frame" x="1503" y="53" width="400" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="OIR-dl-62x"/>
                                 </constraints>
@@ -525,55 +457,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ALq-ul-LAd" userLabel="Ratings Stack View">
-                                <rect key="frame" x="1412" y="286" width="441" height="43"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-2h-VSh">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-IY-v93" userLabel="Like Stack View">
-                                        <rect key="frame" x="120" y="0.0" width="138" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxD-DP-3D6">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-Hc-mQA">
-                                                <rect key="frame" x="86" y="0.0" width="52" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="6t0-Vs-hj7"/>
-                                                    <constraint firstAttribute="height" constant="43" id="96s-L9-EiE"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMJ-t2-vR6" userLabel="Dislike Stack View">
-                                        <rect key="frame" x="278" y="0.0" width="163" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I37-d7-Ebf">
-                                                <rect key="frame" x="0.0" y="0.0" width="114" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-Hr-Dcc">
-                                                <rect key="frame" x="114" y="0.0" width="49" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="JKw-eZ-bab"/>
-                                                    <constraint firstAttribute="width" constant="49" id="k6E-bB-2xy"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-Ih-KfF">
-                                <rect key="frame" x="1412" y="404" width="389" height="97"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-Ih-KfF">
+                                <rect key="frame" x="1471" y="297" width="389" height="97"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Options:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsD-fv-DKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="244" height="37"/>
@@ -607,10 +492,8 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ALq-ul-LAd" secondAttribute="trailing" constant="10" id="Jz9-wk-jLn"/>
+                            <constraint firstItem="Lk9-Ih-KfF" firstAttribute="top" secondItem="FSi-Xb-7U3" secondAttribute="bottom" constant="100" id="8HM-7k-45Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lk9-Ih-KfF" secondAttribute="trailing" constant="40" id="QEu-02-Aj6"/>
-                            <constraint firstItem="Lk9-Ih-KfF" firstAttribute="top" secondItem="ALq-ul-LAd" secondAttribute="bottom" constant="75" id="hJn-5a-iLG"/>
-                            <constraint firstItem="ALq-ul-LAd" firstAttribute="top" secondItem="FSi-Xb-7U3" secondAttribute="bottom" constant="23" id="pRW-d0-atW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FSi-Xb-7U3" secondAttribute="trailing" constant="-3" id="tqN-61-0Vn"/>
                             <constraint firstItem="FSi-Xb-7U3" firstAttribute="top" secondItem="9Dk-zr-Ms8" secondAttribute="topMargin" constant="53" id="zBs-Y6-5y9"/>
                         </constraints>
@@ -651,92 +534,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHOP TV!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-Xm-ZI5" userLabel="Title Label">
-                                <rect key="frame" x="472" y="474" width="572" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP TV!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-Xm-ZI5" userLabel="Title Label">
+                                <rect key="frame" x="872" y="-70" width="177" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-KH-8AH" userLabel="Top Stack View">
-                                <rect key="frame" x="208" y="145" width="1580" height="430"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-9h-0yR" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress15.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T67-Lj-IWe">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="B9P-TR-L1b"/>
-                                                    <constraint firstAttribute="height" constant="450" id="IFs-x8-wAq"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="430" id="PCO-8b-mi3"/>
-                                            <constraint firstAttribute="width" constant="320" id="fFy-vp-blG"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-bP-DR7" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
-                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Skirt.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgV-4z-EvX">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="Tbi-Wa-X8D"/>
-                                                    <constraint firstAttribute="height" constant="450" id="qdh-zt-EO3"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="430" id="6gd-DV-RH7"/>
-                                            <constraint firstAttribute="width" constant="320" id="hlQ-IZ-VEb"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sod-lF-ayn" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
-                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLY-lp-Pk3">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="450" id="7xV-M8-79o"/>
-                                                    <constraint firstAttribute="width" constant="350" id="rNJ-uq-A2Q"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="430" id="42n-Gv-EaN"/>
-                                            <constraint firstAttribute="width" constant="320" id="efI-mZ-zZy"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-Md-hzF" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
-                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Shoes.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hG-Kh-xru">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="450" id="7m2-YJ-f7b"/>
-                                                    <constraint firstAttribute="width" constant="350" id="IcZ-a1-h4x"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="5pf-Sw-FKi"/>
-                                            <constraint firstAttribute="height" constant="430" id="Uda-nt-kIo"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-yq-CZd" userLabel="Buttom Stack View">
                                 <rect key="frame" x="170" y="510" width="1580" height="430"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFy-Px-XRH" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress18.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-YM-vfu">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress18.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-YM-vfu">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="350" id="bYL-iY-jTL"/>
@@ -746,14 +556,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="ogA-YM-vfu" firstAttribute="leading" secondItem="mFy-Px-XRH" secondAttribute="leading" id="Khi-st-oGg"/>
                                             <constraint firstAttribute="height" constant="430" id="gr6-XE-vgo"/>
                                             <constraint firstAttribute="width" constant="320" id="inv-lf-AkZ"/>
+                                            <constraint firstItem="ogA-YM-vfu" firstAttribute="top" secondItem="mFy-Px-XRH" secondAttribute="top" id="nE1-Tp-7ue"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W6-Wy-fyN" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
                                         <rect key="frame" x="420" y="0.0" width="320" height="430"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress23.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hu1-Uh-qbL">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress23.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hu1-Uh-qbL">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="U6V-mD-wer"/>
@@ -764,13 +576,15 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="Enf-h3-bbj"/>
+                                            <constraint firstItem="Hu1-Uh-qbL" firstAttribute="top" secondItem="5W6-Wy-fyN" secondAttribute="top" id="Naq-zS-3X9"/>
+                                            <constraint firstItem="Hu1-Uh-qbL" firstAttribute="leading" secondItem="5W6-Wy-fyN" secondAttribute="leading" id="bOr-iA-X3H"/>
                                             <constraint firstAttribute="height" constant="430" id="wzT-Dr-mg3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-Yd-wYb" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
                                         <rect key="frame" x="840" y="0.0" width="320" height="430"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress21.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO5-0A-mp8">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress21.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO5-0A-mp8">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="rcb-Qh-gE2"/>
@@ -782,12 +596,14 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="1yS-Xt-hTf"/>
                                             <constraint firstAttribute="height" constant="430" id="4Fg-sR-vf4"/>
+                                            <constraint firstItem="lO5-0A-mp8" firstAttribute="leading" secondItem="FXk-Yd-wYb" secondAttribute="leading" id="4Z2-LR-5Bh"/>
+                                            <constraint firstItem="lO5-0A-mp8" firstAttribute="top" secondItem="FXk-Yd-wYb" secondAttribute="top" id="7Lh-2a-8sQ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJa-uW-cZl" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
                                         <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dress28.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-Cb-aNX">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress28.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-Cb-aNX">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="Y8P-QZ-Ucx"/>
@@ -797,8 +613,91 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="AYv-Cb-aNX" firstAttribute="leading" secondItem="QJa-uW-cZl" secondAttribute="leading" id="4Q1-Fp-bMr"/>
+                                            <constraint firstItem="AYv-Cb-aNX" firstAttribute="top" secondItem="QJa-uW-cZl" secondAttribute="top" id="H0c-pw-kGe"/>
                                             <constraint firstAttribute="height" constant="430" id="Hff-r2-yTt"/>
                                             <constraint firstAttribute="width" constant="320" id="KaR-9X-t3c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-KH-8AH" userLabel="Top Stack View">
+                                <rect key="frame" x="208" y="145" width="1580" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-9h-0yR" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress15.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T67-Lj-IWe">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="B9P-TR-L1b"/>
+                                                    <constraint firstAttribute="height" constant="450" id="IFs-x8-wAq"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="PCO-8b-mi3"/>
+                                            <constraint firstAttribute="width" constant="320" id="fFy-vp-blG"/>
+                                            <constraint firstItem="T67-Lj-IWe" firstAttribute="leading" secondItem="2hK-9h-0yR" secondAttribute="leading" id="ptK-cE-LN6"/>
+                                            <constraint firstItem="T67-Lj-IWe" firstAttribute="top" secondItem="2hK-9h-0yR" secondAttribute="top" id="waj-mQ-Ix9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ny-bP-DR7" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skirt.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgV-4z-EvX">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="Tbi-Wa-X8D"/>
+                                                    <constraint firstAttribute="height" constant="450" id="qdh-zt-EO3"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="6gd-DV-RH7"/>
+                                            <constraint firstItem="pgV-4z-EvX" firstAttribute="top" secondItem="1ny-bP-DR7" secondAttribute="top" id="PTl-3B-tcK"/>
+                                            <constraint firstItem="pgV-4z-EvX" firstAttribute="leading" secondItem="1ny-bP-DR7" secondAttribute="leading" id="gFt-Jv-9dZ"/>
+                                            <constraint firstAttribute="width" constant="320" id="hlQ-IZ-VEb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sod-lF-ayn" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLY-lp-Pk3">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="7xV-M8-79o"/>
+                                                    <constraint firstAttribute="width" constant="350" id="rNJ-uq-A2Q"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="42n-Gv-EaN"/>
+                                            <constraint firstItem="qLY-lp-Pk3" firstAttribute="leading" secondItem="sod-lF-ayn" secondAttribute="leading" id="5V3-f0-x2R"/>
+                                            <constraint firstItem="qLY-lp-Pk3" firstAttribute="top" secondItem="sod-lF-ayn" secondAttribute="top" id="CSz-H1-Je6"/>
+                                            <constraint firstAttribute="width" constant="320" id="efI-mZ-zZy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWt-Md-hzF" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shoes.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hG-Kh-xru">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="7m2-YJ-f7b"/>
+                                                    <constraint firstAttribute="width" constant="350" id="IcZ-a1-h4x"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="5pf-Sw-FKi"/>
+                                            <constraint firstAttribute="height" constant="430" id="Uda-nt-kIo"/>
+                                            <constraint firstItem="2hG-Kh-xru" firstAttribute="top" secondItem="iWt-Md-hzF" secondAttribute="top" id="aG6-E8-PCU"/>
+                                            <constraint firstItem="2hG-Kh-xru" firstAttribute="leading" secondItem="iWt-Md-hzF" secondAttribute="leading" id="jzU-17-vOV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -806,12 +705,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vJN-Xm-ZI5" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="-70" id="06m-lD-avA"/>
                             <constraint firstItem="hoz-yq-CZd" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="3sg-Il-m43"/>
                             <constraint firstItem="ZMF-KH-8AH" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="MPr-8f-FD1"/>
                             <constraint firstItem="hoz-yq-CZd" firstAttribute="top" secondItem="ZMF-KH-8AH" secondAttribute="bottom" constant="50" id="PCu-KW-6Cf"/>
+                            <constraint firstItem="ZMF-KH-8AH" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="30" id="iLm-Gg-8da"/>
+                            <constraint firstItem="vJN-Xm-ZI5" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="-70" id="r5T-xx-3EO"/>
                             <constraint firstItem="vJN-Xm-ZI5" firstAttribute="centerX" secondItem="PgC-nl-fRr" secondAttribute="centerX" id="uUK-sn-dYC"/>
-                            <constraint firstItem="ZMF-KH-8AH" firstAttribute="top" secondItem="iG5-IZ-E9R" secondAttribute="bottom" constant="30" id="v9o-2V-oj3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Women" image="second" id="qGW-tg-dFj"/>
@@ -827,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPg-Dv-OTB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1853" y="384"/>
+            <point key="canvasLocation" x="-1827" y="312"/>
         </scene>
         <!--Men View Controller-->
         <scene sceneID="HHg-H4-k3D">
@@ -841,8 +740,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-Hl-S6f">
-                                <rect key="frame" x="0.0" y="0.0" width="1900" height="1000"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-Hl-S6f">
+                                <rect key="frame" x="20" y="0.0" width="1880" height="1080"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LA5-dh-0nE">
                                     <size key="itemSize" width="450" height="541"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -902,12 +801,12 @@
                     <tabBarItem key="tabBarItem" title="Men" image="second" id="rLx-wp-zfF"/>
                     <connections>
                         <outlet property="collectionView" destination="kUD-Hl-S6f" id="oIh-Pb-bPh"/>
-                        <segue destination="hnO-G8-iPO" kind="show" identifier="catalogDetails" id="5Yj-XJ-wbS"/>
+                        <segue destination="mDc-RS-9L2" kind="show" identifier="menCatalogDetails" id="iW0-ks-Bi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0k-u7-yHB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1899" y="1733"/>
+            <point key="canvasLocation" x="-1835" y="3061"/>
         </scene>
         <!--Kids View Controller-->
         <scene sceneID="P6Q-QG-dZa">
@@ -980,12 +879,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k86-0U-Yz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1899" y="3091"/>
+            <point key="canvasLocation" x="-1859" y="4747"/>
         </scene>
-        <!--On Sale!!-->
+        <!--Women Amazon!!-->
         <scene sceneID="lPj-3s-ciP">
             <objects>
-                <viewController id="rDc-Y7-wF1" sceneMemberID="viewController">
+                <viewController id="rDc-Y7-wF1" customClass="WomenAmazonView" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uKO-Wf-EmL"/>
                         <viewControllerLayoutGuide type="bottom" id="NKq-xp-iNs"/>
@@ -994,32 +893,200 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sale.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="My8-Ym-GdH">
-                                <rect key="frame" x="610" y="265" width="700" height="550"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="700" id="KgA-SS-ExD"/>
-                                    <constraint firstAttribute="height" constant="550" id="Lk6-cY-Mhf"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coming Soon!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-Yt-rty">
-                                <rect key="frame" x="593" y="116" width="734" height="82"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="2tQ-L4-MkZ" userLabel="Top Stack View">
+                                <rect key="frame" x="170" y="30" width="1580" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cea-5I-ci6" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress15.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR6-9z-kkG">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="Iqp-uC-6bd"/>
+                                                    <constraint firstAttribute="height" constant="450" id="vPT-fn-Aio"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="Q2F-Kv-gLn"/>
+                                            <constraint firstItem="lR6-9z-kkG" firstAttribute="top" secondItem="Cea-5I-ci6" secondAttribute="top" id="pwe-Q8-uaJ"/>
+                                            <constraint firstAttribute="width" constant="320" id="tV6-I9-Sv1"/>
+                                            <constraint firstItem="lR6-9z-kkG" firstAttribute="leading" secondItem="Cea-5I-ci6" secondAttribute="leading" id="uyJ-8w-F3Z"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDS-Aq-2GT" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skirt.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r84-Ld-xG0">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="216-9c-Qh3"/>
+                                                    <constraint firstAttribute="height" constant="450" id="Sot-S9-RuS"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="430" id="BE5-oU-mYa"/>
+                                            <constraint firstAttribute="width" constant="320" id="PIQ-cp-adk"/>
+                                            <constraint firstItem="r84-Ld-xG0" firstAttribute="leading" secondItem="QDS-Aq-2GT" secondAttribute="leading" id="V3s-6S-nWG"/>
+                                            <constraint firstItem="r84-Ld-xG0" firstAttribute="top" secondItem="QDS-Aq-2GT" secondAttribute="top" id="se8-iL-VPf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K42-sP-nKS" userLabel="Third Image View" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress2.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiQ-Ji-dxP">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="5NY-tp-m5w"/>
+                                                    <constraint firstAttribute="width" constant="350" id="IBM-8w-AVe"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jiQ-Ji-dxP" firstAttribute="leading" secondItem="K42-sP-nKS" secondAttribute="leading" id="GMG-OP-kP1"/>
+                                            <constraint firstItem="jiQ-Ji-dxP" firstAttribute="top" secondItem="K42-sP-nKS" secondAttribute="top" id="TYv-Nc-243"/>
+                                            <constraint firstAttribute="width" constant="320" id="X7Z-CD-SKa"/>
+                                            <constraint firstAttribute="height" constant="430" id="zb2-Rj-ai2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-xz-c48" userLabel="Fourth Image View" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shoes.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSR-Gt-Js7">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="1qC-Di-OZW"/>
+                                                    <constraint firstAttribute="height" constant="450" id="hPy-nO-9K9"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="KSR-Gt-Js7" firstAttribute="leading" secondItem="vkc-xz-c48" secondAttribute="leading" id="4io-rf-oqE"/>
+                                            <constraint firstAttribute="height" constant="430" id="WJk-kE-jeW"/>
+                                            <constraint firstItem="KSR-Gt-Js7" firstAttribute="top" secondItem="vkc-xz-c48" secondAttribute="top" id="p19-Lg-dbE"/>
+                                            <constraint firstAttribute="width" constant="320" id="qE4-vl-Bsx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="pMX-b1-ZO8" userLabel="Buttom Stack View">
+                                <rect key="frame" x="170" y="600" width="1580" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poq-R1-w0h" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress18.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6II-jY-Gzm">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="8io-yR-7Uj"/>
+                                                    <constraint firstAttribute="height" constant="450" id="dei-0o-gb1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="6vH-HU-2Ny"/>
+                                            <constraint firstItem="6II-jY-Gzm" firstAttribute="leading" secondItem="poq-R1-w0h" secondAttribute="leading" id="A6c-AO-qPL"/>
+                                            <constraint firstAttribute="height" constant="430" id="vXP-uo-yFg"/>
+                                            <constraint firstItem="6II-jY-Gzm" firstAttribute="top" secondItem="poq-R1-w0h" secondAttribute="top" id="y0N-aY-1XD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L99-uf-LzY" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="420" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress23.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QY8-kF-hEf">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="9cQ-AS-CfI"/>
+                                                    <constraint firstAttribute="width" constant="350" id="wS8-yu-fm7"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="QY8-kF-hEf" firstAttribute="leading" secondItem="L99-uf-LzY" secondAttribute="leading" id="EDG-b1-jrF"/>
+                                            <constraint firstAttribute="height" constant="430" id="TFW-2x-xAr"/>
+                                            <constraint firstAttribute="width" constant="320" id="eYj-Hm-9gf"/>
+                                            <constraint firstItem="QY8-kF-hEf" firstAttribute="top" secondItem="L99-uf-LzY" secondAttribute="top" id="iDd-m6-2Xg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgV-lz-myh" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="840" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress21.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbh-jm-H67">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="Jd4-0G-l2M"/>
+                                                    <constraint firstAttribute="width" constant="350" id="Rc1-Vb-Lay"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fbh-jm-H67" firstAttribute="top" secondItem="ZgV-lz-myh" secondAttribute="top" id="M4U-9u-TY0"/>
+                                            <constraint firstAttribute="height" constant="430" id="r8Y-RH-42c"/>
+                                            <constraint firstAttribute="width" constant="320" id="w8J-r3-PRD"/>
+                                            <constraint firstItem="fbh-jm-H67" firstAttribute="leading" secondItem="ZgV-lz-myh" secondAttribute="leading" id="yrL-Ew-sdz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xix-M3-3nj" customClass="FocusView" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="1260" y="0.0" width="320" height="430"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dress28.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0PZ-KY-9uA">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="FmR-0k-3CV"/>
+                                                    <constraint firstAttribute="height" constant="450" id="gHA-eb-VpA"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="0PZ-KY-9uA" firstAttribute="leading" secondItem="Xix-M3-3nj" secondAttribute="leading" id="CvD-Ie-DNc"/>
+                                            <constraint firstItem="0PZ-KY-9uA" firstAttribute="top" secondItem="Xix-M3-3nj" secondAttribute="top" id="Doo-nO-xa5"/>
+                                            <constraint firstAttribute="width" constant="320" id="Oi9-8Q-Dyz"/>
+                                            <constraint firstAttribute="height" constant="430" id="ZSl-6T-ONO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP TV!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mo-wA-W2g" userLabel="Title Label">
+                                <rect key="frame" x="872" y="-70" width="177" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="My8-Ym-GdH" firstAttribute="centerY" secondItem="oLv-sI-1AV" secondAttribute="centerY" id="6Zg-5l-gN1"/>
-                            <constraint firstItem="3hB-Yt-rty" firstAttribute="top" secondItem="uKO-Wf-EmL" secondAttribute="bottom" constant="30" id="A09-dR-gET"/>
-                            <constraint firstItem="3hB-Yt-rty" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="yJk-ec-Nlm"/>
-                            <constraint firstItem="My8-Ym-GdH" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="yWf-bP-6HM"/>
+                            <constraint firstItem="2tQ-L4-MkZ" firstAttribute="top" secondItem="uKO-Wf-EmL" secondAttribute="bottom" constant="30" id="13e-BG-lIy"/>
+                            <constraint firstItem="0mo-wA-W2g" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="EyC-8j-XMZ"/>
+                            <constraint firstItem="pMX-b1-ZO8" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="QDT-pJ-fGz"/>
+                            <constraint firstItem="2tQ-L4-MkZ" firstAttribute="centerX" secondItem="oLv-sI-1AV" secondAttribute="centerX" id="Wcu-SM-QSb"/>
+                            <constraint firstItem="NKq-xp-iNs" firstAttribute="top" secondItem="pMX-b1-ZO8" secondAttribute="bottom" constant="50" id="XUD-ib-Taf"/>
+                            <constraint firstItem="0mo-wA-W2g" firstAttribute="top" secondItem="uKO-Wf-EmL" secondAttribute="bottom" constant="-70" id="rCe-PR-2KP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="On Sale!!" image="second" id="1EY-3h-xQM"/>
+                    <tabBarItem key="tabBarItem" title="Women Amazon!!" image="second" id="1EY-3h-xQM" userLabel="Women Amazon"/>
+                    <connections>
+                        <outlet property="eigthImageView" destination="Xix-M3-3nj" id="BUe-sq-IhX"/>
+                        <outlet property="fifthImageView" destination="poq-R1-w0h" id="AoB-cF-esC"/>
+                        <outlet property="firstImageView" destination="Cea-5I-ci6" id="2o7-W6-Tf4"/>
+                        <outlet property="fourthImageView" destination="vkc-xz-c48" id="l27-p1-Z5S"/>
+                        <outlet property="secondImageView" destination="QDS-Aq-2GT" id="e7z-py-Y6e"/>
+                        <outlet property="seventhImageView" destination="ZgV-lz-myh" id="eHH-9c-wJ7"/>
+                        <outlet property="sixthImageView" destination="L99-uf-LzY" id="hb5-os-tzf"/>
+                        <outlet property="thirdImageView" destination="K42-sP-nKS" id="gVs-pr-GFl"/>
+                        <segue destination="mDc-RS-9L2" kind="show" identifier="menCatalogDetails" id="89b-Jz-vUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fai-fc-gZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1899" y="4439"/>
+            <point key="canvasLocation" x="-1835" y="1471"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yp1-kv-xfU">
@@ -1055,8 +1122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-YF-gTE">
-                                <rect key="frame" x="0.0" y="0.0" width="1900" height="1000"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-YF-gTE">
+                                <rect key="frame" x="20" y="0.0" width="1880" height="1080"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E7d-8m-nKq">
                                     <size key="itemSize" width="450" height="541"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1122,6 +1189,85 @@
             </objects>
             <point key="canvasLocation" x="-1827" y="-907"/>
         </scene>
+        <!--Men Catalog Details View-->
+        <scene sceneID="H8T-SD-BY4">
+            <objects>
+                <viewController id="mDc-RS-9L2" userLabel="Men Catalog Details View" customClass="AmazonViewController" customModule="TVShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQi-fy-dvI"/>
+                        <viewControllerLayoutGuide type="bottom" id="JL8-zN-sle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBu-tP-TQK">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-5y-MAm">
+                                <rect key="frame" x="0.0" y="0.0" width="1900" height="1030"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wjY-1N-QNb">
+                                    <size key="itemSize" width="1900" height="1030"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatalogCell" id="n0M-Up-6BQ" customClass="CatalogCell" customModule="TVShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1900" height="1030"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="1900" height="1030"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="men1.jpg" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-x6-oxw">
+                                                    <rect key="frame" x="28" y="8" width="1844" height="750"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="750" id="aYW-Z4-BII"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9d-pr-reE">
+                                                    <rect key="frame" x="38" y="798" width="1824" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="89X-kK-DqW"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Catagory Details">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="55" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="w9d-pr-reE" secondAttribute="trailing" constant="30" id="2Hh-jt-yuS"/>
+                                            <constraint firstItem="w9d-pr-reE" firstAttribute="top" secondItem="iq7-x6-oxw" secondAttribute="bottom" constant="40" id="7aM-F9-HX8"/>
+                                            <constraint firstItem="iq7-x6-oxw" firstAttribute="top" secondItem="n0M-Up-6BQ" secondAttribute="topMargin" id="aFE-TJ-WDF"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="iq7-x6-oxw" secondAttribute="trailing" constant="20" id="fZr-S7-nfm"/>
+                                            <constraint firstItem="w9d-pr-reE" firstAttribute="leading" secondItem="n0M-Up-6BQ" secondAttribute="leadingMargin" constant="30" id="gHm-lw-gJK"/>
+                                            <constraint firstItem="iq7-x6-oxw" firstAttribute="leading" secondItem="n0M-Up-6BQ" secondAttribute="leadingMargin" constant="20" id="lBV-bp-7Ef"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImg" destination="iq7-x6-oxw" id="9F0-yx-TY7"/>
+                                            <outlet property="itemLbl" destination="w9d-pr-reE" id="HdI-3U-nNL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="2fX-5y-MAm" id="RbG-iK-OiF"/>
+                        <segue destination="cD6-Dl-uiT" kind="show" identifier="itemDetails" id="0y5-ry-VOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPH-7P-28N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="2253"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Jacket1.jpg" width="1000" height="1000"/>
@@ -1129,7 +1275,6 @@
         <image name="Shoes.jpg" width="600" height="450"/>
         <image name="Skirt.jpg" width="419" height="558"/>
         <image name="amazon_logo.jpg" width="1250" height="458"/>
-        <image name="dislike.png" width="570" height="597"/>
         <image name="dress0.jpg" width="3456" height="5184"/>
         <image name="dress15.jpg" width="770" height="1145"/>
         <image name="dress18.jpg" width="736" height="736"/>
@@ -1140,11 +1285,11 @@
         <image name="dress28.jpg" width="736" height="736"/>
         <image name="kids2.jpg" width="2107" height="2171"/>
         <image name="kids5.jpg" width="768" height="1024"/>
-        <image name="like.gif" width="394" height="394"/>
-        <image name="sale.jpg" width="577" height="321"/>
+        <image name="men1.jpg" width="800" height="800"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Yj-XJ-wbS"/>
+        <segue reference="89b-Jz-vUY"/>
+        <segue reference="0y5-ry-VOh"/>
     </inferredMetricsTieBreakers>
 </document>

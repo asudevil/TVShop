@@ -53,7 +53,6 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
                         for obj in results {
                             let item = Item(itemDict: obj, type: "men")
                             self.catalog.append(item)
-                            
                         }
                         
                         //Main UI thread
@@ -103,9 +102,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             
             clickedCell = cell
             
-            print("You tapped on a men catalog")
-            
-            performSegueWithIdentifier("catalogDetails", sender: self)
+            performSegueWithIdentifier("menCatalogDetails", sender: self)
             
         }
     }
@@ -129,14 +126,13 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
+        let catalogDetails = segue.destinationViewController as! AmazonViewController
         
         if let title = clickedCell.itemLbl.text {
 
             if title == "Jackets" {
-                
-                catalogDetails.URL_BASE = "https://s3.amazonaws.com/spicysuya/menJacketJSON"
-                catalogDetails.catagory = "Jacket"
+                print("Clicked on Men Jacket")
+
             }
         }
     }

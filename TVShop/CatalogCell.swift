@@ -12,7 +12,9 @@ class CatalogCell: UICollectionViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemLbl: UILabel!
     
-    var itemDescript = ""
+    var itemCategory = ""
+    var itemBrand = ""
+    var itemPrice = ""
     
     var setSideImage = UIImage()
     
@@ -35,10 +37,8 @@ class CatalogCell: UICollectionViewCell {
         }
         
         if let itemText = item.itemDescription {
-            itemDescript = itemText
+            itemCategory = itemText
         }
-        
-        
         
         
 //        if let imagePath = item.itemImagePath {

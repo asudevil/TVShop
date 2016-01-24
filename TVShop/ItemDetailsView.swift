@@ -20,15 +20,18 @@ class ItemDetailsView: UIViewController {
     @IBOutlet var sideImage3: UIImageView!
     @IBOutlet var itemTitle: UILabel!
     @IBOutlet var brand: UILabel!
-    @IBOutlet var itemDescription: UILabel!
+    @IBOutlet var productCategory: UILabel!
+    @IBOutlet var price: UILabel!
+    
     
     var clickedImage = UIImage()
     var clickedSideImage1 = UIImage()
     var clickedSideImage2 = UIImage()
     var clickedSideImage3 = UIImage()
     var clickedItemTitle = ""
-//    var clickedBrand = ""
-    var clickedItemDescription = ""
+    var clickedBrand = ""
+    var clickedItemCategory = ""
+    var clickedPrice = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +41,10 @@ class ItemDetailsView: UIViewController {
         sideImage2.image = clickedSideImage2
         sideImage3.image = clickedSideImage3
         itemTitle.text = clickedItemTitle
-//        brand.text = clickedBrand
-        itemDescription.text = clickedItemDescription
+        brand.text = clickedBrand
+        productCategory.text = clickedItemCategory
+        price.text = clickedPrice
         
-
-
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {

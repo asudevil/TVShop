@@ -16,6 +16,8 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var clickedCell = CatalogCell()
     
+    var searchProductCategory = "African Dress"
+    
     let amazonDada = AmazonData(
         key: "AKIAJXBD6OLZXTNY4USQ",
         secret: "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",
@@ -30,7 +32,7 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         amazonDada.delegate = self
         
-        amazonDada.searchProducts("African Dress")
+        amazonDada.searchProducts(searchProductCategory)
 
         // Do any additional setup after loading the view.
     }
@@ -45,21 +47,28 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
             
-            cell.itemLbl.text = self.amazonDada.amazonProducts[indexPath.row].title
+            if let title = self.amazonDada.amazonProducts[indexPath.row].title {
+                cell.itemLbl.text = title
+            }
+            
+            if let brand = self.amazonDada.amazonProducts[indexPath.row].brand {
+                cell.itemBrand = brand
+            }
+            
+            if let price = self.amazonDada.amazonProducts[indexPath.row].price {
+                cell.itemPrice = price
+            }
+            
+            if let product = self.amazonDada.amazonProducts[indexPath.row].productGroup {
+                cell.itemCategory = product
+            }
             
             if let urlString = self.amazonDada.amazonProducts[indexPath.row].smallImage {
-
                 if let url = NSURL(string: urlString) {
-
                     downloadImage(url, cell: cell)
                 }
                 
             }
- 
-  //          let item = catalog[indexPath.row]
-  //          cell.configureCell(item)
-            
-            
             
             if cell.gestureRecognizers?.count == nil {
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
@@ -73,7 +82,7 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
         } else {
             
             return CatalogCell()
-        }
+    }
         
         
 //        cell.tilteLabel.text = self.amazonDada.amazonProducts[indexPath.row].title
@@ -96,6 +105,17 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     }
     
+    func tapped(gesture: UITapGestureRecognizer) {
+        if let cell = gesture.view as? CatalogCell {
+            //Load the next view controller and pass in the catalog
+            
+            clickedCell = cell
+            
+            performSegueWithIdentifier("itemDetails", sender: self)
+            
+        }
+    }
+    
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
@@ -103,13 +123,9 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func downloadImage(url: NSURL, cell: CatalogCell){
-        print("Download Started")
-        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                print(response?.suggestedFilename ?? "")
-                print("Download Finished")
                 
                 if let downloadedImage = UIImage(data: data){
                     
@@ -131,7 +147,7 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(450, 541)
+        return CGSizeMake(630, 830)
         
     }
     
@@ -140,15 +156,24 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
 
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
-//        
-//        if let title = clickedCell.itemLbl.text {
-//            
-//            cell.itemLbl.text = self.amazonDada.amazonProducts[indexPath.row].title
-//            
-//            if let urlString = self.amazonDada.amazonProducts[indexPath.row].smallImage {
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let itemDetails = segue.destinationViewController as! ItemDetailsView
+
+            if let title = clickedCell.itemLbl.text {
+                itemDetails.clickedItemTitle = title
+            }
+            
+            if let image = clickedCell.itemImg.image {
+                    itemDetails.clickedImage = image
+                    itemDetails.clickedSideImage1 = image
+                    itemDetails.clickedSideImage2 = image
+                    itemDetails.clickedSideImage3 = image
+            }
+            itemDetails.clickedBrand = clickedCell.itemBrand
+            itemDetails.clickedPrice = clickedCell.itemPrice
+            itemDetails.clickedItemCategory = clickedCell.itemCategory
+            
+        }
+
 }
