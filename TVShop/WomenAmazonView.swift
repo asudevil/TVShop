@@ -141,24 +141,23 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         
         
         if clickedCell.selectedIndex == 0 {
-            catalogDetails.searchProductCategory = "Women Dress Gown"
+            catalogDetails.searchProductCategory = "Women formal gown"
         }
         
         if clickedCell.selectedIndex == 1 {
-            catalogDetails.searchProductCategory = "Dress"
+            catalogDetails.searchProductCategory = "women formal dress"
         }
         if clickedCell.selectedIndex == 2 {
-            catalogDetails.searchProductCategory = "Women top"
+            catalogDetails.searchProductCategory = "Women top dress"
         }
         if clickedCell.selectedIndex == 3 {
-            catalogDetails.searchProductCategory = "Skirt"
+            catalogDetails.searchProductCategory = "casual Skirt"
         }
-        
         if clickedCell.selectedIndex == 4 {
             catalogDetails.searchProductCategory = "African Dress"
         }
         if clickedCell.selectedIndex == 5 {
-            catalogDetails.searchProductCategory = "African Clothes"
+            catalogDetails.searchProductCategory = "African fashion"
         }
         if clickedCell.selectedIndex == 6 {
             catalogDetails.searchProductCategory = "Women Coat"

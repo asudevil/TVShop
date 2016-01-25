@@ -79,6 +79,7 @@ class AmazonData {
                 "Operation" : "ItemSearch",
                 "SearchIndex" : "All",
                 "ResponseGroup" : "Medium",
+                "Catagory" : "clothing",
                 "ItemPage" : String(item),
                 "Keywords" : searhString
             ]
