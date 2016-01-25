@@ -15,6 +15,9 @@ class Item {
     var itemImagePath: String!
     var sideImagePath: String!
     
+    var selectedCell = Int()
+    
+    
     init(itemDict: [String: AnyObject], type: String) {
         
         if let title = itemDict["title"] as? String {
@@ -30,6 +33,7 @@ class Item {
             self.itemImagePath = "\(type)\(imageCount).jpg"
 
         }
+        
         
 //testing concept
         let sideImageCount = "5"

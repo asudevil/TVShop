@@ -19,6 +19,17 @@
 		84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F231C541EDA00617BFF /* amazon_logo.jpg */; };
 		84AF4F261C541FCC00617BFF /* AmazonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F251C541FCC00617BFF /* AmazonViewController.swift */; };
 		84AF4F281C54B4BF00617BFF /* WomenAmazonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F271C54B4BF00617BFF /* WomenAmazonView.swift */; };
+		84AF4F341C55C93700617BFF /* women1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F291C55C93700617BFF /* women1.jpg */; };
+		84AF4F351C55C93700617BFF /* women2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2A1C55C93700617BFF /* women2.jpg */; };
+		84AF4F361C55C93700617BFF /* women3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2B1C55C93700617BFF /* women3.jpg */; };
+		84AF4F371C55C93700617BFF /* women4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2C1C55C93700617BFF /* women4.jpg */; };
+		84AF4F381C55C93700617BFF /* women5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2D1C55C93700617BFF /* women5.jpg */; };
+		84AF4F391C55C93700617BFF /* women6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2E1C55C93700617BFF /* women6.jpg */; };
+		84AF4F3A1C55C93700617BFF /* women7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F2F1C55C93700617BFF /* women7.jpg */; };
+		84AF4F3B1C55C93700617BFF /* women8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F301C55C93700617BFF /* women8.jpg */; };
+		84AF4F3C1C55C93700617BFF /* women9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F311C55C93700617BFF /* women9.jpg */; };
+		84AF4F3D1C55C93700617BFF /* women10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F321C55C93700617BFF /* women10.jpg */; };
+		84AF4F3E1C55C93700617BFF /* women11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F331C55C93700617BFF /* women11.jpg */; };
 		84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */; };
 		84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7521C35C8F300ECFE0B /* MenViewController.swift */; };
 		84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */; };
@@ -126,6 +137,17 @@
 		84AF4F231C541EDA00617BFF /* amazon_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amazon_logo.jpg; sourceTree = "<group>"; };
 		84AF4F251C541FCC00617BFF /* AmazonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonViewController.swift; sourceTree = "<group>"; };
 		84AF4F271C54B4BF00617BFF /* WomenAmazonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WomenAmazonView.swift; sourceTree = "<group>"; };
+		84AF4F291C55C93700617BFF /* women1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women1.jpg; sourceTree = "<group>"; };
+		84AF4F2A1C55C93700617BFF /* women2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women2.jpg; sourceTree = "<group>"; };
+		84AF4F2B1C55C93700617BFF /* women3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women3.jpg; sourceTree = "<group>"; };
+		84AF4F2C1C55C93700617BFF /* women4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women4.jpg; sourceTree = "<group>"; };
+		84AF4F2D1C55C93700617BFF /* women5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women5.jpg; sourceTree = "<group>"; };
+		84AF4F2E1C55C93700617BFF /* women6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women6.jpg; sourceTree = "<group>"; };
+		84AF4F2F1C55C93700617BFF /* women7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women7.jpg; sourceTree = "<group>"; };
+		84AF4F301C55C93700617BFF /* women8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women8.jpg; sourceTree = "<group>"; };
+		84AF4F311C55C93700617BFF /* women9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women9.jpg; sourceTree = "<group>"; };
+		84AF4F321C55C93700617BFF /* women10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women10.jpg; sourceTree = "<group>"; };
+		84AF4F331C55C93700617BFF /* women11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = women11.jpg; sourceTree = "<group>"; };
 		84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WomenViewController.swift; sourceTree = "<group>"; };
 		84B6D7521C35C8F300ECFE0B /* MenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenViewController.swift; sourceTree = "<group>"; };
 		84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +381,17 @@
 				84FF896E1BFFDFB400FB70D8 /* dress19.jpg */,
 				84FF896F1BFFDFB400FB70D8 /* dress20.jpg */,
 				84FF89701BFFDFB400FB70D8 /* dress21.jpg */,
+				84AF4F291C55C93700617BFF /* women1.jpg */,
+				84AF4F2A1C55C93700617BFF /* women2.jpg */,
+				84AF4F2B1C55C93700617BFF /* women3.jpg */,
+				84AF4F2C1C55C93700617BFF /* women4.jpg */,
+				84AF4F2D1C55C93700617BFF /* women5.jpg */,
+				84AF4F2E1C55C93700617BFF /* women6.jpg */,
+				84AF4F2F1C55C93700617BFF /* women7.jpg */,
+				84AF4F301C55C93700617BFF /* women8.jpg */,
+				84AF4F311C55C93700617BFF /* women9.jpg */,
+				84AF4F321C55C93700617BFF /* women10.jpg */,
+				84AF4F331C55C93700617BFF /* women11.jpg */,
 				84FF89711BFFDFB400FB70D8 /* dress22.jpg */,
 				84FF89721BFFDFB400FB70D8 /* dress23.jpg */,
 				84FF89731BFFDFB400FB70D8 /* dress24.jpg */,
@@ -454,15 +487,19 @@
 				84FF897E1BFFDFB400FB70D8 /* dress7.jpg in Resources */,
 				84B6D7591C35D55300ECFE0B /* Men.jpg in Resources */,
 				84B6D7CF1C3A234F00ECFE0B /* Jacket1.jpg in Resources */,
+				84AF4F371C55C93700617BFF /* women4.jpg in Resources */,
 				84B6D78D1C39B9D400ECFE0B /* kids5.jpg in Resources */,
 				84FF89811BFFDFB400FB70D8 /* dress10.jpg in Resources */,
 				84FF89901BFFDFB400FB70D8 /* dress25.jpg in Resources */,
 				84B6D7D61C3A234F00ECFE0B /* Jacket8.jpg in Resources */,
 				84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */,
+				84AF4F381C55C93700617BFF /* women5.jpg in Resources */,
 				84FF897A1BFFDFB400FB70D8 /* dress3.jpg in Resources */,
 				84B6D7781C39184E00ECFE0B /* men8.jpg in Resources */,
 				84FF89941BFFDFB400FB70D8 /* dress29.jpg in Resources */,
+				84AF4F3C1C55C93700617BFF /* women9.jpg in Resources */,
 				84B6D7D11C3A234F00ECFE0B /* Jacket3.jpg in Resources */,
+				84AF4F361C55C93700617BFF /* women3.jpg in Resources */,
 				84FF89891BFFDFB400FB70D8 /* dress18.jpg in Resources */,
 				84B6D7721C39184E00ECFE0B /* men2.jpg in Resources */,
 				84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */,
@@ -470,10 +507,12 @@
 				84FF89851BFFDFB400FB70D8 /* dress14.jpg in Resources */,
 				84FF89821BFFDFB400FB70D8 /* dress11.jpg in Resources */,
 				8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */,
+				84AF4F351C55C93700617BFF /* women2.jpg in Resources */,
 				84B6D7A91C39E18E00ECFE0B /* toddler7.jpg in Resources */,
 				8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */,
 				84FF898C1BFFDFB400FB70D8 /* dress21.jpg in Resources */,
 				84B6D7951C39BC9000ECFE0B /* sale.jpg in Resources */,
+				84AF4F391C55C93700617BFF /* women6.jpg in Resources */,
 				84B6D7A61C39E18E00ECFE0B /* toddler4.jpg in Resources */,
 				84B6D7611C366BEB00ECFE0B /* Skirt.jpg in Resources */,
 				84B6D7D71C3A234F00ECFE0B /* Jacket9.jpg in Resources */,
@@ -493,6 +532,7 @@
 				84FF898B1BFFDFB400FB70D8 /* dress20.jpg in Resources */,
 				84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */,
 				84B6D7D01C3A234F00ECFE0B /* Jacket2.jpg in Resources */,
+				84AF4F3B1C55C93700617BFF /* women8.jpg in Resources */,
 				84FF89971BFFEADC00FB70D8 /* like.gif in Resources */,
 				84B6D7931C39B9D400ECFE0B /* kids11.jpg in Resources */,
 				84B6D77B1C39184E00ECFE0B /* men11.jpg in Resources */,
@@ -503,6 +543,7 @@
 				84B6D7741C39184E00ECFE0B /* men4.jpg in Resources */,
 				84FF89801BFFDFB400FB70D8 /* dress9.jpg in Resources */,
 				84B6D78E1C39B9D400ECFE0B /* kids6.jpg in Resources */,
+				84AF4F3D1C55C93700617BFF /* women10.jpg in Resources */,
 				84B6D7AC1C39E18E00ECFE0B /* toddler10.jpg in Resources */,
 				84B6D7A51C39E18E00ECFE0B /* toddler3.jpg in Resources */,
 				84FF89861BFFDFB400FB70D8 /* dress15.jpg in Resources */,
@@ -518,17 +559,20 @@
 				8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */,
 				84FF898E1BFFDFB400FB70D8 /* dress23.jpg in Resources */,
 				84FF89841BFFDFB400FB70D8 /* dress13.jpg in Resources */,
+				84AF4F3E1C55C93700617BFF /* women11.jpg in Resources */,
 				84FF89881BFFDFB400FB70D8 /* dress17.jpg in Resources */,
 				8423CB9F1BFDA3F900AB5E1E /* Main.storyboard in Resources */,
 				84B6D7761C39184E00ECFE0B /* men6.jpg in Resources */,
 				84B6D7D81C3A234F00ECFE0B /* Jacket10.jpg in Resources */,
 				84B6D78B1C39B9D400ECFE0B /* kids3.jpg in Resources */,
 				84FF89871BFFDFB400FB70D8 /* dress16.jpg in Resources */,
+				84AF4F3A1C55C93700617BFF /* women7.jpg in Resources */,
 				84B6D78A1C39B9D400ECFE0B /* kids2.jpg in Resources */,
 				84B6D7D31C3A234F00ECFE0B /* Jacket5.jpg in Resources */,
 				84B6D7711C39184E00ECFE0B /* men1.jpg in Resources */,
 				84B6D7771C39184E00ECFE0B /* men7.jpg in Resources */,
 				84FF898D1BFFDFB400FB70D8 /* dress22.jpg in Resources */,
+				84AF4F341C55C93700617BFF /* women1.jpg in Resources */,
 				84B6D7D21C3A234F00ECFE0B /* Jacket4.jpg in Resources */,
 				84B6D7891C39B9D400ECFE0B /* kids1.jpg in Resources */,
 			);

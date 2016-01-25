@@ -15,6 +15,7 @@ class CatalogCell: UICollectionViewCell {
     var itemCategory = ""
     var itemBrand = ""
     var itemPrice = ""
+    var selectedIndex = Int()
     
     var setSideImage = UIImage()
     
@@ -40,7 +41,8 @@ class CatalogCell: UICollectionViewCell {
             itemCategory = itemText
         }
         
-        
+        selectedIndex = item.selectedCell
+                
 //        if let imagePath = item.itemImagePath {
 //            let url = NSURL(string: imagePath)!
 //            

@@ -15,11 +15,13 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var collectionView: UICollectionView!
     
     var clickedCell = CatalogCell()
+    var catalog = [Item]()
+    var selectedCell = [CatalogCell]()
+    
+    var selectedIndex = Int()
     
     let URL_BASE = "https://s3.amazonaws.com/spicysuya/MenJSON"
     
-    var catalog = [Item]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +79,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
             
             let item = catalog[indexPath.row]
+            item.selectedCell = indexPath.row
             cell.configureCell(item)
             
             
@@ -84,8 +87,8 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
+                
             }
-            
             
             return cell
             
@@ -102,7 +105,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             
             clickedCell = cell
             
-            performSegueWithIdentifier("menCatalogDetails", sender: self)
+            performSegueWithIdentifier("amazonCatalogDetails", sender: self)
             
         }
     }
@@ -122,19 +125,57 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         return CGSizeMake(450, 541)
         
     }
-
     
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedIndex = indexPath.item
+        
+        print(selectedIndex)
+        
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let catalogDetails = segue.destinationViewController as! AmazonViewController
         
-        if let title = clickedCell.itemLbl.text {
-
-            if title == "Jackets" {
-                print("Clicked on Men Jacket")
-
-            }
+     
+        if clickedCell.selectedIndex == 0 {
+            catalogDetails.searchProductCategory = "Men Jacket"
         }
+        
+        if clickedCell.selectedIndex == 1 {
+            catalogDetails.searchProductCategory = "Men Pants"
+        }
+        if clickedCell.selectedIndex == 2 {
+            catalogDetails.searchProductCategory = "Men Shirts"
+        }
+        if clickedCell.selectedIndex == 3 {
+            catalogDetails.searchProductCategory = "Men T-Shirt"
+        }
+        
+        if clickedCell.selectedIndex == 4 {
+            catalogDetails.searchProductCategory = "Men Coats"
+        }
+        if clickedCell.selectedIndex == 5 {
+            catalogDetails.searchProductCategory = "Men Suits"
+        }
+        if clickedCell.selectedIndex == 6 {
+            catalogDetails.searchProductCategory = "Men Sweaters"
+        }
+        if clickedCell.selectedIndex == 7 {
+            catalogDetails.searchProductCategory = "Men Dress Shoes"
+        }
+        if clickedCell.selectedIndex == 8 {
+            catalogDetails.searchProductCategory = "Men Tennis Shoes"
+        }
+        if clickedCell.selectedIndex == 9 {
+            catalogDetails.searchProductCategory = "Men Underwear"
+        }
+        if clickedCell.selectedIndex == 10 {
+            catalogDetails.searchProductCategory = "Men Casual Wear"
+        }
+        
     }
 
 
