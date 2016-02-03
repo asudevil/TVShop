@@ -151,7 +151,7 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
    // testing side image
         itemDetails.clickedSideImage2 = clickedCell.setSideImage
         
-        itemDetails.clickedItemCategory = clickedCell.itemCategory
+        itemDetails.clickedItemCategory = clickedCell.itemDesc
         
     }
     

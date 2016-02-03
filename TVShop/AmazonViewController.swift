@@ -11,6 +11,7 @@ import UIKit
 class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DownloadFinishProtocol {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var catalog = [Item]()
     
@@ -32,9 +33,11 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         amazonDada.delegate = self
         
+        //start activity indicator spinner
+        activityIndicator.startAnimating()
+        
         amazonDada.searchProducts(searchProductCategory)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +52,9 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             if let title = self.amazonDada.amazonProducts[indexPath.row].title {
                 cell.itemLbl.text = title
+                
+        //stop activity indicator spinner
+                activityIndicator.stopAnimating()
             }
             
             if let brand = self.amazonDada.amazonProducts[indexPath.row].brand {
@@ -60,7 +66,7 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
             
             if let product = self.amazonDada.amazonProducts[indexPath.row].productGroup {
-                cell.itemCategory = product
+                cell.itemDesc = product
             }
             
             if let urlString = self.amazonDada.amazonProducts[indexPath.row].smallImage {
@@ -76,32 +82,12 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
                 cell.addGestureRecognizer(tap)
             }
             
-            
             return cell
             
         } else {
             
             return CatalogCell()
-    }
-        
-        
-//        cell.tilteLabel.text = self.amazonDada.amazonProducts[indexPath.row].title
-//        cell.productGroupLabel.text = self.amazonDada.amazonProducts[indexPath.row].productGroup
-//        cell.priceLabel.text = self.amazonDada.amazonProducts[indexPath.row].price
-//        cell.asinLabel.text = self.amazonDada.amazonProducts[indexPath.row].asin
-//        cell.brandLabel.text = self.amazonDada.amazonProducts[indexPath.row].brand
-//        
-//        
-//        if let urlString = self.amazonDada.amazonProducts[indexPath.row].smallImage {
-//            let url = NSURL(string: urlString)
-//            cell.smallImage.hnk_setImageFromURL(url!)
-//        }
-//        else {
-//            cell.smallImage.image = nil
-//        }
-//        
-//        
-//        return cell
+        }
 
     }
     
@@ -172,7 +158,7 @@ class AmazonViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
             itemDetails.clickedBrand = clickedCell.itemBrand
             itemDetails.clickedPrice = clickedCell.itemPrice
-            itemDetails.clickedItemCategory = clickedCell.itemCategory
+            itemDetails.clickedItemCategory = clickedCell.itemDesc
             
         }
 

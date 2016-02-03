@@ -143,7 +143,6 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         if clickedCell.selectedIndex == 0 {
             catalogDetails.searchProductCategory = "Men Jacket"
         }
-        
         if clickedCell.selectedIndex == 1 {
             catalogDetails.searchProductCategory = "Men Pants"
         }
@@ -153,7 +152,6 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         if clickedCell.selectedIndex == 3 {
             catalogDetails.searchProductCategory = "Men T-Shirt"
         }
-        
         if clickedCell.selectedIndex == 4 {
             catalogDetails.searchProductCategory = "Men Coats"
         }
@@ -175,7 +173,6 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         if clickedCell.selectedIndex == 10 {
             catalogDetails.searchProductCategory = "Men Casual Wear"
         }
-        
     }
 
 

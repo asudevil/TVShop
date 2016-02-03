@@ -14,6 +14,7 @@ class Item {
     var itemDescription: String!
     var itemImagePath: String!
     var sideImagePath: String!
+    var price: String!
     
     var selectedCell = Int()
     
@@ -31,15 +32,23 @@ class Item {
         if let imageCount = itemDict["image_path"] as? String {
             
             self.itemImagePath = "\(type)\(imageCount).jpg"
-
         }
         
+        if let priceOutput = itemDict["price"] as? String {
+            self.price = priceOutput
+        }
+        
+        if let imageEtsy = itemDict["Images"] as? [Dictionary<String, AnyObject>] {
+            let displayImage = imageEtsy[0]
+            if let etsyURL = displayImage["url_170x135"] as? String {
+//                print(etsyURL)
+                self.itemImagePath = etsyURL
+            }
+        }
         
 //testing concept
         let sideImageCount = "5"
         self.sideImagePath = "\(type)\(sideImageCount).jpg"
 
     }
-    
-
 }

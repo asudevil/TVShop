@@ -122,7 +122,6 @@ class AmazonData {
                     product.price = child["LowestNewPrice"]["FormattedPrice"].element?.text
                     amazonProducts.append(product)
                 }
-                
             }
         }
         

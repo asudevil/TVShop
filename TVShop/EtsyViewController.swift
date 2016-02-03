@@ -1,8 +1,8 @@
 //
-//  WomenAmazonView.swift
+//  EtsyViewController.swift
 //  TVShop
 //
-//  Created by admin on 1/23/16.
+//  Created by admin on 1/31/16.
 //  Copyright © 2016 CodeWithFelix. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SWXMLHash
 
-class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,9 +20,16 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
     
     var selectedIndex = Int()
     
-    let URL_BASE = "https://s3.amazonaws.com/spicysuya/WomenJSON"
+    let URL_BASE = "https://openapi.etsy.com/v2/listings/active?"
+    let limit1 = 50
+    let offset1 = 50
+
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    let ETSY_KEY = "gzz1i25ohi2weccyfgb5kc08"
+    
+    var counter = 0
+    
+//    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +37,11 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        activityIndicator.startAnimating()
+//        activityIndicator.startAnimating()
         
         downloadData()
         
-        activityIndicator.stopAnimating()
+//        activityIndicator.stopAnimating()
         
     }
     
@@ -42,7 +49,13 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         
         //NOTE: All this should be in a seperate class for download manager class
         
-        let url = NSURL(string: URL_BASE)!
+        let urlString = "\(URL_BASE)limit=\(limit1)&offset=\(offset1)&includes=Images:1:0&api_key=\(ETSY_KEY)"
+        
+        counter = counter++
+        
+        print(counter)
+        
+        let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request){ (data, request, error) -> Void in
@@ -60,8 +73,8 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
                         for obj in results {
                             let item = Item(itemDict: obj, type: "women")
                             self.catalog.append(item)
+                            
                         }
-                        
                         //Main UI thread
                         dispatch_async(dispatch_get_main_queue()) {
                             self.collectionView.reloadData()
@@ -85,13 +98,11 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
             let item = catalog[indexPath.row]
             item.selectedCell = indexPath.row
             cell.configureCell(item)
-            
-            
+                        
             if cell.gestureRecognizers?.count == nil {
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
-                
             }
             
             return cell
@@ -109,8 +120,28 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
             
             clickedCell = cell
             
-            performSegueWithIdentifier("amazonCatalogDetails", sender: self)
+            performSegueWithIdentifier("itemDetails", sender: self)
             
+        }
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL, cell: CatalogCell){
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                
+                if let downloadedImage = UIImage(data: data){
+                    
+                    cell.itemImg.image = downloadedImage
+                    cell.setSideImage = downloadedImage
+                }
+            }
         }
     }
     
@@ -135,49 +166,25 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         
         selectedIndex = indexPath.item
         
-        print(selectedIndex)
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! AmazonViewController
+        let itemDetails = segue.destinationViewController as! ItemDetailsView
         
-        
-        if clickedCell.selectedIndex == 0 {
-            catalogDetails.searchProductCategory = "Women formal gown"
+        if let title = clickedCell.itemLbl.text {
+            itemDetails.clickedItemTitle = title
         }
         
-        if clickedCell.selectedIndex == 1 {
-            catalogDetails.searchProductCategory = "women formal dress"
+        if let image = clickedCell.itemImg.image {
+            itemDetails.clickedImage = image
+            itemDetails.clickedSideImage1 = image
+            itemDetails.clickedSideImage2 = image
+            itemDetails.clickedSideImage3 = image
         }
-        if clickedCell.selectedIndex == 2 {
-            catalogDetails.searchProductCategory = "Women top dress"
-        }
-        if clickedCell.selectedIndex == 3 {
-            catalogDetails.searchProductCategory = "Casual Skirt"
-        }
-        if clickedCell.selectedIndex == 4 {
-            catalogDetails.searchProductCategory = "African Dress"
-        }
-        if clickedCell.selectedIndex == 5 {
-            catalogDetails.searchProductCategory = "African fashion"
-        }
-        if clickedCell.selectedIndex == 6 {
-            catalogDetails.searchProductCategory = "Women Coat"
-        }
-        if clickedCell.selectedIndex == 7 {
-            catalogDetails.searchProductCategory = "Women Shoes"
-        }
-        if clickedCell.selectedIndex == 8 {
-            catalogDetails.searchProductCategory = "Women Casual Shoes"
-        }
-        if clickedCell.selectedIndex == 9 {
-            catalogDetails.searchProductCategory = "Women bag"
-        }
-        if clickedCell.selectedIndex == 10 {
-            catalogDetails.searchProductCategory = "Women jewelry"
-        }
+        itemDetails.clickedBrand = clickedCell.itemBrand
+        itemDetails.clickedPrice = clickedCell.itemPrice
+        itemDetails.clickedItemCategory = clickedCell.itemDesc
         
     }
     

@@ -12,7 +12,7 @@ class CatalogCell: UICollectionViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemLbl: UILabel!
     
-    var itemCategory = ""
+    var itemDesc = ""
     var itemBrand = ""
     var itemPrice = ""
     var selectedIndex = Int()
@@ -26,35 +26,49 @@ class CatalogCell: UICollectionViewCell {
         }
         
         if let image = item.itemImagePath {
+            
+            if let urlNS = NSURL(string: image) {
+                
+                self.getDataFromUrl(urlNS) { (data, response, error)  in
+                    dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                        guard let data = data where error == nil else { return }
+                        
+                        if let downloadedImage = UIImage(data: data){
+                            
+                            self.itemImg.image = downloadedImage
+                            self.setSideImage = downloadedImage
+                        }
+                    }
+                }
+
+            }
+            
+            
             itemImg.image = UIImage(named: image)
         }
         
         if let sideImage = item.sideImagePath {
             if let theImage = UIImage(named: sideImage) {
                 setSideImage = theImage
-                
             }
             
         }
         
         if let itemText = item.itemDescription {
-            itemCategory = itemText
+            itemDesc = itemText
+        }
+        
+        if let itemPrice1 = item.price {
+            itemPrice = itemPrice1
         }
         
         selectedIndex = item.selectedCell
-                
-//        if let imagePath = item.itemImagePath {
-//            let url = NSURL(string: imagePath)!
-//            
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-//                
-//                let data = NSData(contentsOfURL: url)!
-//                
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    let img = UIImage(data: data)
-//                    self.itemImg.image = img
-//                }
-//            }
-//        }
+        
     }
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+
 }

@@ -14,6 +14,8 @@
 		8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */; };
 		8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */; };
 		8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */; };
+		84351F071C5D789C0025115F /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; };
+		84351F081C5D789C0025115F /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84AF4F1F1C54145B00617BFF /* AmazonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F1E1C54145B00617BFF /* AmazonData.swift */; };
 		84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */; };
 		84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F231C541EDA00617BFF /* amazon_logo.jpg */; };
@@ -86,6 +88,8 @@
 		84B6D7D81C3A234F00ECFE0B /* Jacket10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7CD1C3A234F00ECFE0B /* Jacket10.jpg */; };
 		84B6D7D91C3A234F00ECFE0B /* Jacket11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B6D7CE1C3A234F00ECFE0B /* Jacket11.jpg */; };
 		84B6D7DB1C3CD24100ECFE0B /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7DA1C3CD24100ECFE0B /* ItemDetailsView.swift */; };
+		84D209DC1C5DF84E007F812C /* EtsyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D209DB1C5DF84E007F812C /* EtsyViewController.swift */; };
+		84F3D4F71C5D7A0B00106C3A /* ShopifyMobileBuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */; };
 		84FF89591BFFDE7900FB70D8 /* dress0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF89581BFFDE7900FB70D8 /* dress0.jpg */; };
 		84FF895C1BFFDF9900FB70D8 /* dress1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895A1BFFDF9900FB70D8 /* dress1.jpg */; };
 		84FF895D1BFFDF9900FB70D8 /* dress2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FF895B1BFFDF9900FB70D8 /* dress2.jpg */; };
@@ -121,6 +125,72 @@
 		84FF89991BFFED1300FB70D8 /* dislike.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FF89981BFFED1300FB70D8 /* dislike.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84351EFE1C5D78460025115F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4C16BE1BD00FE7005AAAD3;
+			remoteInfo = "Buy tvOS";
+		};
+		84351F091C5D789C0025115F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 901930E11BC5B9BC00D1134E;
+			remoteInfo = Buy;
+		};
+		844EF0291C5D7686000DD771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90F7BA681B0D1DAF0067864D;
+			remoteInfo = Playground;
+		};
+		844EF02B1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90F592EC1B0D5EFE0026B382;
+			remoteInfo = "Mobile Buy SDK Tests";
+		};
+		844EF02D1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE9A64281B503C2F0033E558;
+			remoteInfo = "Buy Static";
+		};
+		844EF02F1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 901931701BC5B9BC00D1134E;
+			remoteInfo = Buy;
+		};
+		844EF0311C5D7686000DD771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE4C174C1BD00FE7005AAAD3;
+			remoteInfo = "Buy tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84351F0B1C5D789C0025115F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84351F081C5D789C0025115F /* Buy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		756EBA0A25A2BB50600E02B4 /* Pods-TVShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShop/Pods-TVShop.debug.xcconfig"; sourceTree = "<group>"; };
 		8423CB961BFDA3F900AB5E1E /* TVShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +201,7 @@
 		8423CBA21BFDA3F900AB5E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG1.jpg; sourceTree = "<group>"; };
 		8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG2.jpg; sourceTree = "<group>"; };
+		844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Mobile Buy SDK.xcodeproj"; path = "../mobile-buy-sdk-ios-tvOS/Mobile Buy SDK/Mobile Buy SDK.xcodeproj"; sourceTree = "<group>"; };
 		84AF4F1E1C54145B00617BFF /* AmazonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonData.swift; sourceTree = "<group>"; };
 		84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amazon-Bridging-Header.h"; sourceTree = "<group>"; };
 		84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACAlgorithm.swift; sourceTree = "<group>"; };
@@ -204,6 +275,8 @@
 		84B6D7CD1C3A234F00ECFE0B /* Jacket10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jacket10.jpg; sourceTree = "<group>"; };
 		84B6D7CE1C3A234F00ECFE0B /* Jacket11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jacket11.jpg; sourceTree = "<group>"; };
 		84B6D7DA1C3CD24100ECFE0B /* ItemDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
+		84D209DB1C5DF84E007F812C /* EtsyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtsyViewController.swift; sourceTree = "<group>"; };
+		84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopifyMobileBuy.swift; path = ../ShopifyMobileBuy.swift; sourceTree = "<group>"; };
 		84FF89581BFFDE7900FB70D8 /* dress0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress0.jpg; sourceTree = "<group>"; };
 		84FF895A1BFFDF9900FB70D8 /* dress1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress1.jpg; sourceTree = "<group>"; };
 		84FF895B1BFFDF9900FB70D8 /* dress2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress2.jpg; sourceTree = "<group>"; };
@@ -247,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6697698999FAA4411FE4D5A1 /* Pods_TVShop.framework in Frameworks */,
+				84351F071C5D789C0025115F /* Buy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +339,7 @@
 		8423CB8D1BFDA3F900AB5E1E = {
 			isa = PBXGroup;
 			children = (
+				844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */,
 				8423CB981BFDA3F900AB5E1E /* TVShop */,
 				8423CB971BFDA3F900AB5E1E /* Products */,
 				374253380211747776AE678B /* Pods */,
@@ -283,8 +358,10 @@
 		8423CB981BFDA3F900AB5E1E /* TVShop */ = {
 			isa = PBXGroup;
 			children = (
+				84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */,
 				84AF4F1E1C54145B00617BFF /* AmazonData.swift */,
 				84AF4F251C541FCC00617BFF /* AmazonViewController.swift */,
+				84D209DB1C5DF84E007F812C /* EtsyViewController.swift */,
 				84AF4F271C54B4BF00617BFF /* WomenAmazonView.swift */,
 				84B6D7521C35C8F300ECFE0B /* MenViewController.swift */,
 				84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */,
@@ -304,6 +381,18 @@
 				84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */,
 			);
 			path = TVShop;
+			sourceTree = "<group>";
+		};
+		844EF0201C5D7686000DD771 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				844EF02A1C5D7686000DD771 /* Playground.app */,
+				844EF02C1C5D7686000DD771 /* Mobile Buy SDK Tests.xctest */,
+				844EF02E1C5D7686000DD771 /* Buy.framework */,
+				844EF0301C5D7686000DD771 /* Buy.framework */,
+				844EF0321C5D7686000DD771 /* Buy.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		84B6D7321C337EE200ECFE0B /* images */ = {
@@ -429,10 +518,13 @@
 				8423CB941BFDA3F900AB5E1E /* Resources */,
 				1494E5CB6AF135677D1FA3B2 /* Embed Pods Frameworks */,
 				105A14995FA966AB1E11C9BD /* Copy Pods Resources */,
+				84351F0B1C5D789C0025115F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84351EFF1C5D78460025115F /* PBXTargetDependency */,
+				84351F0A1C5D789C0025115F /* PBXTargetDependency */,
 			);
 			name = TVShop;
 			productName = TVShop;
@@ -466,12 +558,56 @@
 			mainGroup = 8423CB8D1BFDA3F900AB5E1E;
 			productRefGroup = 8423CB971BFDA3F900AB5E1E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 844EF0201C5D7686000DD771 /* Products */;
+					ProjectRef = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8423CB951BFDA3F900AB5E1E /* TVShop */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		844EF02A1C5D7686000DD771 /* Playground.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Playground.app;
+			remoteRef = 844EF0291C5D7686000DD771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		844EF02C1C5D7686000DD771 /* Mobile Buy SDK Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mobile Buy SDK Tests.xctest";
+			remoteRef = 844EF02B1C5D7686000DD771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		844EF02E1C5D7686000DD771 /* Buy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buy.framework;
+			remoteRef = 844EF02D1C5D7686000DD771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		844EF0301C5D7686000DD771 /* Buy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buy.framework;
+			remoteRef = 844EF02F1C5D7686000DD771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		844EF0321C5D7686000DD771 /* Buy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buy.framework;
+			remoteRef = 844EF0311C5D7686000DD771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8423CB941BFDA3F900AB5E1E /* Resources */ = {
@@ -639,6 +775,8 @@
 				84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */,
 				84B6D7631C38794C00ECFE0B /* CatalogCell.swift in Sources */,
 				84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */,
+				84F3D4F71C5D7A0B00106C3A /* ShopifyMobileBuy.swift in Sources */,
+				84D209DC1C5DF84E007F812C /* EtsyViewController.swift in Sources */,
 				84B6D7651C38A54B00ECFE0B /* Item.swift in Sources */,
 				84AF4F281C54B4BF00617BFF /* WomenAmazonView.swift in Sources */,
 				8423CB9C1BFDA3F900AB5E1E /* ViewController.swift in Sources */,
@@ -651,6 +789,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84351EFF1C5D78460025115F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Buy tvOS";
+			targetProxy = 84351EFE1C5D78460025115F /* PBXContainerItemProxy */;
+		};
+		84351F0A1C5D789C0025115F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Buy;
+			targetProxy = 84351F091C5D789C0025115F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8423CB9D1BFDA3F900AB5E1E /* Main.storyboard */ = {
