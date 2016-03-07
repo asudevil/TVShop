@@ -41,7 +41,7 @@ class WomenViewController: UIViewController {
     
     
     func tapped(gesture: UITapGestureRecognizer) {
-        if var clickedImage = gesture.view as? FocusView {
+        if let clickedImage = gesture.view as? FocusView {
             
            tappedImage = clickedImage
             
@@ -59,25 +59,21 @@ class WomenViewController: UIViewController {
     }
     
 
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let selectedCatalog = segue.destinationViewController as! ViewController
+        if let selectedCatalog = segue.destinationViewController as? ViewController {
         
-        if firstImageView.gestureRecognizers?.count != nil {
-            
-            if let assignImage = firstImage.image {
+            if firstImageView.gestureRecognizers?.count != nil {
                 
-                selectedCatalog.clickedImage = assignImage
-                selectedCatalog.clickedSideImage1 = assignImage
-                selectedCatalog.clickedSideImage2 = assignImage
-                selectedCatalog.clickedSideImage3 = assignImage
-                
-        //        selectedCatalog.clickedDescription = "This is the first women clothes selected"
-                
+                if let assignImage = firstImage.image {
+                    
+                    selectedCatalog.clickedImage = assignImage
+                    selectedCatalog.clickedSideImage1 = assignImage
+                    selectedCatalog.clickedSideImage2 = assignImage
+                    selectedCatalog.clickedSideImage3 = assignImage
+                    
+                }
             }
         }
     }
-    
-
 }

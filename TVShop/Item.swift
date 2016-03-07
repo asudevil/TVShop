@@ -15,6 +15,7 @@ class Item {
     var itemImagePath: String!
     var sideImagePath: String!
     var price: String!
+    var id: String!
     
     var selectedCell = Int()
     
@@ -26,11 +27,19 @@ class Item {
         }
         
         if let descriptionOutput = itemDict["description"] as? String {
-            self.itemDescription = descriptionOutput
+            let theString = NSString(string: descriptionOutput)
+            
+            if theString.containsString("&nbsp") {
+                let trimString = theString.substringWithRange(NSRange(location: 3, length: theString.length - 13))
+                self.itemDescription = trimString as String
+            }
+            else if theString.containsString("<p>") {
+                let trimString = theString.substringWithRange(NSRange(location: 3, length: theString.length - 7))
+                self.itemDescription = trimString as String
+            }
         }
         
         if let imageCount = itemDict["image_path"] as? String {
-            
             self.itemImagePath = "\(type)\(imageCount).jpg"
         }
         
@@ -41,9 +50,32 @@ class Item {
         if let imageEtsy = itemDict["Images"] as? [Dictionary<String, AnyObject>] {
             let displayImage = imageEtsy[0]
             if let etsyURL = displayImage["url_170x135"] as? String {
-//                print(etsyURL)
                 self.itemImagePath = etsyURL
             }
+        }
+        
+        if let bigImage = itemDict["primary_image"] as? Dictionary<String, AnyObject> {
+            if let bigURL = bigImage["standard_url"] as? String {
+                self.itemImagePath = bigURL
+            }
+        }
+        
+        if let bigPrice = itemDict["calculated_price"] as? String {
+            
+            let theString = NSString(string: bigPrice)
+            
+            if theString.containsString(".0000") {
+                let trimString = theString.substringWithRange(NSRange(location: 0, length: theString.length - 2))
+                self.price = trimString as String
+            }
+
+        }
+        if let bigTitle = itemDict["name"] as? String {
+            self.title = bigTitle
+        }
+        
+        if let id = itemDict["id"] as? Int {
+            self.id = String(id)
         }
         
 //testing concept

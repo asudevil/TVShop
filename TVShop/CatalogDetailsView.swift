@@ -12,8 +12,6 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var clickedCell = CatalogCell()
-    
     var catagory = ""
     
     var URL_BASE = ""
@@ -103,11 +101,9 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
         if let cell = gesture.view as? CatalogCell {
             //Load the next view controller and pass in the catalog
             
-            clickedCell = cell
-            
             print("You tapped on an item in the kids catalog")
             
-            performSegueWithIdentifier("itemDetails", sender: self)
+            performSegueWithIdentifier("itemDetails", sender: cell)
             
         }
     }
@@ -133,26 +129,30 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let itemDetails = segue.destinationViewController as! ItemDetailsView
+        if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
+            
+            if let theCell = sender as? CatalogCell {
         
-        
-        if let title = clickedCell.itemLbl.text {
-            itemDetails.clickedItemTitle = title
-        }
-        
-        if let image = clickedCell.itemImg.image {
-            itemDetails.clickedImage = image
-            itemDetails.clickedSideImage1 = image
- //           itemDetails.clickedSideImage2 = image  // testing out side image
-            itemDetails.clickedSideImage3 = image
-        }
+                
+                if let title = theCell.itemLbl.text {
+                    itemDetailsVC.clickedItemTitle = title
+                }
+                
+                if let image = theCell.itemImg.image {
+                    itemDetailsVC.clickedImage = image
+                    itemDetailsVC.clickedSideImage1 = image
+         //           itemDetails.clickedSideImage2 = image  // testing out side image
+                    itemDetailsVC.clickedSideImage3 = image
+                }
 
-        
-   // testing side image
-        itemDetails.clickedSideImage2 = clickedCell.setSideImage
-        
-        itemDetails.clickedItemCategory = clickedCell.itemDesc
-        
+                
+           // testing side image
+                itemDetailsVC.clickedSideImage2 = theCell.setSideImage
+                
+                itemDetailsVC.clickedItemCategory = theCell.itemDesc
+                }
+        }
+    
     }
     
 }

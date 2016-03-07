@@ -25,10 +25,8 @@ class ShopifyMobileBuy: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         
-        
         client = BUYClient(shopDomain: shopDomain, apiKey: apiKey, channelId: channelId)
         super.init(coder: aDecoder)!
-        
     }
     
     override func viewDidLoad() {
@@ -68,8 +66,6 @@ class ShopifyMobileBuy: UIViewController {
         let cart = BUYCart()
         cart.addVariant(productVariant!)
         
-        
-        
         let checkout = BUYCheckout(cart: cart)
         client.createCheckout(checkout) { (checkout, error) -> Void in
             
@@ -79,7 +75,7 @@ class ShopifyMobileBuy: UIViewController {
             
             print(checkoutURL)
             
-       //     if (UIApplication.sharedApplication().canOpenURL(checkoutURL)) {
+        //      if (UIApplication.sharedApplication().canOpenURL(checkoutURL)) {
                 UIApplication.sharedApplication().openURL(checkoutURL)
                 
                 print("Checkout Open URL")

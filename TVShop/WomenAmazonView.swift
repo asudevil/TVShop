@@ -34,8 +34,6 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         
         downloadData()
         
-        activityIndicator.stopAnimating()
-        
     }
     
     func downloadData() {
@@ -82,6 +80,8 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
             
+            activityIndicator.stopAnimating()
+            
             let item = catalog[indexPath.row]
             item.selectedCell = indexPath.row
             cell.configureCell(item)
@@ -109,7 +109,7 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
             
             clickedCell = cell
             
-            performSegueWithIdentifier("amazonCatalogDetails", sender: self)
+            performSegueWithIdentifier("amazonCatalogDetails", sender: cell)
             
         }
     }
@@ -141,42 +141,36 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! AmazonViewController
-        
-        
-        if clickedCell.selectedIndex == 0 {
-            catalogDetails.searchProductCategory = "Women formal gown"
-        }
-        
-        if clickedCell.selectedIndex == 1 {
-            catalogDetails.searchProductCategory = "women formal dress"
-        }
-        if clickedCell.selectedIndex == 2 {
-            catalogDetails.searchProductCategory = "Women top dress"
-        }
-        if clickedCell.selectedIndex == 3 {
-            catalogDetails.searchProductCategory = "Casual Skirt"
-        }
-        if clickedCell.selectedIndex == 4 {
-            catalogDetails.searchProductCategory = "African Dress"
-        }
-        if clickedCell.selectedIndex == 5 {
-            catalogDetails.searchProductCategory = "African fashion"
-        }
-        if clickedCell.selectedIndex == 6 {
-            catalogDetails.searchProductCategory = "Women Coat"
-        }
-        if clickedCell.selectedIndex == 7 {
-            catalogDetails.searchProductCategory = "Women Shoes"
-        }
-        if clickedCell.selectedIndex == 8 {
-            catalogDetails.searchProductCategory = "Women Casual Shoes"
-        }
-        if clickedCell.selectedIndex == 9 {
-            catalogDetails.searchProductCategory = "Women bag"
-        }
-        if clickedCell.selectedIndex == 10 {
-            catalogDetails.searchProductCategory = "Women jewelry"
+        if let catalogDetailsVC = segue.destinationViewController as? AmazonViewController {
+            if let theCell = sender as? CatalogCell {
+                
+                switch theCell.selectedIndex {
+                    case 0:
+                        catalogDetailsVC.searchProductCategory = "women formal gown"
+                    case 1:
+                        catalogDetailsVC.searchProductCategory = "women dress"
+                    case 2:
+                        catalogDetailsVC.searchProductCategory = "Women top dress"
+                    case 3:
+                        catalogDetailsVC.searchProductCategory = "Casual Skirt"
+                    case 4:
+                        catalogDetailsVC.searchProductCategory = "African women Dress"
+                    case 5:
+                        catalogDetailsVC.searchProductCategory = "yoga clothing"
+                    case 6:
+                        catalogDetailsVC.searchProductCategory = "Women Coat"
+                    case 7:
+                        catalogDetailsVC.searchProductCategory = "Women Dress Shoes"
+                    case 8:
+                        catalogDetailsVC.searchProductCategory = "Women Casual Shoes"
+                    case 9:
+                        catalogDetailsVC.searchProductCategory = "Women bag"
+                    case 10:
+                        catalogDetailsVC.searchProductCategory = "Women jewelry"
+                    default:
+                        print("ERROR: No catalog selected selected")
+                }
+            }
         }
         
     }

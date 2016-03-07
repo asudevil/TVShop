@@ -15,17 +15,22 @@ class CatalogCell: UICollectionViewCell {
     var itemDesc = ""
     var itemBrand = ""
     var itemPrice = ""
+    var itemSKUId = ""
+    var imagePath = ""
     var selectedIndex = Int()
+    var qtyInCart = Int()
     
     var setSideImage = UIImage()
     
     func configureCell(item: Item) {
-
+        
         if let title = item.title {
-            itemLbl.text = title
+            itemLbl.text = title            
         }
         
         if let image = item.itemImagePath {
+            
+            imagePath = item.itemImagePath
             
             if let urlNS = NSURL(string: image) {
                 
@@ -40,9 +45,7 @@ class CatalogCell: UICollectionViewCell {
                         }
                     }
                 }
-
             }
-            
             
             itemImg.image = UIImage(named: image)
         }
@@ -51,7 +54,6 @@ class CatalogCell: UICollectionViewCell {
             if let theImage = UIImage(named: sideImage) {
                 setSideImage = theImage
             }
-            
         }
         
         if let itemText = item.itemDescription {
@@ -61,8 +63,12 @@ class CatalogCell: UICollectionViewCell {
         if let itemPrice1 = item.price {
             itemPrice = itemPrice1
         }
+        if let theSKUId = item.id {
+            itemSKUId = theSKUId
+        }
         
         selectedIndex = item.selectedCell
+        
         
     }
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
@@ -70,5 +76,4 @@ class CatalogCell: UICollectionViewCell {
             completion(data: data, response: response, error: error)
             }.resume()
     }
-
 }

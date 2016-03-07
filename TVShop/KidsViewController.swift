@@ -12,6 +12,8 @@ class KidsViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var clickedCell = CatalogCell()
     
     let URL_BASE = "https://s3.amazonaws.com/spicysuya/KidsJSON"
@@ -23,6 +25,8 @@ class KidsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        activityIndicator.startAnimating()
         
         downloadData()
         
@@ -75,6 +79,8 @@ class KidsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let cell1 = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath1) as? CatalogCell {
             
+            activityIndicator.stopAnimating()
+            
             let item = catalog[indexPath1.row]
             cell1.configureCell(item)
             
@@ -124,14 +130,15 @@ class KidsViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! CatalogDetailsView
+        if let catalogDetails = segue.destinationViewController as? CatalogDetailsView {
 
-        if let title = clickedCell.itemLbl.text {
+            if let title = clickedCell.itemLbl.text {
+                
+                if title == "Toddler" {
             
-            if title == "Toddler" {
-        
-                catalogDetails.URL_BASE = "https://s3.amazonaws.com/spicysuya/ToddlerCatalogJSON"
-                catalogDetails.catagory = "toddler"
+                    catalogDetails.URL_BASE = "https://s3.amazonaws.com/spicysuya/ToddlerCatalogJSON"
+                    catalogDetails.catagory = "toddler"
+                }
             }
         }
     }

@@ -14,6 +14,8 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var clickedCell = CatalogCell()
     var catalog = [Item]()
     var selectedCell = [CatalogCell]()
@@ -27,6 +29,8 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        activityIndicator.startAnimating()
         
         downloadData()
 
@@ -78,6 +82,8 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
             
+            activityIndicator.stopAnimating()
+            
             let item = catalog[indexPath.row]
             item.selectedCell = indexPath.row
             cell.configureCell(item)
@@ -105,7 +111,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             
             clickedCell = cell
             
-            performSegueWithIdentifier("amazonCatalogDetails", sender: self)
+            performSegueWithIdentifier("amazonCatalogDetails", sender: cell)
             
         }
     }
@@ -137,43 +143,37 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let catalogDetails = segue.destinationViewController as! AmazonViewController
-        
-     
-        if clickedCell.selectedIndex == 0 {
-            catalogDetails.searchProductCategory = "Men Jacket"
-        }
-        if clickedCell.selectedIndex == 1 {
-            catalogDetails.searchProductCategory = "Men Pants"
-        }
-        if clickedCell.selectedIndex == 2 {
-            catalogDetails.searchProductCategory = "Men Shirts"
-        }
-        if clickedCell.selectedIndex == 3 {
-            catalogDetails.searchProductCategory = "Men T-Shirt"
-        }
-        if clickedCell.selectedIndex == 4 {
-            catalogDetails.searchProductCategory = "Men Coats"
-        }
-        if clickedCell.selectedIndex == 5 {
-            catalogDetails.searchProductCategory = "Men Suits"
-        }
-        if clickedCell.selectedIndex == 6 {
-            catalogDetails.searchProductCategory = "Men Sweaters"
-        }
-        if clickedCell.selectedIndex == 7 {
-            catalogDetails.searchProductCategory = "Men Dress Shoes"
-        }
-        if clickedCell.selectedIndex == 8 {
-            catalogDetails.searchProductCategory = "Men Tennis Shoes"
-        }
-        if clickedCell.selectedIndex == 9 {
-            catalogDetails.searchProductCategory = "Men Underwear"
-        }
-        if clickedCell.selectedIndex == 10 {
-            catalogDetails.searchProductCategory = "Men Casual Wear"
+        if let menCatalogDetailsVC = segue.destinationViewController as? AmazonViewController {
+            if let theCell1 = sender as? CatalogCell {
+                
+                switch theCell1.selectedIndex {
+
+                case 0:
+                    menCatalogDetailsVC.searchProductCategory = "Men Jacket"
+                case 1:
+                    menCatalogDetailsVC.searchProductCategory = "Men Pants"
+                case 2:
+                    menCatalogDetailsVC.searchProductCategory = "Men Shirts"
+                case 3:
+                    menCatalogDetailsVC.searchProductCategory = "Men T-Shirt"
+                case 4:
+                    menCatalogDetailsVC.searchProductCategory = "Men Coats"
+                case 5:
+                    menCatalogDetailsVC.searchProductCategory = "Men Suits"
+                case 6:
+                    menCatalogDetailsVC.searchProductCategory = "Men Sweaters"
+                case 7:
+                    menCatalogDetailsVC.searchProductCategory = "Men Dress Shoes"
+                case 8:
+                    menCatalogDetailsVC.searchProductCategory = "Men Tennis Shoes"
+                case 9:
+                    menCatalogDetailsVC.searchProductCategory = "Men Underwear"
+                case 10:
+                    menCatalogDetailsVC.searchProductCategory = "Men Casual Wear"
+                default:
+                    print("ERROR: No catalog selected selected")
+                }
+            }
         }
     }
-
-
 }

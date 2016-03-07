@@ -1,29 +1,25 @@
 //
-//  EtsyViewController.swift
+//  BigCommerceVC.swift
 //  TVShop
 //
-//  Created by admin on 1/31/16.
+//  Created by admin on 2/27/16.
 //  Copyright © 2016 CodeWithFelix. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SWXMLHash
 
-class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var catalog = [Item]()
+    var selectedCell = [CatalogCell]()
     
     var selectedIndex = Int()
     
-    let URL_BASE = "https://openapi.etsy.com/v2/listings/active?"
-    let limit1 = 50
-    let offset1 = 0
-
-    
-    let ETSY_KEY = "gzz1i25ohi2weccyfgb5kc08"
+    let username = "YogaNinja"
+    let API_key = "20996e0eb9b2b2cdae85cdca734d6cd2c49536db"
+    let urlPath: String = "https://store-pkssh7z.mybigcommerce.com/api/v2/products.json?"
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -44,40 +40,45 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         //NOTE: All this should be in a seperate class for download manager class
         
-        let urlString = "\(URL_BASE)limit=\(limit1)&offset=\(offset1)&includes=Images:1:0&api_key=\(ETSY_KEY)"
-        
-        let url = NSURL(string: urlString)!
-        let request = NSURLRequest(URL: url)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request){ (data, request, error) -> Void in
+        let PasswordString = "\(username):\(API_key)"
+        if let PasswordData = PasswordString.dataUsingEncoding(NSUTF8StringEncoding) {
             
-            if error != nil {
-                print(error.debugDescription)
-            } else {
+            let base64EncodedCredential = PasswordData.base64EncodedStringWithOptions([])
+            if let url: NSURL = NSURL(string: urlPath) {
                 
-                do {
+                let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+                let authString = "Basic \(base64EncodedCredential)"
+                config.HTTPAdditionalHeaders = ["Authorization" : authString]
+                let session = NSURLSession(configuration: config)
+                
+                session.dataTaskWithURL(url) {
+                    (let data, let response, let error) in
                     
-                    let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
-                    
-                    if let results = dict!["results"] as? [Dictionary<String, AnyObject>]{
+                    if error != nil {
+                        print(error.debugDescription)
+                    } else {
                         
-                        for obj in results {
-                            let item = Item(itemDict: obj, type: "women")
-                            self.catalog.append(item)
+                        do {
+                            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                            
+                            for obj in jsonResult {
+                                if let objOutput = obj as? [String: AnyObject] {
+                                    let item = Item(itemDict: objOutput, type: "women")
+                                    self.catalog.append(item)
+                                }
+                            }
+                            //                            Main UI thread
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.collectionView.reloadData()
+                            }
+                        } catch {
+                            print("Catch jsonResult error: \(error)")
                             
                         }
-                        
-                        //Main UI thread
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.collectionView.reloadData()
-                        }
                     }
-                } catch {
-                    
-                }
+                    }.resume()
             }
         }
-        task.resume()
         
     }
     
@@ -90,7 +91,7 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cell.configureCell(item)
             
             self.activityIndicator.stopAnimating()
-                        
+            
             if cell.gestureRecognizers?.count == nil {
                 let tap = UITapGestureRecognizer(target: self, action: "tapped:")
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
@@ -109,9 +110,9 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func tapped(gesture: UITapGestureRecognizer) {
         if let cell = gesture.view as? CatalogCell {
             //Load the next view controller and pass in the catalog
-                        
- //           performSegueWithIdentifier("itemDetails", sender: self)
-            performSegueWithIdentifier("itemDetails", sender: cell)
+            
+            //           performSegueWithIdentifier("itemDetails", sender: self)
+            performSegueWithIdentifier("bigCommerceDetails", sender: cell)
             
         }
     }
@@ -163,32 +164,32 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         
         
-      //  if let segue.identifier == "itemDetails" {
-            
-            if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
-                
-                if let theCell = sender as? CatalogCell {
-                    
-                    if let title = theCell.itemLbl.text {
-                        itemDetailsVC.clickedItemTitle = title
-                        
-                    }
-                    if let image = theCell.itemImg.image {
-                        itemDetailsVC.clickedImage = image
-                        itemDetailsVC.clickedSideImage1 = image
-                        itemDetailsVC.clickedSideImage2 = image
-                        itemDetailsVC.clickedSideImage3 = image
-                        
-                    }
-                    itemDetailsVC.clickedBrand = theCell.itemBrand
-                    itemDetailsVC.clickedPrice = theCell.itemPrice
-                    itemDetailsVC.clickedItemCategory = theCell.itemDesc
-
-                }
-            }
-      //  }
+        //  if let segue.identifier == "itemDetails" {
         
+        if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
+            
+            if let theCell = sender as? CatalogCell {
+                
+                if let title = theCell.itemLbl.text {
+                    itemDetailsVC.clickedItemTitle = title
+                    
+                }
+                if let image = theCell.itemImg.image {
+                    itemDetailsVC.clickedImage = image
+                    itemDetailsVC.clickedSideImage1 = image
+                    itemDetailsVC.clickedSideImage2 = image
+                    itemDetailsVC.clickedSideImage3 = image
+                    
+                }
+                itemDetailsVC.clickedBrand = "Yoga Ninja"
+                itemDetailsVC.clickedPrice = theCell.itemPrice
+                itemDetailsVC.clickedItemCategory = theCell.itemDesc
+                itemDetailsVC.clickedCell = theCell
+                
+            }
+        }
     }
     
     
 }
+

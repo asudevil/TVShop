@@ -61,5 +61,4 @@ extension String {
         
         return NSData(bytes: digest, length: digestLen)
     }
-    
 }
