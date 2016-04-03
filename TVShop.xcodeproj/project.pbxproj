@@ -14,11 +14,13 @@
 		8423CBA11BFDA3F900AB5E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA01BFDA3F900AB5E1E /* Assets.xcassets */; };
 		8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */; };
 		8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */; };
+		84332FA21CAF7424009AD58C /* ShopifyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */; };
 		84351F071C5D789C0025115F /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; };
 		84351F081C5D789C0025115F /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84511D611C825B24007583CF /* BigCommerceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D601C825B24007583CF /* BigCommerceVC.swift */; };
 		84511D681C84295E007583CF /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D671C84295E007583CF /* CheckoutVC.swift */; };
-		84511D6E1C8BB05A007583CF /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D6D1C8BB05A007583CF /* ShoppingCart.swift */; };
+		84511D721C8D0BB9007583CF /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D711C8D0BB9007583CF /* ShoppingCartCell.swift */; };
+		849FAE031C992ED4000C5276 /* YogaNinja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849FAE021C992ED4000C5276 /* YogaNinja.jpg */; };
 		84AF4F1F1C54145B00617BFF /* AmazonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F1E1C54145B00617BFF /* AmazonData.swift */; };
 		84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */; };
 		84AF4F241C541EDA00617BFF /* amazon_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F231C541EDA00617BFF /* amazon_logo.jpg */; };
@@ -204,10 +206,12 @@
 		8423CBA21BFDA3F900AB5E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG1.jpg; sourceTree = "<group>"; };
 		8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG2.jpg; sourceTree = "<group>"; };
+		84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopifyCollectionView.swift; sourceTree = "<group>"; };
 		844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Mobile Buy SDK.xcodeproj"; path = "../mobile-buy-sdk-ios-tvOS/Mobile Buy SDK/Mobile Buy SDK.xcodeproj"; sourceTree = "<group>"; };
 		84511D601C825B24007583CF /* BigCommerceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigCommerceVC.swift; sourceTree = "<group>"; };
 		84511D671C84295E007583CF /* CheckoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
-		84511D6D1C8BB05A007583CF /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		84511D711C8D0BB9007583CF /* ShoppingCartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
+		849FAE021C992ED4000C5276 /* YogaNinja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YogaNinja.jpg; sourceTree = "<group>"; };
 		84AF4F1E1C54145B00617BFF /* AmazonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonData.swift; sourceTree = "<group>"; };
 		84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amazon-Bridging-Header.h"; sourceTree = "<group>"; };
 		84AF4F211C5416ED00617BFF /* HMACAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACAlgorithm.swift; sourceTree = "<group>"; };
@@ -365,9 +369,10 @@
 			isa = PBXGroup;
 			children = (
 				84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */,
+				84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */,
 				84511D601C825B24007583CF /* BigCommerceVC.swift */,
 				84511D671C84295E007583CF /* CheckoutVC.swift */,
-				84511D6D1C8BB05A007583CF /* ShoppingCart.swift */,
+				84511D711C8D0BB9007583CF /* ShoppingCartCell.swift */,
 				84AF4F1E1C54145B00617BFF /* AmazonData.swift */,
 				84AF4F251C541FCC00617BFF /* AmazonViewController.swift */,
 				84D209DB1C5DF84E007F812C /* EtsyViewController.swift */,
@@ -408,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				84AF4F231C541EDA00617BFF /* amazon_logo.jpg */,
+				849FAE021C992ED4000C5276 /* YogaNinja.jpg */,
 				84FF89961BFFEADC00FB70D8 /* like.gif */,
 				84B6D77E1C39B9D400ECFE0B /* kids1.jpg */,
 				84B6D77F1C39B9D400ECFE0B /* kids2.jpg */,
@@ -717,6 +723,7 @@
 				84B6D7711C39184E00ECFE0B /* men1.jpg in Resources */,
 				84B6D7771C39184E00ECFE0B /* men7.jpg in Resources */,
 				84FF898D1BFFDFB400FB70D8 /* dress22.jpg in Resources */,
+				849FAE031C992ED4000C5276 /* YogaNinja.jpg in Resources */,
 				84AF4F341C55C93700617BFF /* women1.jpg in Resources */,
 				84B6D7D21C3A234F00ECFE0B /* Jacket4.jpg in Resources */,
 				84B6D7891C39B9D400ECFE0B /* kids1.jpg in Resources */,
@@ -788,12 +795,13 @@
 				84D209DC1C5DF84E007F812C /* EtsyViewController.swift in Sources */,
 				84511D611C825B24007583CF /* BigCommerceVC.swift in Sources */,
 				84B6D7651C38A54B00ECFE0B /* Item.swift in Sources */,
+				84511D721C8D0BB9007583CF /* ShoppingCartCell.swift in Sources */,
 				84AF4F281C54B4BF00617BFF /* WomenAmazonView.swift in Sources */,
 				8423CB9C1BFDA3F900AB5E1E /* ViewController.swift in Sources */,
 				84511D681C84295E007583CF /* CheckoutVC.swift in Sources */,
 				84AF4F1F1C54145B00617BFF /* AmazonData.swift in Sources */,
+				84332FA21CAF7424009AD58C /* ShopifyCollectionView.swift in Sources */,
 				8423CB9A1BFDA3F900AB5E1E /* AppDelegate.swift in Sources */,
-				84511D6E1C8BB05A007583CF /* ShoppingCart.swift in Sources */,
 				84B6D7DB1C3CD24100ECFE0B /* ItemDetailsView.swift in Sources */,
 				84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */,
 				84B6D75D1C3625DB00ECFE0B /* FocusView.swift in Sources */,

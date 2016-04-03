@@ -33,6 +33,14 @@ class ShopifyMobileBuy: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        client.getCollections { (products, error) in
+            
+            print("Products output \(products)")
+            
+            
+        }
+        
+        
         
         client.getProductById(productId) { (product, error) -> Void in
             self.titleLabel.text = product.title

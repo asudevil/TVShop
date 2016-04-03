@@ -42,28 +42,28 @@ class ItemDetailsView: UIViewController {
     var clickedCell = CatalogCell()
     
     @IBAction func smButton(sender: AnyObject) {
-        selectedSize = "small"
+        selectedSize = "Small"
         smLabel.backgroundColor = UIColor.blackColor()
         mdLabel.backgroundColor = UIColor.whiteColor()
         lgLabel.backgroundColor = UIColor.whiteColor()
         xlLabel.backgroundColor = UIColor.whiteColor()
     }
     @IBAction func mdButton(sender: AnyObject) {
-        selectedSize = "medium"
+        selectedSize = "Medium"
         mdLabel.backgroundColor = UIColor.blackColor()
         smLabel.backgroundColor = UIColor.whiteColor()
         lgLabel.backgroundColor = UIColor.whiteColor()
         xlLabel.backgroundColor = UIColor.whiteColor()
     }
     @IBAction func lgButton(sender: AnyObject) {
-        selectedSize = "large"
+        selectedSize = "Large"
         lgLabel.backgroundColor = UIColor.blackColor()
         smLabel.backgroundColor = UIColor.whiteColor()
         mdLabel.backgroundColor = UIColor.whiteColor()
         xlLabel.backgroundColor = UIColor.whiteColor()
     }
     @IBAction func xlButton(sender: AnyObject) {
-        selectedSize = "extraLarge"
+        selectedSize = "Extra Large"
         xlLabel.backgroundColor = UIColor.blackColor()
         smLabel.backgroundColor = UIColor.whiteColor()
         mdLabel.backgroundColor = UIColor.whiteColor()
@@ -71,58 +71,56 @@ class ItemDetailsView: UIViewController {
     }
     @IBAction func addToCart(sender: AnyObject) {
         if selectedSize == "" {
-            cartQTYLabel.text = "Please select a size."
+            var alertText = "Please select a size to add to cart!"
+            cartQTYLabel.text = alertText
+            
+            let alertController = UIAlertController(title: "Select Size", message: alertText, preferredStyle: .Alert)
+            let ok = UIAlertAction(title: "OK", style: .Default) { (action) in
+            }
+            alertController.addAction(ok)
+            
+            self.presentViewController(alertController, animated: true) {
+            }
+            
         } else {
             
             if var cartQTY = qtyEntered.text {
                 if cartQTY == "" || cartQTY == "0" {
                     cartQTY = "1"
                 }
-                
                 let subtotal = Float(clickedPrice)! * Float(cartQTY)!
                 cartQTYLabel.text = "QTY in your Cart \(cartQTY).  Subtotal = $\(subtotal)"
-                
-                
                 let imagePath = clickedCell.imagePath
-                
-                let cell: [String: AnyObject] = ["image": imagePath, "title": clickedItemTitle, "price": clickedPrice, "brand": clickedBrand]
-                
+                let cellInfo: [String: AnyObject] = ["image": imagePath, "title": clickedItemTitle, "price": clickedPrice, "brand": clickedBrand]
                 let qty = Int(cartQTY)!
                 let size = selectedSize
-                
-                
-                let itemAttributes: [String: AnyObject] = ["cell": cell, "size": size, "qty": qty]
+                let itemAttributes: [String: AnyObject] = ["cell": cellInfo, "size": size, "qty": qty]
                 
                 if let returnedArray = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
-                    
                     var arr = returnedArray as! [Dictionary<String, AnyObject>]
                     arr.append(itemAttributes)
                     NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "savedItems")
-                    print("Array after saving $$$$$$$$$$$$$$ \(arr)")
-
                 } else {
                     var newArray: [Dictionary<String, AnyObject>] = []
                     newArray.append(itemAttributes)
                     NSUserDefaults.standardUserDefaults().setObject(newArray, forKey: "savedItems")
-                    let arr = NSUserDefaults.standardUserDefaults().objectForKey("savedItems")
-                    print("New Array after saving $$$$$$$$$$$$$$ Printed!!! \(arr)")
                 }
 
 
             } else {
                 let cartQTY = 1
                 let subtotal = Float(clickedPrice)! * Float(cartQTY)
-                cartQTYLabel.text = "QTY in your Cart \(cartQTY).   Subtotal = $\(subtotal)"
+                if cartQTYLabel.text != nil {
+                    cartQTYLabel.text = "QTY in your Cart \(cartQTY).   Subtotal = $\(subtotal)"
+                }
             }
-            
-            
         }
     }
     @IBAction func clearCart(sender: AnyObject) {
         
         qtyEntered.text = "0"
         let subtotal = 0
-        cartQTYLabel.text = "QTY in your Cart \(clickedCell.qtyInCart).   Subtotal = $\(subtotal)"
+        cartQTYLabel.text = "QTY in your Cart \(clickedCell.qtyInCart).   Subtotal = $\(subtotal)0"
         NSUserDefaults.standardUserDefaults().removeObjectForKey("savedItems")
     }
     
@@ -144,9 +142,6 @@ class ItemDetailsView: UIViewController {
         brand.text = clickedBrand
         productCategory.text = clickedItemCategory
         price.text = clickedPrice
-        
-        cartQTYLabel.text = "QTY in your Cart \(clickedCell.qtyInCart)."
-        
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
@@ -155,11 +150,9 @@ class ItemDetailsView: UIViewController {
         if sideImage1View.focused == true {
             image.image = clickedSideImage1
         }
-        
         if sideImage2View.focused == true {
             image.image = clickedSideImage2
         }
-        
         if sideImage3View.focused == true {
             image.image = clickedSideImage3
         }
@@ -168,9 +161,8 @@ class ItemDetailsView: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let checkoutView = segue.destinationViewController as? CheckoutVC {
-         
-            checkoutView.checkoutSKUId = clickedCell.itemSKUId
-            checkoutView.checkoutCell = clickedCell
+            
+
         }
     }
 }

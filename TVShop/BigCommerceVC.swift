@@ -21,7 +21,6 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     let API_key = "20996e0eb9b2b2cdae85cdca734d6cd2c49536db"
     let urlPath: String = "https://store-pkssh7z.mybigcommerce.com/api/v2/products.json?"
     
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -60,6 +59,8 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                         
                         do {
                             let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                            
+                            print(jsonResult)
                             
                             for obj in jsonResult {
                                 if let objOutput = obj as? [String: AnyObject] {
@@ -139,7 +140,6 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
@@ -148,23 +148,15 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
         return CGSizeMake(450, 541)
-        
     }
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         selectedIndex = indexPath.item
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        
-        //  if let segue.identifier == "itemDetails" {
         
         if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
             
@@ -172,14 +164,12 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                 
                 if let title = theCell.itemLbl.text {
                     itemDetailsVC.clickedItemTitle = title
-                    
                 }
                 if let image = theCell.itemImg.image {
                     itemDetailsVC.clickedImage = image
                     itemDetailsVC.clickedSideImage1 = image
                     itemDetailsVC.clickedSideImage2 = image
                     itemDetailsVC.clickedSideImage3 = image
-                    
                 }
                 itemDetailsVC.clickedBrand = "Yoga Ninja"
                 itemDetailsVC.clickedPrice = theCell.itemPrice

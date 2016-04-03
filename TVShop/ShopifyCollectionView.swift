@@ -1,50 +1,46 @@
 //
-//  EtsyViewController.swift
+//  ShopifyCollectionView.swift
 //  TVShop
 //
-//  Created by admin on 1/31/16.
+//  Created by admin on 4/1/16.
 //  Copyright © 2016 CodeWithFelix. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SWXMLHash
+import Buy
 
-class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+private let reuseIdentifier = "Cell"
+
+class ShopifyCollectionView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var catalog = [Item]()
-    var selectedIndex = Int()
-    
-    let URL_BASE = "https://openapi.etsy.com/v2/listings/active?"
-    let limit1 = 50
-    let offset1 = 0
-    
-    let ETSY_KEY = "gzz1i25ohi2weccyfgb5kc08"
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var catalog = [Item]()
+    var selectedCell = [CatalogCell]()
+    var selectedIndex = Int()
+    
+    let hostname = "yoganinja.myshopify.com"
+    let apiKey = "3550fabec3d0bc375beca31e1b895ba6"
+    let password = "578dd55eec8acb785ce6641c0173d86a"
+    let query = "admin/products.json"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionView.delegate = self
         collectionView.dataSource = self
         
         activityIndicator.startAnimating()
         
         downloadData()
-        
     }
-    
+
     func downloadData() {
         
-        //NOTE: All this should be in a seperate class for download manager class
-        
-        // https://openapi.etsy.com/v2/listings/active?limit=50&offset=1&includes=Images:1:0&api_key=gzz1i25ohi2weccyfgb5kc08
-        
-        let urlString = "\(URL_BASE)limit=\(limit1)&offset=\(offset1)&includes=Images:1:0&api_key=\(ETSY_KEY)"
-        
+        // https://apikey:password@hostname/admin/
+    
+        let urlString = "https://\(apiKey):\(password)@\(hostname)/\(query)"        
         let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
@@ -58,7 +54,7 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     
                     let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
                     
-                    if let results = dict!["results"] as? [Dictionary<String, AnyObject>]{
+                    if let results = dict!["products"] as? [Dictionary<String, AnyObject>]{
                         
                         for obj in results {
                             let item = Item(itemDict: obj, type: "women")
@@ -77,9 +73,8 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
         }
         task.resume()
-        
     }
-    
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CatalogCell", forIndexPath: indexPath) as? CatalogCell {
@@ -89,9 +84,9 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cell.configureCell(item)
             
             self.activityIndicator.stopAnimating()
-                        
+            
             if cell.gestureRecognizers?.count == nil {
-                let tap = UITapGestureRecognizer(target: self, action: #selector(EtsyViewController.tapped(_:)))
+                let tap = UITapGestureRecognizer(target: self, action: #selector(ShopifyCollectionView.tapped(_:)))
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
             }
@@ -108,9 +103,9 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func tapped(gesture: UITapGestureRecognizer) {
         if let cell = gesture.view as? CatalogCell {
             //Load the next view controller and pass in the catalog
-                        
- //           performSegueWithIdentifier("itemDetails", sender: self)
-            performSegueWithIdentifier("itemDetails", sender: cell)
+            
+            //           performSegueWithIdentifier("itemDetails", sender: self)
+            performSegueWithIdentifier("bigCommerceDetails", sender: cell)
             
         }
     }
@@ -137,7 +132,6 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
@@ -146,48 +140,36 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
         return CGSizeMake(450, 541)
-        
     }
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         selectedIndex = indexPath.item
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
-        
-      //  if let segue.identifier == "itemDetails" {
+        if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
             
-            if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
+            if let theCell = sender as? CatalogCell {
                 
-                if let theCell = sender as? CatalogCell {
-                    
-                    if let title = theCell.itemLbl.text {
-                        itemDetailsVC.clickedItemTitle = title
-                        
-                    }
-                    if let image = theCell.itemImg.image {
-                        itemDetailsVC.clickedImage = image
-                        itemDetailsVC.clickedSideImage1 = image
-                        itemDetailsVC.clickedSideImage2 = image
-                        itemDetailsVC.clickedSideImage3 = image
-                        
-                    }
-                    itemDetailsVC.clickedBrand = theCell.itemBrand
-                    itemDetailsVC.clickedPrice = theCell.itemPrice
-                    itemDetailsVC.clickedItemCategory = theCell.itemDesc
-
+                if let title = theCell.itemLbl.text {
+                    itemDetailsVC.clickedItemTitle = title
                 }
+                if let image = theCell.itemImg.image {
+                    itemDetailsVC.clickedImage = image
+                    itemDetailsVC.clickedSideImage1 = image
+                    itemDetailsVC.clickedSideImage2 = image
+                    itemDetailsVC.clickedSideImage3 = image
+                }
+                itemDetailsVC.clickedBrand = "Yoga Ninja"
+                itemDetailsVC.clickedPrice = theCell.itemPrice
+                itemDetailsVC.clickedItemCategory = theCell.itemDesc
+                itemDetailsVC.clickedCell = theCell
+                
             }
-      //  }
-        
+        }
     }
-    
     
 }

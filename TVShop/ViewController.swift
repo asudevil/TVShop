@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     var clickedDescription = ""
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +43,6 @@ class ViewController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
-        
     }
     
     func swipedResponse(gesture: UIGestureRecognizer) {
@@ -63,7 +61,6 @@ class ViewController: UIViewController {
             default:
                 break
             }
-            
         }
         
         if swipCount > 30 {

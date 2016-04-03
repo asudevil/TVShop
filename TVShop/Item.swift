@@ -54,6 +54,14 @@ class Item {
             }
         }
         
+        if let imageShopify = itemDict["image"] as? Dictionary<String, AnyObject> {
+            
+            if let src = imageShopify["src"] as? String {
+                self.itemImagePath = src
+            }
+            
+        }
+        
         if let bigImage = itemDict["primary_image"] as? Dictionary<String, AnyObject> {
             if let bigURL = bigImage["standard_url"] as? String {
                 self.itemImagePath = bigURL
@@ -76,6 +84,13 @@ class Item {
         
         if let id = itemDict["id"] as? Int {
             self.id = String(id)
+        }
+        if let variants = itemDict["variants"] as? [Dictionary<String, AnyObject>] {
+            let selectVariant = variants[0]
+                if let shopifyPrice = selectVariant["price"] as? String {
+                self.price = shopifyPrice
+                print(self.price)
+            }
         }
         
 //testing concept
