@@ -16,16 +16,32 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
     
+    var selectedIndex = Int()
+    
+    
     @IBAction func clearList(sender: AnyObject) {
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("savedItems")
         
-        self.collectionView.reloadData()
-        subtotalLabel.text = "0.00"
-  //      shippingLabel.text = "0.00"
-        totalCostLabel.text = "0.00"
+        
+        let alertMsg = "Would you like to delete all items?"
+        let alertController = UIAlertController(title: "Clear Cart", message: alertMsg, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        }
+        let deleteItem = UIAlertAction(title: "Delete All", style: .Default) { (action) in
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("savedItems")
+            self.subtotalLabel.text = "0.00"
+            self.shippingLabel.text = "0.00"
+            self.totalCostLabel.text = "0.00"
+            self.collectionView.reloadData()
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteItem)
+        
+        self.presentViewController(alertController, animated: true) {
+        }
         
     }
-    var selectedIndex = Int()
+
     
     
     override func viewDidLoad() {
@@ -43,19 +59,63 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         calculateTotal()
     }
     
-//    func showAlert(status: String, title:String) {
-//        let alertController = UIAlertController(title: status, message: title, preferredStyle: .Alert)
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-//        }
-//        alertController.addAction(cancelAction)
-//        
-//        let ok = UIAlertAction(title: "OK", style: .Default) { (action) in
-//        }
-//        alertController.addAction(ok)
-//        
-//        self.presentViewController(alertController, animated: true) {
-//        }
-//    }
+    func tapped(gesture: UITapGestureRecognizer) {
+        
+        if let tappedCell = gesture.view as? ShoppingCartCell {
+            
+            if let indexPath = self.collectionView!.indexPathForCell(tappedCell) {
+                selectedIndex = indexPath.row
+            }
+            
+            let alertMessage = "Would you like to edit selected item?"
+            
+            let alertController = UIAlertController(title: "Edit Cart", message: alertMessage, preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            }
+            let editItem = UIAlertAction(title: "Edit Item", style: .Default) { (action) in
+                if let itemToEdit = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
+                    var arr = itemToEdit as! [Dictionary<String, AnyObject>]
+                    arr.removeAtIndex(self.selectedIndex)
+                    NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "savedItems")
+                    self.collectionView.reloadData()
+                }
+                self.performSegueWithIdentifier("editItem", sender: tappedCell)
+            }
+            let deleteItem = UIAlertAction(title: "Delete Item", style: .Default) { (action) in
+                
+                if let itemToDelete = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
+                    var arr = itemToDelete as! [Dictionary<String, AnyObject>]
+                    arr.removeAtIndex(self.selectedIndex)
+                    NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "savedItems")
+                    self.collectionView.reloadData()
+                }
+            }
+            
+            let checkoutTest = UIAlertAction(title: "Checkout Testing", style: .Default) { (action) in
+                
+                if let itemTotest = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
+                    var arr = itemTotest as! [Dictionary<String, AnyObject>]
+                    var output = arr[self.selectedIndex]
+                    if let cell = output["cell"] as? [String: AnyObject]  {
+                        print("Inside Cell \(cell)")
+                        if let productId = cell["productId"] as? String {
+                            print("$$$$$$$$$ PRODUCT ID is:  \(productId)")
+                        }
+                    }
+                }
+            }
+
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(editItem)
+            alertController.addAction(deleteItem)
+            
+            alertController.addAction(checkoutTest)
+    
+            self.presentViewController(alertController, animated: true) {
+            }
+        }
+    }
     
     func calculateTotal() {
         
@@ -64,7 +124,7 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             let arr = cartArray as! [Dictionary<String, AnyObject>]
             
             var subtotalCost = 0.00
-            var shipping = 0.00
+            let shipping = 8.00
             var totalCost = 0.00
             
             for output in arr {
@@ -84,7 +144,8 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
                 }
                 cellCost = Double(sumQty) * cost
                 subtotalCost = subtotalCost + cellCost
-                totalCost = subtotalCost - shipping
+                totalCost = subtotalCost + shipping
+                shippingLabel.text = "\(shipping)0"
                 subtotalLabel.text = "\(subtotalCost)0"
                 totalCostLabel.text = "\(totalCost)0"
             }
@@ -97,8 +158,15 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
                         
             cell.setCell(indexPath.row)
             
+            if cell.gestureRecognizers?.count == nil {
+                let tap = UITapGestureRecognizer(target: self, action: #selector(CheckoutVC.tapped(_:)))
+                tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
+                cell.addGestureRecognizer(tap)
+            }
+            
         return cell
         } else {
+            
             return ShoppingCartCell()
         }
     }
@@ -119,20 +187,28 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        selectedIndex = indexPath.item
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let itemDetailsVC = segue.destinationViewController as? ItemDetailsView {
+            
+            if let cartCell = sender as? ShoppingCartCell {
+                
+                itemDetailsVC.clickedItemTitle = cartCell.cartCellTitle
+                
+                let image = cartCell.cartCellImage
+                    itemDetailsVC.clickedImage = image
+                    itemDetailsVC.clickedSideImage1 = image
+                    itemDetailsVC.clickedSideImage2 = image
+                    itemDetailsVC.clickedSideImage3 = image
+                
+                itemDetailsVC.clickedBrand = "Yoga Ninja"
+                itemDetailsVC.clickedPrice = cartCell.cartCellPrice
+                itemDetailsVC.clickedItemCategory = cartCell.cartCellTitle
+                itemDetailsVC.clickedCell.imagePath = cartCell.cellImagePath
+                itemDetailsVC.clickedProductId = cartCell.productId
+                
+            }
+        }
     }
-    */
 
 }

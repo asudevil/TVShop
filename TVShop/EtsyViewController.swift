@@ -182,6 +182,7 @@ class EtsyViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     itemDetailsVC.clickedBrand = theCell.itemBrand
                     itemDetailsVC.clickedPrice = theCell.itemPrice
                     itemDetailsVC.clickedItemCategory = theCell.itemDesc
+                    itemDetailsVC.clickedProductId = theCell.itemProductId
 
                 }
             }

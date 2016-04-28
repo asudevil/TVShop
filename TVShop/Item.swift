@@ -15,7 +15,7 @@ class Item {
     var itemImagePath: String!
     var sideImagePath: String!
     var price: String!
-    var id: String!
+    var productId: String!
     
     var selectedCell = Int()
     
@@ -59,7 +59,6 @@ class Item {
             if let src = imageShopify["src"] as? String {
                 self.itemImagePath = src
             }
-            
         }
         
         if let bigImage = itemDict["primary_image"] as? Dictionary<String, AnyObject> {
@@ -82,14 +81,13 @@ class Item {
             self.title = bigTitle
         }
         
-        if let id = itemDict["id"] as? Int {
-            self.id = String(id)
-        }
         if let variants = itemDict["variants"] as? [Dictionary<String, AnyObject>] {
             let selectVariant = variants[0]
-                if let shopifyPrice = selectVariant["price"] as? String {
+            if let shopifyPrice = selectVariant["price"] as? String {
                 self.price = shopifyPrice
-                print(self.price)
+            }
+            if let productId = selectVariant["product_id"] as? Int {
+                self.productId = "\(productId)"
             }
         }
         

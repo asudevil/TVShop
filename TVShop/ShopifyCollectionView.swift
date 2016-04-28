@@ -55,11 +55,10 @@ class ShopifyCollectionView: UIViewController, UICollectionViewDelegate, UIColle
                     let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
                     
                     if let results = dict!["products"] as? [Dictionary<String, AnyObject>]{
-                        
+                                                
                         for obj in results {
                             let item = Item(itemDict: obj, type: "women")
                             self.catalog.append(item)
-                            
                         }
                         
                         //Main UI thread
@@ -90,7 +89,6 @@ class ShopifyCollectionView: UIViewController, UICollectionViewDelegate, UIColle
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
             }
-            
             return cell
             
         } else {
@@ -102,11 +100,7 @@ class ShopifyCollectionView: UIViewController, UICollectionViewDelegate, UIColle
     
     func tapped(gesture: UITapGestureRecognizer) {
         if let cell = gesture.view as? CatalogCell {
-            //Load the next view controller and pass in the catalog
-            
-            //           performSegueWithIdentifier("itemDetails", sender: self)
             performSegueWithIdentifier("bigCommerceDetails", sender: cell)
-            
         }
     }
     
@@ -167,6 +161,7 @@ class ShopifyCollectionView: UIViewController, UICollectionViewDelegate, UIColle
                 itemDetailsVC.clickedPrice = theCell.itemPrice
                 itemDetailsVC.clickedItemCategory = theCell.itemDesc
                 itemDetailsVC.clickedCell = theCell
+                itemDetailsVC.clickedProductId = theCell.itemProductId
                 
             }
         }

@@ -59,9 +59,6 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                         
                         do {
                             let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-                            
-                            print(jsonResult)
-                            
                             for obj in jsonResult {
                                 if let objOutput = obj as? [String: AnyObject] {
                                     let item = Item(itemDict: objOutput, type: "women")
@@ -94,7 +91,7 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
             self.activityIndicator.stopAnimating()
             
             if cell.gestureRecognizers?.count == nil {
-                let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+                let tap = UITapGestureRecognizer(target: self, action: #selector(BigCommerceVC.tapped(_:)))
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
             }
@@ -110,11 +107,7 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     
     func tapped(gesture: UITapGestureRecognizer) {
         if let cell = gesture.view as? CatalogCell {
-            //Load the next view controller and pass in the catalog
-            
-            //           performSegueWithIdentifier("itemDetails", sender: self)
             performSegueWithIdentifier("bigCommerceDetails", sender: cell)
-            
         }
     }
     
@@ -151,7 +144,6 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         return CGSizeMake(450, 541)
     }
     
-    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         selectedIndex = indexPath.item
     }
@@ -175,11 +167,9 @@ class BigCommerceVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                 itemDetailsVC.clickedPrice = theCell.itemPrice
                 itemDetailsVC.clickedItemCategory = theCell.itemDesc
                 itemDetailsVC.clickedCell = theCell
-                
             }
         }
     }
-    
     
 }
 

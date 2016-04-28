@@ -15,8 +15,8 @@
 		8423CBAA1BFDAC7A00AB5E1E /* IMG1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */; };
 		8423CBAB1BFDAC7A00AB5E1E /* IMG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */; };
 		84332FA21CAF7424009AD58C /* ShopifyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */; };
-		84351F071C5D789C0025115F /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; };
-		84351F081C5D789C0025115F /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF0301C5D7686000DD771 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8433302F1CBE2E61009AD58C /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433302E1CBE2E61009AD58C /* PaymentVC.swift */; };
+		843330311CC0B82D009AD58C /* SwiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843330301CC0B82D009AD58C /* SwiftRequest.swift */; };
 		84511D611C825B24007583CF /* BigCommerceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D601C825B24007583CF /* BigCommerceVC.swift */; };
 		84511D681C84295E007583CF /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D671C84295E007583CF /* CheckoutVC.swift */; };
 		84511D721C8D0BB9007583CF /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84511D711C8D0BB9007583CF /* ShoppingCartCell.swift */; };
@@ -131,53 +131,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84351EFE1C5D78460025115F /* PBXContainerItemProxy */ = {
+		84F7317D1CCF3ACF009C010A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BE4C16BE1BD00FE7005AAAD3;
-			remoteInfo = "Buy tvOS";
-		};
-		84351F091C5D789C0025115F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 901930E11BC5B9BC00D1134E;
-			remoteInfo = Buy;
-		};
-		844EF0291C5D7686000DD771 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 90F7BA681B0D1DAF0067864D;
 			remoteInfo = Playground;
 		};
-		844EF02B1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+		84F7317F1CCF3ACF009C010A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 90F592EC1B0D5EFE0026B382;
 			remoteInfo = "Mobile Buy SDK Tests";
 		};
-		844EF02D1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+		84F731811CCF3ACF009C010A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BE9A64281B503C2F0033E558;
 			remoteInfo = "Buy Static";
 		};
-		844EF02F1C5D7686000DD771 /* PBXContainerItemProxy */ = {
+		84F731831CCF3ACF009C010A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 901931701BC5B9BC00D1134E;
 			remoteInfo = Buy;
 		};
-		844EF0311C5D7686000DD771 /* PBXContainerItemProxy */ = {
+		84F731851CCF3ACF009C010A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BE4C174C1BD00FE7005AAAD3;
+			remoteInfo = "Buy tvOS";
+		};
+		84F731871CCF3AD7009C010A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4C16BE1BD00FE7005AAAD3;
 			remoteInfo = "Buy tvOS";
 		};
 /* End PBXContainerItemProxy section */
@@ -189,7 +182,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84351F081C5D789C0025115F /* Buy.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +199,8 @@
 		8423CBA81BFDAC7A00AB5E1E /* IMG1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG1.jpg; sourceTree = "<group>"; };
 		8423CBA91BFDAC7A00AB5E1E /* IMG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG2.jpg; sourceTree = "<group>"; };
 		84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopifyCollectionView.swift; sourceTree = "<group>"; };
-		844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Mobile Buy SDK.xcodeproj"; path = "../mobile-buy-sdk-ios-tvOS/Mobile Buy SDK/Mobile Buy SDK.xcodeproj"; sourceTree = "<group>"; };
+		8433302E1CBE2E61009AD58C /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		843330301CC0B82D009AD58C /* SwiftRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRequest.swift; sourceTree = "<group>"; };
 		84511D601C825B24007583CF /* BigCommerceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigCommerceVC.swift; sourceTree = "<group>"; };
 		84511D671C84295E007583CF /* CheckoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		84511D711C8D0BB9007583CF /* ShoppingCartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
@@ -286,7 +279,9 @@
 		84B6D7CE1C3A234F00ECFE0B /* Jacket11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jacket11.jpg; sourceTree = "<group>"; };
 		84B6D7DA1C3CD24100ECFE0B /* ItemDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		84D209DB1C5DF84E007F812C /* EtsyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtsyViewController.swift; sourceTree = "<group>"; };
+		84EF11371CCF36110051598D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/TVShop-bnubntvsefmrhwbiqvfjczxkgufv/Build/Products/Debug-appletvsimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopifyMobileBuy.swift; path = ../ShopifyMobileBuy.swift; sourceTree = "<group>"; };
+		84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Mobile Buy SDK.xcodeproj"; path = "../../../Downloads/mobile-buy-sdk-ios-tvOS/Mobile Buy SDK/Mobile Buy SDK.xcodeproj"; sourceTree = "<group>"; };
 		84FF89581BFFDE7900FB70D8 /* dress0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress0.jpg; sourceTree = "<group>"; };
 		84FF895A1BFFDF9900FB70D8 /* dress1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress1.jpg; sourceTree = "<group>"; };
 		84FF895B1BFFDF9900FB70D8 /* dress2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dress2.jpg; sourceTree = "<group>"; };
@@ -330,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6697698999FAA4411FE4D5A1 /* Pods_TVShop.framework in Frameworks */,
-				84351F071C5D789C0025115F /* Buy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +343,7 @@
 		8423CB8D1BFDA3F900AB5E1E = {
 			isa = PBXGroup;
 			children = (
-				844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */,
+				84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */,
 				8423CB981BFDA3F900AB5E1E /* TVShop */,
 				8423CB971BFDA3F900AB5E1E /* Products */,
 				374253380211747776AE678B /* Pods */,
@@ -369,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				84F3D4F61C5D7A0B00106C3A /* ShopifyMobileBuy.swift */,
+				843330301CC0B82D009AD58C /* SwiftRequest.swift */,
+				8433302E1CBE2E61009AD58C /* PaymentVC.swift */,
 				84332FA11CAF7424009AD58C /* ShopifyCollectionView.swift */,
 				84511D601C825B24007583CF /* BigCommerceVC.swift */,
 				84511D671C84295E007583CF /* CheckoutVC.swift */,
@@ -395,18 +391,6 @@
 				84AF4F201C54149D00617BFF /* Amazon-Bridging-Header.h */,
 			);
 			path = TVShop;
-			sourceTree = "<group>";
-		};
-		844EF0201C5D7686000DD771 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				844EF02A1C5D7686000DD771 /* Playground.app */,
-				844EF02C1C5D7686000DD771 /* Mobile Buy SDK Tests.xctest */,
-				844EF02E1C5D7686000DD771 /* Buy.framework */,
-				844EF0301C5D7686000DD771 /* Buy.framework */,
-				844EF0321C5D7686000DD771 /* Buy.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		84B6D7321C337EE200ECFE0B /* images */ = {
@@ -512,9 +496,22 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		84F731741CCF3ACE009C010A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F7317E1CCF3ACF009C010A /* Playground.app */,
+				84F731801CCF3ACF009C010A /* Mobile Buy SDK Tests.xctest */,
+				84F731821CCF3ACF009C010A /* Buy.framework */,
+				84F731841CCF3ACF009C010A /* Buy.framework */,
+				84F731861CCF3ACF009C010A /* Buy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8A2B93DD4316A128CAD74C1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84EF11371CCF36110051598D /* Alamofire.framework */,
 				E3AF676246CE887C195EFDC8 /* Pods_TVShop.framework */,
 			);
 			name = Frameworks;
@@ -538,8 +535,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				84351EFF1C5D78460025115F /* PBXTargetDependency */,
-				84351F0A1C5D789C0025115F /* PBXTargetDependency */,
+				84F731881CCF3AD7009C010A /* PBXTargetDependency */,
 			);
 			name = TVShop;
 			productName = TVShop;
@@ -575,8 +571,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 844EF0201C5D7686000DD771 /* Products */;
-					ProjectRef = 844EF01F1C5D7686000DD771 /* Mobile Buy SDK.xcodeproj */;
+					ProductGroup = 84F731741CCF3ACE009C010A /* Products */;
+					ProjectRef = 84F731731CCF3ACE009C010A /* Mobile Buy SDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -587,39 +583,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		844EF02A1C5D7686000DD771 /* Playground.app */ = {
+		84F7317E1CCF3ACF009C010A /* Playground.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = Playground.app;
-			remoteRef = 844EF0291C5D7686000DD771 /* PBXContainerItemProxy */;
+			remoteRef = 84F7317D1CCF3ACF009C010A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		844EF02C1C5D7686000DD771 /* Mobile Buy SDK Tests.xctest */ = {
+		84F731801CCF3ACF009C010A /* Mobile Buy SDK Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Mobile Buy SDK Tests.xctest";
-			remoteRef = 844EF02B1C5D7686000DD771 /* PBXContainerItemProxy */;
+			remoteRef = 84F7317F1CCF3ACF009C010A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		844EF02E1C5D7686000DD771 /* Buy.framework */ = {
+		84F731821CCF3ACF009C010A /* Buy.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Buy.framework;
-			remoteRef = 844EF02D1C5D7686000DD771 /* PBXContainerItemProxy */;
+			remoteRef = 84F731811CCF3ACF009C010A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		844EF0301C5D7686000DD771 /* Buy.framework */ = {
+		84F731841CCF3ACF009C010A /* Buy.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Buy.framework;
-			remoteRef = 844EF02F1C5D7686000DD771 /* PBXContainerItemProxy */;
+			remoteRef = 84F731831CCF3ACF009C010A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		844EF0321C5D7686000DD771 /* Buy.framework */ = {
+		84F731861CCF3ACF009C010A /* Buy.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Buy.framework;
-			remoteRef = 844EF0311C5D7686000DD771 /* PBXContainerItemProxy */;
+			remoteRef = 84F731851CCF3ACF009C010A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -792,6 +788,7 @@
 				84B6D7631C38794C00ECFE0B /* CatalogCell.swift in Sources */,
 				84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */,
 				84F3D4F71C5D7A0B00106C3A /* ShopifyMobileBuy.swift in Sources */,
+				843330311CC0B82D009AD58C /* SwiftRequest.swift in Sources */,
 				84D209DC1C5DF84E007F812C /* EtsyViewController.swift in Sources */,
 				84511D611C825B24007583CF /* BigCommerceVC.swift in Sources */,
 				84B6D7651C38A54B00ECFE0B /* Item.swift in Sources */,
@@ -804,6 +801,7 @@
 				8423CB9A1BFDA3F900AB5E1E /* AppDelegate.swift in Sources */,
 				84B6D7DB1C3CD24100ECFE0B /* ItemDetailsView.swift in Sources */,
 				84AF4F221C5416ED00617BFF /* HMACAlgorithm.swift in Sources */,
+				8433302F1CBE2E61009AD58C /* PaymentVC.swift in Sources */,
 				84B6D75D1C3625DB00ECFE0B /* FocusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,15 +809,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		84351EFF1C5D78460025115F /* PBXTargetDependency */ = {
+		84F731881CCF3AD7009C010A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Buy tvOS";
-			targetProxy = 84351EFE1C5D78460025115F /* PBXContainerItemProxy */;
-		};
-		84351F0A1C5D789C0025115F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Buy;
-			targetProxy = 84351F091C5D789C0025115F /* PBXContainerItemProxy */;
+			targetProxy = 84F731871CCF3AD7009C010A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

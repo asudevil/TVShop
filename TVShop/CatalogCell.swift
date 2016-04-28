@@ -15,7 +15,7 @@ class CatalogCell: UICollectionViewCell {
     var itemDesc = ""
     var itemBrand = ""
     var itemPrice = ""
-    var itemSKUId = ""
+    var itemProductId = ""
     var imagePath = ""
     var selectedIndex = Int()
     var qtyInCart = Int()
@@ -63,8 +63,8 @@ class CatalogCell: UICollectionViewCell {
         if let itemPrice1 = item.price {
             itemPrice = itemPrice1
         }
-        if let theSKUId = item.id {
-            itemSKUId = theSKUId
+        if let theSKUId = item.productId {
+            itemProductId = theSKUId
         }
         
         selectedIndex = item.selectedCell

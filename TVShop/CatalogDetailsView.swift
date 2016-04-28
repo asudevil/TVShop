@@ -83,7 +83,7 @@ class CatalogDetailsView: UIViewController, UICollectionViewDelegate, UICollecti
             cell1.configureCell(item)
             
             if cell1.gestureRecognizers?.count == nil {
-                let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+                let tap = UITapGestureRecognizer(target: self, action: #selector(CatalogDetailsView.tapped(_:)))
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell1.addGestureRecognizer(tap)
             }

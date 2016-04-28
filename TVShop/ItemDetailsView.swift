@@ -39,6 +39,7 @@ class ItemDetailsView: UIViewController {
     var clickedBrand = ""
     var clickedItemCategory = ""
     var clickedPrice = ""
+    var clickedProductId = ""
     var clickedCell = CatalogCell()
     
     @IBAction func smButton(sender: AnyObject) {
@@ -71,7 +72,7 @@ class ItemDetailsView: UIViewController {
     }
     @IBAction func addToCart(sender: AnyObject) {
         if selectedSize == "" {
-            var alertText = "Please select a size to add to cart!"
+            let alertText = "Please select a size to add to cart!"
             cartQTYLabel.text = alertText
             
             let alertController = UIAlertController(title: "Select Size", message: alertText, preferredStyle: .Alert)
@@ -88,30 +89,42 @@ class ItemDetailsView: UIViewController {
                 if cartQTY == "" || cartQTY == "0" {
                     cartQTY = "1"
                 }
-                let subtotal = Float(clickedPrice)! * Float(cartQTY)!
-                cartQTYLabel.text = "QTY in your Cart \(cartQTY).  Subtotal = $\(subtotal)"
-                let imagePath = clickedCell.imagePath
-                let cellInfo: [String: AnyObject] = ["image": imagePath, "title": clickedItemTitle, "price": clickedPrice, "brand": clickedBrand]
-                let qty = Int(cartQTY)!
-                let size = selectedSize
-                let itemAttributes: [String: AnyObject] = ["cell": cellInfo, "size": size, "qty": qty]
                 
-                if let returnedArray = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
-                    var arr = returnedArray as! [Dictionary<String, AnyObject>]
-                    arr.append(itemAttributes)
-                    NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "savedItems")
-                } else {
-                    var newArray: [Dictionary<String, AnyObject>] = []
-                    newArray.append(itemAttributes)
-                    NSUserDefaults.standardUserDefaults().setObject(newArray, forKey: "savedItems")
+                if let floatingPrice = Float(clickedPrice) {
+                    
+                    let subtotal = floatingPrice * Float(cartQTY)!
+                    cartQTYLabel.text = "QTY in your Cart \(cartQTY).  Subtotal = $\(subtotal)0"
+                    let imagePath = clickedCell.imagePath
+                    let cellInfo: [String: AnyObject] = ["image": imagePath, "title": clickedItemTitle, "price": clickedPrice, "brand": clickedBrand, "productId": clickedProductId]
+                    let qty = Int(cartQTY)!
+                    let size = selectedSize
+                    let itemAttributes: [String: AnyObject] = ["cell": cellInfo, "size": size, "qty": qty]
+                    
+                    if let returnedArray = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
+                        var arr = returnedArray as! [Dictionary<String, AnyObject>]
+                        arr.append(itemAttributes)
+                        NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "savedItems")
+                    } else {
+                        var newArray: [Dictionary<String, AnyObject>] = []
+                        newArray.append(itemAttributes)
+                        NSUserDefaults.standardUserDefaults().setObject(newArray, forKey: "savedItems")
+                    }
+                    
+                    let alertText = "Selected item QTY \(cartQTY) was added to your Cart.  Subtotal = $\(subtotal)0"
+                    let alertController = UIAlertController(title: "Item Added to Cart", message: alertText, preferredStyle: .Alert)
+                    let ok = UIAlertAction(title: "OK", style: .Default) { (action) in
+                    }
+                    alertController.addAction(ok)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                    }
                 }
-
 
             } else {
                 let cartQTY = 1
                 let subtotal = Float(clickedPrice)! * Float(cartQTY)
                 if cartQTYLabel.text != nil {
-                    cartQTYLabel.text = "QTY in your Cart \(cartQTY).   Subtotal = $\(subtotal)"
+                    cartQTYLabel.text = "QTY in your Cart \(cartQTY).   Subtotal = $\(subtotal)0"
                 }
             }
         }
@@ -121,9 +134,7 @@ class ItemDetailsView: UIViewController {
         qtyEntered.text = "0"
         let subtotal = 0
         cartQTYLabel.text = "QTY in your Cart \(clickedCell.qtyInCart).   Subtotal = $\(subtotal)0"
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("savedItems")
     }
-    
     
     @IBAction func checkout(sender: AnyObject) {
         if selectedSize == "" {
@@ -160,9 +171,9 @@ class ItemDetailsView: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let checkoutView = segue.destinationViewController as? CheckoutVC {
-            
-
-        }
+//        if let checkoutView = segue.destinationViewController as? CheckoutVC {
+//            
+//
+//        }
     }
 }

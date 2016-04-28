@@ -9,6 +9,20 @@
 import UIKit
 
 class ShoppingCartCell: UICollectionViewCell {
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var qtyLabel: UILabel!
+//    @IBOutlet weak var brandLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var cellTotalLabel: UILabel!
+    
+    var cartCellTitle = String()
+    var cartCellPrice = String()
+    var cellImagePath = String()
+    var cartCellImage = UIImage()
+    var productId = String()
     
     override func canBecomeFocused() -> Bool {
         return true
@@ -31,20 +45,9 @@ class ShoppingCartCell: UICollectionViewCell {
                 self.layer.backgroundColor = UIColor.clearColor().CGColor
                 
                 }, completion: nil)
-            
         }
-        
     }
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var sizeLabel: UILabel!
-    @IBOutlet weak var qtyLabel: UILabel!
-//    @IBOutlet weak var brandLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var cellTotalLabel: UILabel!
     
-    var selectedIndex = Int()
     
     func setCell(row: Int) {
 
@@ -66,16 +69,21 @@ class ShoppingCartCell: UICollectionViewCell {
             if let cell = output["cell"] as? [String: AnyObject] {
                 if let title = cell["title"] as? String {
                     titleLabel.text = title
-                    print(title)
+                    cartCellTitle = title
                 }
                 if let price = cell["price"] as? String {
                     priceLabel.text = price
                     cellPrice = Double(price)!
+                    cartCellPrice = price
+        
                 }
-                if let brand = cell["brand"] as? String {
-  //                  brandLabel.text = brand
+                if let selectedCell = cell["clickedCell"] as?  CatalogCell {
+                    
+                    productId = selectedCell.itemProductId
                 }
+
                 if let imagePath = cell["image"] as? String {
+                    cellImagePath = imagePath
                     
                     if let urlNS = NSURL(string: imagePath) {
                         
@@ -86,6 +94,7 @@ class ShoppingCartCell: UICollectionViewCell {
                                 if let downloadedImage = UIImage(data: data){
                                     
                                     self.imageView.image = downloadedImage
+                                    self.cartCellImage = downloadedImage
                                 }
                             }
                         }

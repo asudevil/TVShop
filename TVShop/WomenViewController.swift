@@ -26,13 +26,13 @@ class WomenViewController: UIViewController {
         super.viewDidLoad()
         
         if firstImageView.gestureRecognizers?.count == nil {
-            let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+            let tap = UITapGestureRecognizer(target: self, action: #selector(WomenViewController.tapped(_:)))
             tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
             firstImageView.addGestureRecognizer(tap)
             
         }
         if secondImageView.gestureRecognizers?.count == nil {
-            let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+            let tap = UITapGestureRecognizer(target: self, action: #selector(WomenViewController.tapped(_:)))
             tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
             secondImageView.addGestureRecognizer(tap)
         }

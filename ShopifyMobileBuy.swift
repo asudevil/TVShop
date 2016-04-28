@@ -15,10 +15,19 @@ class ShopifyMobileBuy: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
+    var collection: BUYCollection!
+    
     let shopDomain = "shoptav.myshopify.com"
     let apiKey = "7226fcd904f430972ee4f6d87a08d4a8"
     let channelId = "42928961"
     let productId = "4009702273"
+
+//    let shopDomain = "yoganinja.myshopify.com"
+//    let apiKey = "706f85f7989134d8225e2ec4da7335b8"
+//    let channelId = "49743622"
+//    let productId = "5609902598"
+//    
+    
     
     var productVariant: BUYProductVariant?
     let client: BUYClient
@@ -27,20 +36,12 @@ class ShopifyMobileBuy: UIViewController {
         
         client = BUYClient(shopDomain: shopDomain, apiKey: apiKey, channelId: channelId)
         super.init(coder: aDecoder)!
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        client.getCollections { (products, error) in
-            
-            print("Products output \(products)")
-            
-            
-        }
-        
-        
         
         client.getProductById(productId) { (product, error) -> Void in
             self.titleLabel.text = product.title
@@ -72,7 +73,9 @@ class ShopifyMobileBuy: UIViewController {
         
         // Create the checkout
         let cart = BUYCart()
-        cart.addVariant(productVariant!)
+        if let productVar = productVariant {
+            cart.addVariant(productVar)
+        }
         
         let checkout = BUYCheckout(cart: cart)
         client.createCheckout(checkout) { (checkout, error) -> Void in
@@ -81,15 +84,11 @@ class ShopifyMobileBuy: UIViewController {
             
             let checkoutURL = checkout.webCheckoutURL
             
-            print(checkoutURL)
-            
         //      if (UIApplication.sharedApplication().canOpenURL(checkoutURL)) {
                 UIApplication.sharedApplication().openURL(checkoutURL)
-                
-                print("Checkout Open URL")
+                print("Checkout Open URL is \(checkoutURL)")
          //   }
-            
         }
-        
     }
+
 }
