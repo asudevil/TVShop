@@ -42,8 +42,6 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
     }
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

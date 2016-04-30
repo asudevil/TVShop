@@ -37,6 +37,8 @@
 		84AF4F3C1C55C93700617BFF /* women9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F311C55C93700617BFF /* women9.jpg */; };
 		84AF4F3D1C55C93700617BFF /* women10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F321C55C93700617BFF /* women10.jpg */; };
 		84AF4F3E1C55C93700617BFF /* women11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF4F331C55C93700617BFF /* women11.jpg */; };
+		84B41BFA1CD430EB00F888A7 /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F731861CCF3ACF009C010A /* Buy.framework */; };
+		84B41BFB1CD434ED00F888A7 /* Buy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84F731821CCF3ACF009C010A /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B6D7511C35C86F00ECFE0B /* WomenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7501C35C86F00ECFE0B /* WomenViewController.swift */; };
 		84B6D7531C35C8F300ECFE0B /* MenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7521C35C8F300ECFE0B /* MenViewController.swift */; };
 		84B6D7551C35CF6E00ECFE0B /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6D7541C35CF6E00ECFE0B /* KidsViewController.swift */; };
@@ -182,6 +184,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84B41BFB1CD434ED00F888A7 /* Buy.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B41BFA1CD430EB00F888A7 /* Buy.framework in Frameworks */,
 				6697698999FAA4411FE4D5A1 /* Pods_TVShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2077,11 +2077,22 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce9-fv-F3G">
+                                        <rect key="frame" x="200" y="356" width="400" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Mxz-kD-QJt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="700" id="72h-of-hCe"/>
                                     <constraint firstItem="yIt-Ee-GJP" firstAttribute="centerX" secondItem="XDX-fj-QXM" secondAttribute="centerX" id="CPZ-pg-pxJ"/>
+                                    <constraint firstItem="Ce9-fv-F3G" firstAttribute="leading" secondItem="XDX-fj-QXM" secondAttribute="leading" constant="200" id="Drj-wT-BJ7"/>
+                                    <constraint firstItem="Ce9-fv-F3G" firstAttribute="top" secondItem="VFG-2w-v8b" secondAttribute="bottom" constant="13" id="HGI-6x-pt2"/>
                                     <constraint firstItem="XYb-Bo-96w" firstAttribute="centerX" secondItem="XDX-fj-QXM" secondAttribute="centerX" id="Hht-be-2WS"/>
                                     <constraint firstItem="VFG-2w-v8b" firstAttribute="centerX" secondItem="XDX-fj-QXM" secondAttribute="centerX" id="MV7-ys-ZZY"/>
                                     <constraint firstItem="XYb-Bo-96w" firstAttribute="top" secondItem="j0q-DK-JvK" secondAttribute="bottom" constant="60" id="OlI-jR-flh"/>
@@ -2105,6 +2116,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="enterPhoneLabel" destination="Ce9-fv-F3G" id="zWO-zM-E2L"/>
                         <outlet property="phoneTextField" destination="VFG-2w-v8b" id="tIa-9b-fdL"/>
                         <segue destination="AOe-NY-hkB" kind="show" identifier="continueShopping" id="HWR-hE-sEa"/>
                     </connections>
@@ -2225,9 +2237,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eYy-y2-9Jb"/>
-        <segue reference="gft-zn-hY3"/>
-        <segue reference="xqJ-09-bUQ"/>
-        <segue reference="XRB-KZ-XzM"/>
         <segue reference="iW0-ks-Bi7"/>
+        <segue reference="vjo-9Q-DZN"/>
+        <segue reference="HWR-hE-sEa"/>
+        <segue reference="xqJ-09-bUQ"/>
     </inferredMetricsTieBreakers>
 </document>

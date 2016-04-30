@@ -12,7 +12,11 @@ import Alamofire
 
 class PaymentVC: UIViewController {
 
+    @IBOutlet weak var enterPhoneLabel: UILabel!
     @IBOutlet weak var phoneTextField: UITextField!
+    
+    //pass this in from ShoppingCart
+    let productId = "5610129862"
     
     //Twilio credentials
     let basePath = "https://api.twilio.com/"
@@ -31,31 +35,21 @@ class PaymentVC: UIViewController {
     let tinyApiKey = "AIzaSyCzJ1nS8knmHKeu3iOclTFSZ3JhUBamFvM"
     let apiURL = "https://www.googleapis.com/urlshortener/v1/url"
     
-    var collection: BUYCollection!
-    
     var productVariant: BUYProductVariant?
     let client: BUYClient
     
-
-    
     required init(coder aDecoder: NSCoder) {
-        
         client = BUYClient(shopDomain: shopDomain, apiKey: apiKey, channelId: channelId)
         super.init(coder: aDecoder)!
-        
     }
-    
     
     @IBAction func payButton(sender: AnyObject) {
         
-        var textSent = false
-        
-        //pass this in from ShoppingCart
-        let productId = "5610129862"
-        
         client.getProductById(productId) { (product, error) -> Void in
             if let variants = product.variants as? [BUYProductVariant] {
-                self.productVariant = variants.first
+                
+      // Get the specific size ([0] = Sm, [1] = Med, [2] = Lg, [3] = XL
+                self.productVariant = variants[2]
             }
         }
         
@@ -80,55 +74,53 @@ class PaymentVC: UIViewController {
                     
                     if let urlOutput = output["id"] as? String {
                         print("URL Link is $$$$$$$$$$$$$$ ####################### \(urlOutput)")
+                        let txtMessage = "Welcome to Yoga Ninja!  Please click on link to make payment: \(urlOutput)"
+                        self.sendText(txtMessage)
+                    }
+                }
+            }
+
+        }
+    }
+    
+    func sendText(message: String) {
         
         if let phoneNumber = self.phoneTextField.text {
-           let charCount = phoneNumber.characters.count
+            let charCount = phoneNumber.characters.count
             if charCount < 10 {
                 //Need an alert to do this!
-                print("Please enter a phone number")
+                enterPhoneLabel.text = "Please enter a valid phone number"
             } else {
+                enterPhoneLabel.text = ""
                 let fromNumber = "%2B1\(self.twilioPhoneNumber)"
                 let toNumber = "%2B1\(phoneNumber)"
-                
-                let message = "Welcome to Yoga Ninja!  Please click on link to make payment: \(urlOutput)"
                 
                 // Build the request
                 let request = NSMutableURLRequest(URL: NSURL(string:"https://\(self.accountSID):\(self.authToken)@api.twilio.com/2010-04-01/Accounts/\(self.accountSID)/SMS/Messages")!)
                 request.HTTPMethod = "POST"
                 request.HTTPBody = "From=\(fromNumber)&To=\(toNumber)&Body=\(message)".dataUsingEncoding(NSUTF8StringEncoding)
                 
-                // Build the completion block and send the request
                 NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
                     print("Finished")
                     if let data = data, responseDetails = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                        textSent = true
-                    
+                        print("Text sent")
                     } else {
                         print("Error: \(error)")
                     }
                 }).resume()
                 
-                if textSent == true {
-                    let alertText = "Text message sent to \(phoneNumber). Please check your message to complete the payment!"
-                    let alertController = UIAlertController(title: "Payment Text Sent!", message: alertText, preferredStyle: .Alert)
-                    let ok = UIAlertAction(title: "OK", style: .Default) { (action) in
-                        self.performSegueWithIdentifier("continueShopping", sender: self)
-                    }
-                    alertController.addAction(ok)
-                    
-                    self.presentViewController(alertController, animated: true) {
-                    }
+                let alertText = "Text message sent to \(phoneNumber). Please check your message to complete the payment!"
+                let alertController = UIAlertController(title: "Payment Text Sent!", message: alertText, preferredStyle: .Alert)
+                let ok = UIAlertAction(title: "OK", style: .Default) { (action) in
+                    self.performSegueWithIdentifier("continueShopping", sender: self)
+                }
+                alertController.addAction(ok)
+                self.presentViewController(alertController, animated: true) {
                 }
             }
-            
         } else {
             //Need an alert to do this!
-            print("Please enter a phone number")
-        }
-
-    }
-    }
-            }
+            enterPhoneLabel.text = "Please enter a phone number"
         }
     }
     
