@@ -90,7 +90,7 @@ class MenViewController: UIViewController, UICollectionViewDelegate, UICollectio
             
             
             if cell.gestureRecognizers?.count == nil {
-                let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+                let tap = UITapGestureRecognizer(target: self, action: #selector(MenViewController.tapped(_:)))
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
                 

@@ -72,7 +72,7 @@ class AmazonData {
         
         var item: Int
         
-        for item = 1; item <= self.countPages; ++item {
+        for item = 1; item <= self.countPages; item += 1 {
             
             let amazonParams = [
                 "Service" : "AWSECommerceService",
@@ -96,7 +96,7 @@ class AmazonData {
     
     func parseData(xml: XMLIndexer) {
         
-        kolvo++
+        kolvo += 1
         
         for elem in xml["ItemSearchResponse"]["Items"]["Item"] {
             

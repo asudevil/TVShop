@@ -88,7 +88,7 @@ class WomenAmazonView: UIViewController, UICollectionViewDelegate, UICollectionV
             
             
             if cell.gestureRecognizers?.count == nil {
-                let tap = UITapGestureRecognizer(target: self, action: "tapped:")
+                let tap = UITapGestureRecognizer(target: self, action: #selector(WomenAmazonView.tapped(_:)))
                 tap.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)]
                 cell.addGestureRecognizer(tap)
                 

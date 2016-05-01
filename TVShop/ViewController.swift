@@ -36,11 +36,11 @@ class ViewController: UIViewController {
         image.image = clickedImage
         descriptionLabel.text = clickedDescription
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipedResponse(_:)))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
         
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipedResponse:"))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipedResponse(_:)))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
     }
@@ -51,13 +51,13 @@ class ViewController: UIViewController {
             
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.Right:
-                swipCount++
+                swipCount += 1
                 print("Swiped right")
                 print(swipCount)
             case UISwipeGestureRecognizerDirection.Left:
                 print("Swiped left")
                 print(swipCount)
-                swipCount--
+                swipCount -= 1
             default:
                 break
             }

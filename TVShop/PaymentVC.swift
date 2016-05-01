@@ -65,34 +65,37 @@ class PaymentVC: UIViewController {
                     if let qty = item["qty"] as? Int {
                         productQty = qty
                     }
-                    if let size = item["size"] as? String {
-                        switch size {
-                        case "Small":
-                            selectedVariant = 0
-                        case "Medium":
-                            selectedVariant = 1
-                        case "Large":
-                            selectedVariant = 2
-                        case "Extra Large":
-                            selectedVariant = 3
-                        default:
-                            selectedVariant = 0
-                        }
-                        print(selectedVariant)
+                    
                         if let itemCell = item["cell"] as? [String: AnyObject] {
                             if let itemId = itemCell["productId"] as? String {
 
         
                                 client.getProductById(itemId) { (product, error) -> Void in
                                     
-                                    if let variants = product.variants as? [BUYProductVariant] {
-                                        self.productVariant = variants.first
-                                    }
+                                    if let size = item["size"] as? String {
+                                        switch size {
+                                        case "Small":
+                                            selectedVariant = 0
+                                        case "Medium":
+                                            selectedVariant = 1
+                                        case "Large":
+                                            selectedVariant = 2
+                                        case "Extra Large":
+                                            selectedVariant = 3
+                                        default:
+                                            selectedVariant = 0
+                                        }
+                                        print(selectedVariant)
                                     
-                                    while productQty > 0 {
-                                        if let productVar = self.productVariant {
-                                            self.cart.addVariant(productVar)
-                                            productQty -= 1
+                                    if let variants = product.variants as? [BUYProductVariant] {
+                                        self.productVariant = variants[selectedVariant]
+
+                                    
+                                        while productQty > 0 {
+                                            if let productVar = self.productVariant {
+                                                self.cart.addVariant(productVar)
+                                                productQty -= 1
+                                            }
                                         }
                                     }
                         }   }   }
