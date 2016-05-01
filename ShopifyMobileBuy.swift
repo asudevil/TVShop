@@ -31,7 +31,8 @@ class ShopifyMobileBuy: UIViewController {
     
     var productVariant: BUYProductVariant?
     let client: BUYClient
-    
+    let cart = BUYCart()
+
     required init(coder aDecoder: NSCoder) {
         
         client = BUYClient(shopDomain: shopDomain, apiKey: apiKey, channelId: channelId)
@@ -48,6 +49,13 @@ class ShopifyMobileBuy: UIViewController {
             
             if let variants = product.variants as? [BUYProductVariant] {
                 self.productVariant = variants.first
+            }
+            
+            if let productVar = self.productVariant {
+                self.cart.addVariant(productVar)
+            }
+            if let productVar = self.productVariant {
+                self.cart.addVariant(productVar)
             }
             
             if (product != nil && error == nil) {
@@ -72,10 +80,7 @@ class ShopifyMobileBuy: UIViewController {
     @IBAction func didTapCheckout(sender: UIButton) {
         
         // Create the checkout
-        let cart = BUYCart()
-        if let productVar = productVariant {
-            cart.addVariant(productVar)
-        }
+
         
         let checkout = BUYCheckout(cart: cart)
         client.createCheckout(checkout) { (checkout, error) -> Void in

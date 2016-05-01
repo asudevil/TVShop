@@ -56,7 +56,7 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         self.collectionView.reloadData()
         calculateTotal()
     }
-    
+        
     func tapped(gesture: UITapGestureRecognizer) {
         
         if let tappedCell = gesture.view as? ShoppingCartCell {
@@ -208,5 +208,4 @@ class CheckoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             }
         }
     }
-
 }

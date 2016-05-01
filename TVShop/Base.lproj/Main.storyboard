@@ -1975,7 +1975,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Pay"/>
                                 <connections>
-                                    <segue destination="CR2-R1-3Vy" kind="show" id="chN-WT-cPG"/>
+                                    <segue destination="CR2-R1-3Vy" kind="show" identifier="payment" id="chN-WT-cPG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2236,10 +2236,10 @@
         <image name="women6.jpg" width="737" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYy-y2-9Jb"/>
         <segue reference="iW0-ks-Bi7"/>
+        <segue reference="eYy-y2-9Jb"/>
+        <segue reference="gft-zn-hY3"/>
         <segue reference="vjo-9Q-DZN"/>
-        <segue reference="HWR-hE-sEa"/>
         <segue reference="xqJ-09-bUQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,7 +16,10 @@ class PaymentVC: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     
     //pass this in from ShoppingCart
-    let productId = "5610129862"
+
+    
+    //pass this in from ShoppingCart
+//    let productId = "5610129862"
     
     //Twilio credentials
     let basePath = "https://api.twilio.com/"
@@ -29,7 +32,6 @@ class PaymentVC: UIViewController {
     let shopDomain = "yoganinja.myshopify.com"
     let apiKey = "706f85f7989134d8225e2ec4da7335b8"
     let channelId = "49743622"
- //   let productId = "4009702273"
     
     //Google Tiny-URL credentials
     let tinyApiKey = "AIzaSyCzJ1nS8knmHKeu3iOclTFSZ3JhUBamFvM"
@@ -37,51 +39,95 @@ class PaymentVC: UIViewController {
     
     var productVariant: BUYProductVariant?
     let client: BUYClient
+    let cart = BUYCart()
     
     required init(coder aDecoder: NSCoder) {
+        
         client = BUYClient(shopDomain: shopDomain, apiKey: apiKey, channelId: channelId)
         super.init(coder: aDecoder)!
+        
     }
     
-    @IBAction func payButton(sender: AnyObject) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad")
         
-        client.getProductById(productId) { (product, error) -> Void in
-            if let variants = product.variants as? [BUYProductVariant] {
+        var productId = ""
+        var selectedVariant = 1
+        var productQty = 1
+        
+        if let invoiceList = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
+            
+            if let arr = invoiceList as? [Dictionary<String, AnyObject>] {
                 
-      // Get the specific size ([0] = Sm, [1] = Med, [2] = Lg, [3] = XL
-                self.productVariant = variants[2]
+                /////////////
+                for item in arr {
+                    if let qty = item["qty"] as? Int {
+                        productQty = qty
+                    }
+                    if let size = item["size"] as? String {
+                        switch size {
+                        case "Small":
+                            selectedVariant = 0
+                        case "Medium":
+                            selectedVariant = 1
+                        case "Large":
+                            selectedVariant = 2
+                        case "Extra Large":
+                            selectedVariant = 3
+                        default:
+                            selectedVariant = 0
+                        }
+                        print(selectedVariant)
+                        if let itemCell = item["cell"] as? [String: AnyObject] {
+                            if let itemId = itemCell["productId"] as? String {
+
+        
+                                client.getProductById(itemId) { (product, error) -> Void in
+                                    
+                                    if let variants = product.variants as? [BUYProductVariant] {
+                                        self.productVariant = variants.first
+                                    }
+                                    
+                                    if let productVar = self.productVariant {
+                                        self.cart.addVariant(productVar)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-        
-        // Create the checkout
-        let cart = BUYCart()
-        if let productVar = productVariant {
-            cart.addVariant(productVar)
-        }
+       
+    }
+
+    
+    @IBAction func payButton(sender: AnyObject) {
+        print("Paybutton Pressed")
         
         let checkout = BUYCheckout(cart: cart)
         client.createCheckout(checkout) { (checkout, error) -> Void in
-
+            
         //create shortURL
         let parameters = [
             "longUrl": "\(checkout.webCheckoutURL)"
         ]
+        print(parameters)
+        
         Alamofire.request(.POST, "https://www.googleapis.com/urlshortener/v1/url?key=\(self.tinyApiKey)", parameters: parameters, encoding: .JSON)
             .responseJSON { Response in
                 if let output = Response.result.value as? Dictionary<String, AnyObject> {
                     
-                    print(output)
-                    
                     if let urlOutput = output["id"] as? String {
-                        print("URL Link is $$$$$$$$$$$$$$ ####################### \(urlOutput)")
+  //                      print("URL Link is $$$$$$$$$$$$$$ ####################### \(urlOutput)")
                         let txtMessage = "Welcome to Yoga Ninja!  Please click on link to make payment: \(urlOutput)"
                         self.sendText(txtMessage)
                     }
                 }
             }
-
+            }
         }
-    }
     
     func sendText(message: String) {
         
@@ -124,9 +170,4 @@ class PaymentVC: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
 }
