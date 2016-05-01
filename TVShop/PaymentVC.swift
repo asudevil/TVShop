@@ -54,7 +54,6 @@ class PaymentVC: UIViewController {
         
         var productId = ""
         var selectedVariant = 1
-        var productQty = 1
         
         if let invoiceList = NSUserDefaults.standardUserDefaults().objectForKey("savedItems") {
             
@@ -62,6 +61,7 @@ class PaymentVC: UIViewController {
                 
                 /////////////
                 for item in arr {
+                    var productQty = 1
                     if let qty = item["qty"] as? Int {
                         productQty = qty
                     }
@@ -89,17 +89,17 @@ class PaymentVC: UIViewController {
                                         self.productVariant = variants.first
                                     }
                                     
-                                    if let productVar = self.productVariant {
-                                        self.cart.addVariant(productVar)
+                                    while productQty > 0 {
+                                        if let productVar = self.productVariant {
+                                            self.cart.addVariant(productVar)
+                                            productQty -= 1
+                                        }
                                     }
-                                }
-                            }
-                        }
+                        }   }   }
                     }
                 }
             }
         }
-       
     }
 
     
